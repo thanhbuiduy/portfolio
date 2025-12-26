@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thanh Bui | Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --accent: #0f62fe;
+      --accent-soft: #e1ebff;
+      --text-main: #111827;
+      --text-soft: #6b7280;
+      --border-soft: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(16px);
+      background: rgba(245, 247, 251, 0.9);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .nav {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .brand span {
+      font-size: 13px;
+      color: var(--text-soft);
+      font-weight: 400;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      color: var(--text-soft);
+    }
+
+    .nav-links a.active {
+      color: var(--text-main);
+      border-color: var(--accent);
+    }
+
+    .nav-links a:hover { color: var(--text-main); }
+
+    main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 2fr);
+      gap: 32px;
+      align-items: start;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+
+    .section-note {
+      font-size: 14px;
+      color: var(--text-soft);
+      margin-bottom: 16px;
+      max-width: 420px;
+    }
+
+    .contact-info {
+      font-size: 14px;
+      color: #111827;
+    }
+
+    .contact-info div {
+      margin-bottom: 6px;
+    }
+
+    .contact-info span {
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 22px 22px 24px;
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+    }
+
+    .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-soft);
+      margin-bottom: 8px;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 12px;
+    }
+
+    .pill {
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: #f3f4f6;
+      color: #374151;
+    }
+
+    .hint {
+      font-size: 12px;
+      color: var(--text-soft);
+      margin-top: 12px;
+      max-width: 360px;
+    }
+
+    @media (max-width: 800px) {
+      .layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      header { position: static; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="brand">
+      thanhbui
+      <span>Learning Design & Facilitation</span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="layout">
+    <div>
+      <h1 class="section-title">Let’s talk about learning.</h1>
+      <p class="section-note">
+        Whether you are exploring a new leadership programme, re-thinking onboarding,
+        or prototyping digital learning products, feel free to reach out.
+      </p>
+      <div class="contact-info">
+        <div>
+          <strong>Email</strong><br>
+          <span>hello@thanhbui.example</span>
+        </div>
+        <div>
+          <strong>LinkedIn</strong><br>
+          <span>linkedin.com/in/thanhbui-example</span>
+        </div>
+      </div>
+    </div>
+
+    <aside class="card">
+      <div class="label">Typical requests</div>
+      <div class="pill-list">
+        <span class="pill">Leadership & soft skills programmes</span>
+        <span class="pill">eLearning & SCORM modules</span>
+        <span class="pill">Workshop design & facilitation</span>
+        <span class="pill">Learning tech & analytics</span>
+      </div>
+      <p class="hint">
+        This page can later include a simple contact form (e.g. via Formspree) if you
+        want visitors to send messages directly from the site.
+      </p>
+    </aside>
+  </section>
+</main>
+</body>
+</html>
