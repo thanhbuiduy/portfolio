@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thanh Bui | Products</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --accent: #0f62fe;
+      --accent-soft: #e1ebff;
+      --text-main: #111827;
+      --text-soft: #6b7280;
+      --border-soft: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(16px);
+      background: rgba(245, 247, 251, 0.9);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .nav {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .brand span {
+      font-size: 13px;
+      color: var(--text-soft);
+      font-weight: 400;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      color: var(--text-soft);
+    }
+
+    .nav-links a.active {
+      color: var(--text-main);
+      border-color: var(--accent);
+    }
+
+    .nav-links a:hover { color: var(--text-main); }
+
+    main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+
+    .section-title {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-soft);
+      margin-bottom: 12px;
+    }
+
+    .section-note {
+      font-size: 13px;
+      color: var(--text-soft);
+      max-width: 560px;
+      margin-bottom: 24px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 2.2fr);
+      gap: 18px;
+      margin-bottom: 22px;
+      align-items: start;
+    }
+
+    .product-category {
+      font-size: 13px;
+      color: var(--text-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 4px;
+    }
+
+    .product-name {
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .product-card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 18px 18px 16px;
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-soft);
+      margin-bottom: 6px;
+    }
+
+    .bullet-list {
+      font-size: 13px;
+      color: #111827;
+      margin-bottom: 10px;
+      padding-left: 16px;
+    }
+
+    .bullet-list li {
+      margin-bottom: 4px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--text-soft);
+      margin-bottom: 10px;
+    }
+
+    .meta span {
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #f3f4f6;
+    }
+
+    .links-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .btn-link {
+      font-size: 12px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      background: #ffffff;
+      color: var(--text-soft);
+    }
+
+    .btn-link.primary {
+      border-color: var(--accent-soft);
+      background: var(--accent-soft);
+      color: #1d4ed8;
+    }
+
+    @media (max-width: 800px) {
+      .product-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      header { position: static; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="brand">
+      thanhbui
+      <span>Learning Design & Facilitation</span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">About</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section>
+    <h1 class="section-title">Selected products</h1>
+    <p class="section-note">
+      Each product combines learning design, facilitation, and technology.
+      Links below are prototypes so you can see how Storyline, SCORM and collaboration tools appear.
+    </p>
+  </section>
+
+  <!-- Product 1 -->
+  <section class="product-grid">
+    <header>
+      <div class="product-category">Learning Design</div>
+      <div class="product-name">AI for Productivity</div>
+    </header>
+    <article class="product-card">
+      <div class="label">Context & requirements</div>
+      <ul class="bullet-list">
+        <li>Internal programme for knowledge workers to experiment with AI tools in everyday tasks.</li>
+        <li>Blend of self-paced eLearning and virtual workshops.</li>
+        <li>Need clear use cases, guardrails and practice space.</li>
+      </ul>
+
+      <div class="label">Learning approach</div>
+      <ul class="bullet-list">
+        <li>Scenario-based modules built in Storyline and published to SCORM.</li>
+        <li>Padlet wall for sharing prompts and examples.</li>
+        <li>Miro board to map workflows and identify “AI-able” tasks.</li>
+      </ul>
+
+      <div class="label">Result</div>
+      <ul class="bullet-list">
+        <li>120+ participants across 3 cohorts.</li>
+        <li>Post-programme survey: 4.6 / 5 average satisfaction.</li>
+        <li>Participants reported saving 1–2 hours per week on routine tasks.</li>
+      </ul>
+
+      <div class="links-row">
+        <a class="btn-link primary" href="https://demo.thanhbui.com/storyline/ai-for-productivity" target="_blank">
+          View Storyline demo
+        </a>
+        <a class="btn-link" href="https://demo.thanhbui.com/scorm/ai-for-productivity" target="_blank">
+          View SCORM package
+        </a>
+        <a class="btn-link" href="https://padlet.com/thanhbui/ai-productivity" target="_blank">
+          Padlet wall
+        </a>
+        <a class="btn-link" href="https://miro.com/app/board/ai-productivity" target="_blank">
+          Miro board
+        </a>
+      </div>
+    </article>
+  </section>
+
+  <!-- Product 2 -->
+  <section class="product-grid">
+    <header>
+      <div class="product-category">Leadership Development</div>
+      <div class="product-name">Leading for Impact 2025</div>
+    </header>
+    <article class="product-card">
+      <div class="label">Context & requirements</div>
+      <ul class="bullet-list">
+        <li>Programme for mid-level leaders to strengthen coaching and feedback skills.</li>
+        <li>Hybrid delivery: in-person workshops plus digital follow-up.</li>
+        <li>Need practical tools, not just theory.</li>
+      </ul>
+
+      <div class="label">Learning approach</div>
+      <ul class="bullet-list">
+        <li>Interactive cases and branching conversations in Storyline.</li>
+        <li>Reflection journals hosted in Padlet for peer learning.</li>
+        <li>Session flows and frameworks captured in Miro.</li>
+      </ul>
+
+      <div class="label">Result</div>
+      <ul class="bullet-list">
+        <li>80 managers participated in the first rollout.</li>
+        <li>90% indicated they used at least one tool within 4 weeks.</li>
+        <li>Qualitative feedback highlighted “safe practice space” and “realistic scenarios”.</li>
+      </ul>
+
+      <div class="links-row">
+        <a class="btn-link primary" href="https://demo.thanhbui.com/storyline/leading-for-impact-2025" target="_blank">
+          View Storyline demo
+        </a>
+        <a class="btn-link" href="https://padlet.com/thanhbui/leading-for-impact" target="_blank">
+          Padlet reflection wall
+        </a>
+        <a class="btn-link" href="https://miro.com/app/board/leading-for-impact" target="_blank">
+          Miro programme map
+        </a>
+      </div>
+    </article>
+  </section>
+
+  <!-- Product 3 -->
+  <section class="product-grid">
+    <header>
+      <div class="product-category">eLearning</div>
+      <div class="product-name">Critical Thinking Toolbox</div>
+    </header>
+    <article class="product-card">
+      <div class="label">Context & requirements</div>
+      <ul class="bullet-list">
+        <li>Self-paced course for individual contributors to strengthen problem solving.</li>
+        <li>Need short, modular content that fits into busy schedules.</li>
+        <li>Client requested data on completion and key behaviours.</li>
+      </ul>
+
+      <div class="label">Learning approach</div>
+      <ul class="bullet-list">
+        <li>Micro-lessons built in Storyline and exported as SCORM for the LMS.</li>
+        <li>Interactive visualisations using simple HTML/CSS/JS embedded inside modules.</li>
+        <li>Power BI dashboard tracking progress and quiz results.</li>
+      </ul>
+
+      <div class="label">Result</div>
+      <ul class="bullet-list">
+        <li>85% completion rate within the first 3 months.</li>
+        <li>Managers reported clearer problem statements in project proposals.</li>
+        <li>Dashboard enabled monthly reporting to senior leadership.</li>
+      </ul>
+
+      <div class="links-row">
+        <a class="btn-link primary" href="https://demo.thanhbui.com/storyline/critical-thinking" target="_blank">
+          View Storyline demo
+        </a>
+        <a class="btn-link" href="https://demo.thanhbui.com/scorm/critical-thinking" target="_blank">
+          SCORM sample
+        </a>
+        <a class="btn-link" href="https://app.powerbi.com/groups/critical-thinking-dashboard" target="_blank">
+          Power BI dashboard
+        </a>
+      </div>
+    </article>
+  </section>
+</main>
+</body>
+</html>
