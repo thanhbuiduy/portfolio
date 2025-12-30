@@ -7,14 +7,16 @@
 
   <!-- Favicon: update the file name once you add it -->
   <link rel="icon" type="image/png" href="images/favicon.png">
-<link rel="stylesheet" href="styles.css">
+
+  <!-- Shared styles -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header>
   <div class="nav">
     <div class="brand">
       thanh bui
-  </div>
+    </div>
     <nav class="nav-links">
       <a href="index.html" class="active">About</a>
       <a href="products.html">Portfolio</a>
@@ -24,6 +26,7 @@
 </header>
 
 <main>
+  <!-- HERO -->
   <section class="hero">
     <div>
       <h1 class="hero-title">Learning experiences for modern organisations.</h1>
@@ -45,72 +48,83 @@
 
     <aside class="hero-panel">
       <div class="profile-pic">
-        <img src="images/profile.JPG" alt="Thanh profile photo">
+        <!-- Your round LinkedIn-style photo -->
+        <img src="images/profile.jpg" alt="Thanh Bui profile photo">
       </div>
       <div>
         <div class="hero-panel-title">Short introduction</div>
         <div class="hero-panel-body">
-          Thanh designs and delivers learning journeys that connect business goals with human experience, 
+          Thanh designs and delivers learning journeys that connect business goals with human experience,
           from multi‑month leadership programmes to hands‑on workshops and eLearning modules.
         </div>
       </div>
     </aside>
   </section>
 
+  <!-- PROFILE SNAPSHOT -->
   <section style="margin-bottom: 26px;">
     <h2 class="section-title">Profile snapshot</h2>
     <p class="section-note">
-      Key skills, tools and certifications that show up most often in recent projects.
+      Key certifications, skills and tools that show up most often in recent projects.
     </p>
 
     <div class="grid">
+      <!-- 1) CERTIFICATIONS (top / first card) -->
       <article class="card">
-        <section style="margin-bottom: 26px;">
-  <h2 class="section-title">Profile snapshot</h2>
-  <p class="section-note">
-    Key skills, tools and certifications that show up most often in recent projects.
-  </p>
+        <h3 class="card-title">Certifications</h3>
+        <div class="cert-row">
+          <!-- Example items: replace image src + links + labels with your real data -->
+          <div class="cert-item">
+            <img src="images/cert-shrm.png" alt="SHRM certificate badge">
+            <div>
+              <div>SHRM‑CP</div>
+              <a href="https://link-to-your-certificate-1" target="_blank">View certificate</a>
+            </div>
+          </div>
+          <div class="cert-item">
+            <img src="images/cert-kfla.png" alt="KFLA practitioner badge">
+            <div>
+              <div>KFLA Certified Practitioner</div>
+              <a href="https://link-to-your-certificate-2" target="_blank">View certificate</a>
+            </div>
+          </div>
+          <div class="cert-item">
+            <img src="images/cert-pm.png" alt="Project management badge">
+            <div>
+              <div>Project Management – GG</div>
+              <a href="https://link-to-your-certificate-3" target="_blank">View certificate</a>
+            </div>
+          </div>
+        </div>
+      </article>
 
-  <div class="grid">
+      <!-- 2) SKILLS -->
+      <article class="card">
+        <h3 class="card-title">Skills</h3>
+        <div class="pill-list">
+          <div class="pill">Learning experience design</div>
+          <div class="pill">Leadership & soft skills programmes</div>
+          <div class="pill">Workshop facilitation & coaching</div>
+          <div class="pill">LMS & learning operations</div>
+          <div class="pill">Learning data & reporting</div>
+        </div>
+      </article>
 
-    <!-- 1) CERTIFICATIONS BOX (kept first) -->
-    <article class="card">
-      <h3 class="card-title">Certifications</h3>
-      <div class="cert-row">
-        <!-- your cert-item blocks here -->
-      </div>
-    </article>
-
-    <!-- 2) SKILLS BOX -->
-    <article class="card">
-      <h3 class="card-title">Skills</h3>
-      <div class="pill-list">
-        <div class="pill">Learning experience design</div>
-        <div class="pill">Leadership & soft skills programmes</div>
-        <div class="pill">Workshop facilitation & coaching</div>
-        <div class="pill">LMS & learning operations</div>
-        <div class="pill">Learning data & reporting</div>
-      </div>
-    </article>
-
-    <!-- 3) TOOLS BOX -->
-    <article class="card">
-      <h3 class="card-title">Tools</h3>
-      <div class="pill-list">
-        <div class="pill">LMS: Workday Learning</div>
-        <div class="pill">Design: PowerPoint, Google Slides, Canva</div>
-        <div class="pill">eLearning: Articulate Storyline</div>
-        <div class="pill">Analytics: Excel, Power BI</div>
-        <div class="pill">Collaboration: Miro, Padlet</div>
-      </div>
-    </article>
-
-  </div>
-</section>
-
+      <!-- 3) TOOLS -->
+      <article class="card">
+        <h3 class="card-title">Tools</h3>
+        <div class="pill-list">
+          <div class="pill">LMS: Workday Learning</div>
+          <div class="pill">Design: PowerPoint, Google Slides, Canva</div>
+          <div class="pill">eLearning: Articulate Storyline</div>
+          <div class="pill">Analytics: Excel, Power BI</div>
+          <div class="pill">Collaboration: Miro, Padlet</div>
+        </div>
+      </article>
     </div>
   </section>
 
+  <!-- WHERE TO EXPLORE MORE -->
   <section>
     <h2 class="section-title">Where to explore more</h2>
     <p class="section-note">
