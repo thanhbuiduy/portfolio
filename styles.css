@@ -47,15 +47,16 @@ header {
 }
 
 .brand span {
-  font-size: 13px;
+  font-size: 14px;          /* slightly larger */
   color: var(--text-soft);
   font-weight: 400;
 }
 
+/* NAV MENU – bigger like Apple.com */
 .nav-links {
   display: flex;
   gap: 24px;
-  font-size: 13px;
+  font-size: 16px;          /* was 13px */
 }
 
 .nav-links a {
@@ -87,8 +88,9 @@ main {
   margin-bottom: 32px;
 }
 
+/* MAIN PAGE TITLE – larger */
 .hero-title {
-  font-size: 32px;
+  font-size: 40px;          /* was 32px */
   font-weight: 600;
   letter-spacing: -0.03em;
   margin-bottom: 10px;
@@ -170,8 +172,9 @@ main {
 
 /* SECTIONS, CARDS, LISTS */
 
+/* UPPERCASE SECTION TITLES */
 .section-title {
-  font-size: 15px;
+  font-size: 16px;          /* was 15px */
   text-transform: uppercase;
   letter-spacing: 0.16em;
   color: var(--text-soft);
@@ -200,8 +203,9 @@ main {
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
 }
 
+/* CARD HEADINGS (CERTIFICATIONS, SKILLS, TOOLS) */
 .card-title {
-  font-size: 13px;
+  font-size: 14px;          /* was 13px */
   text-transform: uppercase;
   letter-spacing: 0.09em;
   color: var(--text-soft);
@@ -298,8 +302,9 @@ main {
   margin-bottom: 4px;
 }
 
+/* PROJECT NAMES – bigger */
 .product-name {
-  font-size: 18px;
+  font-size: 22px;          /* was 18px */
   font-weight: 600;
   letter-spacing: -0.02em;
   margin-bottom: 6px;
@@ -405,8 +410,9 @@ main {
   align-items: start;
 }
 
+/* CONTACT PAGE MAIN TITLE – larger */
 .section-title-main {
-  font-size: 24px;
+  font-size: 32px;          /* was 24px */
   font-weight: 600;
   letter-spacing: -0.02em;
   margin-bottom: 10px;
