@@ -265,68 +265,85 @@ main {
 
 .experience-timeline {
   position: relative;
-  padding-left: 28px;
-  margin-top: 4px;
+  padding-left: 40px;
 }
 
+/* Đường thẳng dọc mờ */
 .experience-timeline::before {
-  content: "";
+  content: '';
   position: absolute;
-  left: 12px;
-  top: 0;
-  bottom: 0;
+  left: 6px;
+  top: 12px;
+  bottom: 12px;
   width: 2px;
-  background: #d1d5db;
+  background-color: rgba(200, 200, 200, 0.4); /* Màu mờ */
 }
 
 .exp-item {
   position: relative;
-  padding: 10px 0 4px;
+  margin-bottom: 32px;
 }
 
+.exp-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Dấu chấm tròn */
 .exp-item::before {
-  content: "";
+  content: '';
   position: absolute;
-  left: 6px;
-  top: 24px;
-  width: 12px;
-  height: 12px;
-  border-radius: 999px;
-  background: #ffffff;
-  border: 2px solid #9ca3af;
+  left: -37px;
+  top: 8px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  border: 3px solid #fff;
+  z-index: 1;
 }
 
-.exp-item.exp-current::before {
-  background: var(--accent-soft);
-  border-color: var(--accent);
+/* Dấu chấm cho item hiện tại (màu khác) */
+.exp-current::before {
+  background-color: #0066cc;
 }
 
 .exp-year {
   font-size: 13px;
-  color: var(--text-soft);
-  margin-bottom: 4px;
+  color: #666;
+  margin-bottom: 8px;
 }
 
 .exp-content {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 17px;
+  gap: 12px;
+}
+
+.exp-logo {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .exp-logo img {
-  width: 32px;
-  height: 32px;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
 }
 
 .exp-role {
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1a1a1a;
+  margin-bottom: 2px;
 }
 
 .exp-company {
-  font-size: 15px;
-  color: var(--text-soft);
+  font-size: 14px;
+  color: #666;
 }
 
 /* SHARED BUTTONS / CHIPS */
