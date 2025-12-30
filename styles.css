@@ -272,11 +272,11 @@ main {
 .experience-timeline::before {
   content: '';
   position: absolute;
-  left: 6.5px; /* Căn giữa với dấu chấm */
+  left: 0; /* Đặt cùng vị trí với dấu chấm */
   top: 8px;
   bottom: 8px;
-  width: 1px; /* Nhỏ hơn từ 2px xuống 1px */
-  background-color: rgba(200, 200, 200, 0.25); /* Mờ hơn từ 0.4 xuống 0.25 */
+  width: 1px;
+  background-color: rgba(200, 200, 200, 0.25);
 }
 
 .exp-item {
@@ -288,11 +288,11 @@ main {
   margin-bottom: 0;
 }
 
-/* Dấu chấm tròn - đường thẳng sẽ xuyên qua giữa */
+/* Dấu chấm tròn */
 .exp-item::before {
   content: '';
   position: absolute;
-  left: -37px;
+  left: -37px; /* -40px + 3px để căn giữa */
   top: 8px;
   width: 14px;
   height: 14px;
@@ -300,13 +300,11 @@ main {
   background-color: #e0e0e0;
   border: 3px solid #fff;
   z-index: 1;
-  box-shadow: 0 0 0 1px rgba(200, 200, 200, 0.25); /* Viền mờ nhẹ */
 }
 
 /* Dấu chấm cho item hiện tại */
 .exp-current::before {
   background-color: #0066cc;
-  box-shadow: 0 0 0 1px rgba(0, 102, 204, 0.2);
 }
 
 .exp-year {
