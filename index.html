@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <title>Thanh Bui | Learning Designer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicon: update the file name once you add it -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
   <style>
     :root {
       --bg: #f5f7fb;
@@ -75,9 +79,7 @@
       border-color: var(--accent);
     }
 
-    .nav-links a:hover {
-      color: var(--text-main);
-    }
+    .nav-links a:hover { color: var(--text-main); }
 
     main {
       max-width: 1040px;
@@ -87,30 +89,30 @@
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-      gap: 32px;
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 2.4fr);
+      gap: 28px;
       align-items: center;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
 
     .hero-title {
-      font-size: 32px;
+      font-size: 30px;
       font-weight: 600;
       letter-spacing: -0.03em;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .hero-sub {
       color: var(--text-soft);
-      font-size: 15px;
-      margin-bottom: 18px;
+      font-size: 14px;
+      margin-bottom: 16px;
     }
 
     .hero-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
     }
 
     .tag {
@@ -136,50 +138,86 @@
     .hero-panel {
       border-radius: 18px;
       background: linear-gradient(135deg, #ffffff, #eef2ff);
-      padding: 20px 22px;
+      padding: 18px 20px;
       box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 16px;
+      align-items: center;
+    }
+
+    .profile-pic {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid #e5e7eb;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #e5e7eb;
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .hero-panel-title {
-      font-size: 13px;
+      font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.09em;
+      color: var(--text-soft);
+      margin-bottom: 6px;
+    }
+
+    .hero-panel-body {
+      font-size: 13px;
+      color: #111827;
+    }
+
+    .section-title {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
       color: var(--text-soft);
       margin-bottom: 10px;
     }
 
-    .hero-panel-body {
-      font-size: 14px;
-      color: #111827;
+    .section-note {
+      font-size: 13px;
+      color: var(--text-soft);
+      max-width: 460px;
+      margin-bottom: 16px;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
 
     .card {
       background: var(--card);
       border-radius: 14px;
-      padding: 16px 16px 18px;
+      padding: 14px 14px 16px;
       border: 1px solid rgba(148, 163, 184, 0.15);
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
     }
 
     .card-title {
-      font-size: 13px;
+      font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.09em;
       color: var(--text-soft);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .pill-list {
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 5px;
       font-size: 13px;
     }
 
@@ -188,29 +226,38 @@
       border-bottom: 1px dashed rgba(148, 163, 184, 0.5);
     }
 
-    .pill:last-child {
-      border-bottom: none;
+    .pill:last-child { border-bottom: none; }
+
+    .cert-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
-    .pill span {
+    .cert-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       font-size: 12px;
       color: var(--text-soft);
-      display: block;
     }
 
-    .section-title {
-      font-size: 15px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--text-soft);
-      margin-bottom: 12px;
+    .cert-item img {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      border: 1px solid var(--border-soft);
+      object-fit: cover;
+      background: #e5e7eb;
     }
 
-    .section-note {
-      font-size: 13px;
-      color: var(--text-soft);
-      max-width: 460px;
-      margin-bottom: 18px;
+    .cert-item a {
+      color: #1d4ed8;
+      text-decoration: none;
+    }
+
+    .cert-item a:hover {
+      text-decoration: underline;
     }
 
     .links-inline {
@@ -240,8 +287,9 @@
       .grid {
         grid-template-columns: minmax(0, 1fr);
       }
-      header {
-        position: static;
+      header { position: static; }
+      .hero-panel {
+        grid-template-columns: minmax(0, 1fr);
       }
     }
   </style>
@@ -255,7 +303,7 @@
     </div>
     <nav class="nav-links">
       <a href="index.html" class="active">About</a>
-      <a href="products.html">Products</a>
+      <a href="products.html">Portfolio</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
@@ -266,8 +314,8 @@
     <div>
       <h1 class="hero-title">Learning experiences for modern organisations.</h1>
       <p class="hero-sub">
-        Learning designer and facilitator with 10+ years of experience in leadership
-        development, learning culture, and eLearning. Helping teams learn better, faster, and together.
+        Learning designer and facilitator with 10+ years in leadership development, learning culture 
+        and eLearning across international companies in Vietnam.
       </p>
       <div class="hero-tags">
         <span class="tag tag-primary">Learning Design</span>
@@ -276,62 +324,79 @@
         <span class="tag">eLearning</span>
       </div>
       <p class="hero-note">
-        This portfolio highlights selected programmes, digital learning products, and experiments with
-        Storyline, SCORM, Padlet, Power BI and Miro.
+        This site shows selected leadership programmes, workshops and digital learning products, 
+        combining in‑person experiences with tools like Storyline, Miro and Padlet.
       </p>
     </div>
+
     <aside class="hero-panel">
-      <div class="hero-panel-title">Short introduction</div>
-      <div class="hero-panel-body">
-        Thanh designs and delivers learning programmes that blend facilitation, digital tools and
-        data-informed decisions. Focus areas include leadership, problem solving and learning culture.
+      <div class="profile-pic">
+        <img src="images/profile.jpg" alt="Thanh Bui profile photo">
+      </div>
+      <div>
+        <div class="hero-panel-title">Short introduction</div>
+        <div class="hero-panel-body">
+          Thanh designs and delivers learning journeys that connect business goals with human experience, 
+          from multi‑month leadership programmes to hands‑on workshops and eLearning modules.
+        </div>
       </div>
     </aside>
   </section>
 
-  <section style="margin-bottom: 30px;">
+  <section style="margin-bottom: 26px;">
     <h2 class="section-title">Profile snapshot</h2>
     <p class="section-note">
-      Certifications, skills and tools that often show up together in client projects.
-      You can explore concrete products and case studies in the Products section.
+      Key skills, tools and certifications that show up most often in recent projects.
     </p>
 
     <div class="grid">
       <article class="card">
         <h3 class="card-title">Certifications</h3>
-        <div class="pill-list">
-          <div class="pill">SHRM CP (2021)</div>
-          <div class="pill">KFLA Certified Practitioner</div>
-          <div class="pill">Project Management – GG</div>
+        <div class="cert-row">
+          <!-- Update with real images and links when ready -->
+          <div class="cert-item">
+            <img src="images/cert-shrm.png" alt="SHRM certificate badge">
+            <div>
+              <div>SHRM‑CP</div>
+              <a href="https://link-to-your-certificate-1" target="_blank">View certificate</a>
+            </div>
+          </div>
+          <div class="cert-item">
+            <img src="images/cert-kfla.png" alt="KFLA practitioner badge">
+            <div>
+              <div>KFLA Certified Practitioner</div>
+              <a href="https://link-to-your-certificate-2" target="_blank">View certificate</a>
+            </div>
+          </div>
+          <div class="cert-item">
+            <img src="images/cert-pm.png" alt="Project management certificate badge">
+            <div>
+              <div>Project Management – GG</div>
+              <a href="https://link-to-your-certificate-3" target="_blank">View certificate</a>
+            </div>
+          </div>
         </div>
       </article>
 
       <article class="card">
         <h3 class="card-title">Skills</h3>
         <div class="pill-list">
-          <div class="pill">Problem Solving</div>
-          <div class="pill">Learning Design</div>
-          <div class="pill">Facilitation</div>
-          <div class="pill">Learning Management</div>
-          <div class="pill">Leadership Development</div>
+          <div class="pill">Learning experience design</div>
+          <div class="pill">Leadership & soft skills programmes</div>
+          <div class="pill">Workshop facilitation & coaching</div>
+          <div class="pill">LMS & learning operations</div>
+          <div class="pill">Learning data & reporting</div>
         </div>
       </article>
 
       <article class="card">
         <h3 class="card-title">Tools</h3>
         <div class="pill-list">
-          <div class="pill">
-            LMS: Workday Learning
-          </div>
-          <div class="pill">
-            Design: Canva, PowerPoint, Google Slides
-          </div>
-          <div class="pill">
-            Analytics: Excel, Power BI, Python
-          </div>
-          <div class="pill">
-            Collaboration: Miro, Padlet
-          </div>
+          <div class="pill">LMS: Workday Learning</div>
+          <div class="pill">Design: PowerPoint, Google Slides, Canva</div>
+          <div class="pill">eLearning: Articulate Storyline</div>
+          <div class="pill">Analytics: Excel, Power BI</div>
+          <div class="pill">Collaboration: Miro, Padlet</div>
         </div>
       </article>
     </div>
@@ -340,11 +405,10 @@
   <section>
     <h2 class="section-title">Where to explore more</h2>
     <p class="section-note">
-      Outside of this site, content is curated and prototyped using a few familiar spaces.
-      Links below are placeholders you can replace with your own.
+      You can find more writing, prototypes and workshop boards on these platforms.
     </p>
     <div class="links-inline">
-      <span class="link-chip"><strong>LinkedIn</strong> – writing hub & curated learning content</span>
+      <span class="link-chip"><strong>LinkedIn</strong> – ideas on learning & leadership</span>
       <span class="link-chip"><strong>Padlet</strong> – learning walls & resources</span>
       <span class="link-chip"><strong>Miro</strong> – structures, flows & workshop boards</span>
     </div>
