@@ -606,7 +606,7 @@ main {
 }
 
 .carousel-item {
-  min-width: 50%;
+  min-width: 100%;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
