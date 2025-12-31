@@ -9,9 +9,7 @@
 <body>
 <header>
   <div class="nav">
-    <div class="brand">
-      thanh bui
-    </div>
+    <div class="brand">thanh bui</div>
     <nav class="nav-links">
       <a href="index.html">About</a>
       <a href="products.html" class="active">Products</a>
@@ -31,418 +29,436 @@
 
   <!-- Product 1 -->
   <section class="product-grid">
-    <header>
-      <div class="product-category">Learning Design</div>
-      <div class="product-name">Leading for Impact – RMIT (2025)</div>
-    </header>
-    <article class="product-card">
-      <div class="label">Context & requirements</div>
-      <ul class="bullet-list">
-        <li>Internal programme for knowledge workers to experiment with AI tools in everyday tasks.</li>
-        <li>Blend of self-paced eLearning and virtual workshops.</li>
-        <li>Need clear use cases, guardrails and practice space.</li>
-      </ul>
+    <div class="product-header" onclick="toggleAccordion('product1')">
+      <div class="product-header-content">
+        <div class="product-category">Leadership Development</div>
+        <div class="product-name">Leading for Impact – RMIT (2025)</div>
+      </div>
+      <div class="accordion-icon" id="icon1">▼</div>
+    </div>
+    <div class="product-content" id="product1">
+      <article class="product-card">
+        <div class="label">Context & requirements</div>
+        <ul class="bullet-list">
+          <li>Programme for mid-level leaders to strengthen coaching and feedback skills.</li>
+          <li>Hybrid delivery: in-person workshops plus digital follow-up.</li>
+          <li>Need practical tools, not just theory.</li>
+        </ul>
 
-      <div class="label">Learning approach</div>
-      <ul class="bullet-list">
-        <li>Scenario-based modules built in Storyline and published to SCORM.</li>
-        <li>Padlet wall for sharing prompts and examples.</li>
-        <li>Miro board to map workflows and identify “AI-able” tasks.</li>
-      </ul>
+        <div class="label">Learning approach</div>
+        <ul class="bullet-list">
+          <li>Interactive cases and branching conversations in Storyline.</li>
+          <li>Reflection journals hosted in Padlet for peer learning.</li>
+          <li>Session flows and frameworks captured in Miro.</li>
+        </ul>
 
-      <div class="label">Result</div>
-      <ul class="bullet-list">
-        <li>120+ participants across 3 cohorts.</li>
-        <li>Post-programme survey: 4.6 / 5 average satisfaction.</li>
-        <li>Participants reported saving 1–2 hours per week on routine tasks.</li>
-      </ul>
+        <div class="label">Result</div>
+        <ul class="bullet-list">
+          <li>80 managers participated in the first rollout.</li>
+          <li>90% indicated they used at least one tool within 4 weeks.</li>
+          <li>Qualitative feedback highlighted "safe practice space" and "realistic scenarios".</li>
+        </ul>
 
-      <!-- Carousel 1 -->
-      <div class="product-carousel">
-        <button class="carousel-btn prev" aria-label="Previous">‹</button>
-        <div class="carousel-track-wrapper">
-          <div class="carousel-track">
-            <figure class="carousel-item">
-              <img src="images/impact-1.jpg" alt="Leading for Impact image 1">
-              <figcaption>Workshop snapshot</figcaption>
-            </figure>
-            <figure class="carousel-item">
-              <img src="images/impact-2.jpg" alt="Leading for Impact image 2">
-              <figcaption>Scenario module</figcaption>
-            </figure>
-            <figure class="carousel-item">
-              <img src="images/impact-3.jpg" alt="Leading for Impact image 3">
-              <figcaption>Group activity</figcaption>
-            </figure>
-            <figure class="carousel-item">
-              <img src="images/impact-4.jpg" alt="Leading for Impact image 4">
-              <figcaption>Miro workflow map</figcaption>
-            </figure>
-            <figure class="carousel-item">
-              <img src="images/impact-5.jpg" alt="Leading for Impact image 5">
-              <figcaption>Padlet prompt wall</figcaption>
-            </figure>
+        <div class="carousel-container">
+          <div class="carousel-wrapper">
+            <button class="carousel-btn" onclick="moveCarousel('carousel1', -1)">‹</button>
+            <div class="carousel" id="carousel1">
+              <div class="carousel-track">
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/3b82f6/fff?text=Branching+Scenario" alt="Branching Scenario">
+                  <div class="carousel-caption">Branching conversation scenarios</div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/8b5cf6/fff?text=Reflection+Journal" alt="Reflection Journal">
+                  <div class="carousel-caption">Peer reflection journals in Padlet</div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/ec4899/fff?text=Framework+Map" alt="Framework">
+                  <div class="carousel-caption">Leadership frameworks mapped in Miro</div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/f59e0b/fff?text=Practice+Space" alt="Practice">
+                  <div class="carousel-caption">Safe practice environment for coaching</div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/10b981/fff?text=Feedback+Tools" alt="Tools">
+                  <div class="carousel-caption">Practical feedback tools and templates</div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-btn" onclick="moveCarousel('carousel1', 1)">›</button>
           </div>
         </div>
-        <button class="carousel-btn next" aria-label="Next">›</button>
-      </div>
 
-      <div class="links-row">
-        <a class="btn-link primary" href="https://demo.thanhbui.com/storyline/ai-for-productivity" target="_blank">
-          View Storyline demo
-        </a>
-        <a class="btn-link" href="https://demo.thanhbui.com/scorm/ai-for-productivity" target="_blank">
-          View SCORM package
-        </a>
-        <a class="btn-link" href="https://padlet.com/thanhbui/ai-productivity" target="_blank">
-          Padlet wall
-        </a>
-        <a class="btn-link" href="https://miro.com/app/board/ai-productivity" target="_blank">
-          Miro board
-        </a>
-      </div>
-    </article>
+        <div class="links-row">
+          <a class="btn-link primary" href="https://demo.thanhbui.com/storyline/leading-for-impact-2025" target="_blank">
+            View Storyline demo
+          </a>
+          <a class="btn-link" href="https://padlet.com/thanhbui/leading-for-impact" target="_blank">
+            Padlet reflection wall
+          </a>
+          <a class="btn-link" href="https://miro.com/app/board/leading-for-impact" target="_blank">
+            Miro programme map
+          </a>
+        </div>
+      </article>
+    </div>
   </section>
 
   <!-- Product 2 -->
   <section class="product-grid">
-    <header>
-      <div class="product-category">Leadership Development</div>
-      <div class="product-name">Leadership Development Programme – Dai Viet Group (2021)</div>
-    </header>
-    <article class="product-card">
-      <div class="label">Context & requirements</div>
-      <ul class="bullet-list">
-        <li>Programme for mid-level leaders to strengthen coaching and feedback skills.</li>
-        <li>Hybrid delivery: in-person workshops plus digital follow-up.</li>
-        <li>Need practical tools, not just theory.</li>
-      </ul>
+    <div class="product-header" onclick="toggleAccordion('product2')">
+      <div class="product-header-content">
+        <div class="product-category">Leadership Development</div>
+        <div class="product-name">Leadership Development Programme – Dai Viet Group (2021)</div>
+      </div>
+      <div class="accordion-icon" id="icon2">▼</div>
+    </div>
+    <div class="product-content" id="product2">
+      <article class="product-card">
+        <div class="label">Context & requirements</div>
+        <ul class="bullet-list">
+          <li>Comprehensive leadership programme for senior managers at Dai Viet Group.</li>
+          <li>Focus on strategic thinking, team management, and organizational transformation.</li>
+          <li>Blended learning approach with in-person sessions and online modules.</li>
+        </ul>
 
-      <div class="label">Learning approach</div>
-      <ul class="bullet-list">
-        <li>Interactive cases and branching conversations in Storyline.</li>
-        <li>Reflection journals hosted in Padlet for peer learning.</li>
-        <li>Session flows and frameworks captured in Miro.</li>
-      </ul>
+        <div class="label">Learning approach</div>
+        <ul class="bullet-list">
+          <li>Custom leadership assessment and 360-degree feedback tools.</li>
+          <li>Interactive workshops with real business case studies.</li>
+          <li>Action learning projects aligned with company goals.</li>
+        </ul>
 
-      <div class="label">Result</div>
-      <ul class="bullet-list">
-        <li>80 managers participated in the first rollout.</li>
-        <li>90% indicated they used at least one tool within 4 weeks.</li>
-        <li>Qualitative feedback highlighted “safe practice space” and “realistic scenarios”.</li>
-      </ul>
+        <div class="label">Result</div>
+        <ul class="bullet-list">
+          <li>45 senior managers completed the 6-month programme.</li>
+          <li>Improved leadership capability scores by an average of 28%.</li>
+          <li>3 action learning projects implemented organization-wide.</li>
+        </ul>
 
-      <!-- Carousel 2 -->
-      <div class="product-carousel">
-        <button class="carousel-btn prev" aria-label="Previous">‹</button>
-        <div class="carousel-track-wrapper">
-          <div class="carousel-track">
-            <figure class="carousel-item">
-              <img src="images/dvg-1.jpg" alt="Dai Viet leadership image 1">
-              <figcaption>Manager cohort</figcaption>
-            </figure>
-            <figure class="carousel-item">
-              <img src="images/dvg-2.jpg" alt="Dai Viet leadership image 2">
-              <figcaption>Coaching practice</figcaption>
-            </figure>
-            <figure class="carousel-item">
-              <img src="images/dvg-3.jpg" alt="Dai Viet leadership image 3">
-              <figcaption>Storyline case</figcaption>
-            </figure>
-            <figure class="carousel-item">
-              <img src="images/dvg-4.jpg" alt="Dai Viet leadership image 4">
-              <figcaption>Padlet reflections</figcaption>
-            </figure>
-            <figure class="carousel-item">
-              <img src="images/dvg-5.jpg" alt="Dai Viet leadership image 5">
-              <figcaption>Miro frameworks</figcaption>
-            </figure>
+        <div class="carousel-container">
+          <div class="carousel-wrapper">
+            <button class="carousel-btn" onclick="moveCarousel('carousel2', -1)">‹</button>
+            <div class="carousel" id="carousel2">
+              <div class="carousel-track">
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/6366f1/fff?text=Assessment+Tool" alt="Assessment Tool">
+                  <div class="carousel-caption">Leadership assessment dashboard</div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/8b5cf6/fff?text=Workshop+Session" alt="Workshop">
+                  <div class="carousel-caption">Interactive workshop facilitation</div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/ec4899/fff?text=Case+Studies" alt="Case Studies">
+                  <div class="carousel-caption">Business case analysis sessions</div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/f59e0b/fff?text=Action+Learning" alt="Action Learning">
+                  <div class="carousel-caption">Action learning project teams</div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/10b981/fff?text=Results+Report" alt="Results">
+                  <div class="carousel-caption">Programme impact and outcomes</div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-btn" onclick="moveCarousel('carousel2', 1)">›</button>
           </div>
         </div>
-        <button class="carousel-btn next" aria-label="Next">›</button>
-      </div>
 
-      <div class="links-row">
-        <a class="btn-link primary" href="https://demo.thanhbui.com/storyline/leading-for-impact-2025" target="_blank">
-          View Storyline demo
-        </a>
-        <a class="btn-link" href="https://padlet.com/thanhbui/leading-for-impact" target="_blank">
-          Padlet reflection wall
-        </a>
-        <a class="btn-link" href="https://miro.com/app/board/leading-for-impact" target="_blank">
-          Miro programme map
-        </a>
-      </div>
-    </article>
+        <div class="links-row">
+          <a class="btn-link primary" href="https://demo.thanhbui.com/storyline/dai-viet-leadership" target="_blank">
+            View programme overview
+          </a>
+          <a class="btn-link" href="https://demo.thanhbui.com/assessment/dai-viet" target="_blank">
+            Assessment tool
+          </a>
+        </div>
+      </article>
+    </div>
   </section>
 
   <!-- Product 3 -->
   <section class="product-grid">
-    <header>
-      <div class="product-category">eLearning</div>
-      <div class="product-name">Leadership Workshops – Shopee (2022)</div>
-    </header>
-    <article class="product-card">
-      <div class="label">Context & requirements</div>
-      <ul class="bullet-list">
-        <li>Self-paced course for individual contributors to strengthen problem solving.</li>
-        <li>Need short, modular content that fits into busy schedules.</li>
-        <li>Client requested data on completion and key behaviours.</li>
-      </ul>
+    <div class="product-header" onclick="toggleAccordion('product3')">
+      <div class="product-header-content">
+        <div class="product-category">Leadership Workshops</div>
+        <div class="product-name">Leadership Workshops – Shopee (2022)</div>
+      </div>
+      <div class="accordion-icon" id="icon3">▼</div>
+    </div>
+    <div class="product-content" id="product3">
+      <article class="product-card">
+        <div class="label">Context & requirements</div>
+        <ul class="bullet-list">
+          <li>Fast-paced workshop series for team leaders in tech and operations.</li>
+          <li>Focus on agile leadership, remote team management, and quick decision-making.</li>
+          <li>High engagement required due to busy schedules.</li>
+        </ul>
 
-      <div class="label">Learning approach</div>
-      <ul class="bullet-list">
-        <li>Micro-lessons built in Storyline and exported as SCORM for the LMS.</li>
-        <li>Interactive visualisations using simple HTML/CSS/JS embedded inside modules.</li>
-        <li>Power BI dashboard tracking progress and quiz results.</li>
-      </ul>
+        <div class="label">Learning approach</div>
+        <ul class="bullet-list">
+          <li>90-minute intensive workshops with practical exercises.</li>
+          <li>Real-time simulations and role-playing activities.</li>
+          <li>Digital toolkit with templates and quick-reference guides.</li>
+        </ul>
 
-      <div class="label">Result</div>
-      <ul class="bullet-list">
-        <li>85% completion rate within the first 3 months.</li>
-        <li>Managers reported clearer problem statements in project proposals.</li>
-        <li>Dashboard enabled monthly reporting to senior leadership.</li>
-      </ul>
+        <div class="label">Result</div>
+        <ul class="bullet-list">
+          <li>150+ team leaders participated across 8 workshop sessions.</li>
+          <li>4.7 / 5 average satisfaction rating.</li>
+          <li>92% reported applying at least two new techniques within one week.</li>
+        </ul>
 
-      <!-- Carousel 3 -->
-      <div class="product-carousel">
-        <button class="carousel-btn prev" aria-label="Previous">‹</button>
-        <div class="carousel-track-wrapper">
-          <div class="carousel-track">
-            <figure class="carousel-item">
-              <img src="images/shopee-1.jpg" alt="Shopee leadership image 1">
-              <figcaption>Hybrid workshop</figcaption>
-            </figure>
-            <figure class="carousel-item">
-              <img src="images/shopee-2.jpg" alt="Shopee leadership image 2">
-              <figcaption>Remote team case</figcaption>
-            </figure>
-            <figure class="carousel-item">
-              <img src="images/shopee-3.jpg" alt="Shopee leadership image 3">
-              <figcaption>Storyline dialog</figcaption>
-            </figure>
-            <figure class="carousel-item">
-              <img src="images/shopee-4.jpg" alt="Shopee leadership image 4">
-              <figcaption>Miro collaboration</figcaption>
-            </figure>
-            <figure class="carousel-item">
-              <img src="images/shopee-5.jpg" alt="Shopee leadership image 5">
-              <figcaption>Peer feedback</figcaption>
-            </figure>
+        <div class="carousel-container">
+          <div class="carousel-wrapper">
+            <button class="carousel-btn" onclick="moveCarousel('carousel3', -1)">‹</button>
+            <div class="carousel" id="carousel3">
+              <div class="carousel-track">
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/3b82f6/fff?text=Workshop+Room" alt="Workshop">
+                  <div class="carousel-caption">Interactive workshop environment</div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/8b5cf6/fff?text=Simulation" alt="Simulation">
+                  <div class="carousel-caption">Leadership simulation exercises</div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/ec4899/fff?text=Digital+Toolkit" alt="Toolkit">
+                  <div class="carousel-caption">Digital toolkit and resources</div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/f59e0b/fff?text=Team+Activity" alt="Team Activity">
+                  <div class="carousel-caption">Collaborative team activities</div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/10b981/fff?text=Feedback+Session" alt="Feedback">
+                  <div class="carousel-caption">Participant feedback and insights</div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-btn" onclick="moveCarousel('carousel3', 1)">›</button>
           </div>
         </div>
-        <button class="carousel-btn next" aria-label="Next">›</button>
-      </div>
 
-      <div class="links-row">
-        <a class="btn-link primary" href="https://demo.thanhbui.com/storyline/critical-thinking" target="_blank">
-          View Storyline demo
-        </a>
-        <a class="btn-link" href="https://demo.thanhbui.com/scorm/critical-thinking" target="_blank">
-          SCORM sample
-        </a>
-        <a class="btn-link" href="https://app.powerbi.com/groups/critical-thinking-dashboard" target="_blank">
-          Power BI dashboard
-        </a>
-      </div>
-    </article>
+        <div class="links-row">
+          <a class="btn-link primary" href="https://demo.thanhbui.com/workshops/shopee-leadership" target="_blank">
+            View workshop materials
+          </a>
+          <a class="btn-link" href="https://demo.thanhbui.com/toolkit/shopee" target="_blank">
+            Digital toolkit
+          </a>
+        </div>
+      </article>
+    </div>
   </section>
 
-  <!-- Product 4 (copy template, chỉ đổi title) -->
+  <!-- Product 4 -->
   <section class="product-grid">
-    <header>
-      <div class="product-category">Leadership Development</div>
-      <div class="product-name">Leadership Essentials – RMIT Vietnam (2025)</div>
-    </header>
-    <article class="product-card">
-      <div class="label">Context & requirements</div>
-      <ul class="bullet-list">
-        <li>Self-paced course for individual contributors to strengthen problem solving.</li>
-        <li>Need short, modular content that fits into busy schedules.</li>
-        <li>Client requested data on completion and key behaviours.</li>
-      </ul>
+    <div class="product-header" onclick="toggleAccordion('product4')">
+      <div class="product-header-content">
+        <div class="product-category">eLearning</div>
+        <div class="product-name">Leadership Essentials – RMIT Vietnam (2025)</div>
+      </div>
+      <div class="accordion-icon" id="icon4">▼</div>
+    </div>
+    <div class="product-content" id="product4">
+      <article class="product-card">
+        <div class="label">Context & requirements</div>
+        <ul class="bullet-list">
+          <li>Self-paced eLearning for emerging leaders and students.</li>
+          <li>Cover foundational leadership concepts and essential skills.</li>
+          <li>Need engaging, mobile-friendly content with gamification.</li>
+        </ul>
 
-      <div class="label">Learning approach</div>
-      <ul class="bullet-list">
-        <li>Micro-lessons built in Storyline and exported as SCORM for the LMS.</li>
-        <li>Interactive visualisations using simple HTML/CSS/JS embedded inside modules.</li>
-        <li>Power BI dashboard tracking progress and quiz results.</li>
-      </ul>
+        <div class="label">Learning approach</div>
+        <ul class="bullet-list">
+          <li>Modular course built in Storyline with SCORM compliance.</li>
+          <li>Interactive scenarios with branching pathways.</li>
+          <li>Gamified elements including badges, points, and leaderboards.</li>
+        </ul>
 
-      <div class="label">Result</div>
-      <ul class="bullet-list">
-        <li>85% completion rate within the first 3 months.</li>
-        <li>Managers reported clearer problem statements in project proposals.</li>
-        <li>Dashboard enabled monthly reporting to senior leadership.</li>
-      </ul>
+        <div class="label">Result</div>
+        <ul class="bullet-list">
+          <li>200+ students enrolled in the first semester.</li>
+          <li>88% completion rate within 6 weeks.</li>
+          <li>Students reported increased confidence in leadership situations.</li>
+        </ul>
 
-      <!-- Carousel 4 -->
-      <div class="product-carousel">
-        <button class="carousel-btn prev" aria-label="Previous">‹</button>
-        <div class="carousel-track-wrapper">
-          <div class="carousel-track">
-            <figure class="carousel-item">
-              <img src="images/essentials-1.jpg" alt="Leadership essentials image 1">
-              <figcaption>New manager cohort</figcaption>
-            </figure>
-            <figure class="carousel-item">
-              <img src="images/essentials-2.jpg" alt="Leadership essentials image 2">
-              <figcaption>Core skills module</figcaption>
-            </figure>
-            <figure class="carousel-item">
-              <img src="images/essentials-3.jpg" alt="Leadership essentials image 3">
-              <figcaption>Practice activity</figcaption>
-            </figure>
-            <figure class="carousel-item">
-              <img src="images/essentials-4.jpg" alt="Leadership essentials image 4">
-              <figcaption>Miro scenarios</figcaption>
-            </figure>
-            <figure class="carousel-item">
-              <img src="images/essentials-5.jpg" alt="Leadership essentials image 5">
-              <figcaption>Reflection board</figcaption>
-            </figure>
+        <div class="carousel-container">
+          <div class="carousel-wrapper">
+            <button class="carousel-btn" onclick="moveCarousel('carousel4', -1)">‹</button>
+            <div class="carousel" id="carousel4">
+              <div class="carousel-track">
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/6366f1/fff?text=Course+Interface" alt="Course Interface">
+                  <div class="carousel-caption">Modern eLearning interface</div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/8b5cf6/fff?text=Scenario+Module" alt="Scenario">
+                  <div class="carousel-caption">Interactive leadership scenarios</div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/ec4899/fff?text=Gamification" alt="Gamification">
+                  <div class="carousel-caption">Badges and achievement system</div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/f59e0b/fff?text=Mobile+View" alt="Mobile">
+                  <div class="carousel-caption">Mobile-responsive learning</div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/10b981/fff?text=Analytics" alt="Analytics">
+                  <div class="carousel-caption">Learning analytics dashboard</div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-btn" onclick="moveCarousel('carousel4', 1)">›</button>
           </div>
         </div>
-        <button class="carousel-btn next" aria-label="Next">›</button>
-      </div>
 
-      <div class="links-row">
-        <a class="btn-link primary" href="https://demo.thanhbui.com/storyline/critical-thinking" target="_blank">
-          View Storyline demo
-        </a>
-        <a class="btn-link" href="https://demo.thanhbui.com/scorm/critical-thinking" target="_blank">
-          SCORM sample
-        </a>
-        <a class="btn-link" href="https://app.powerbi.com/groups/critical-thinking-dashboard" target="_blank">
-          Power BI dashboard
-        </a>
-      </div>
-    </article>
+        <div class="links-row">
+          <a class="btn-link primary" href="https://demo.thanhbui.com/storyline/leadership-essentials" target="_blank">
+            View Storyline demo
+          </a>
+          <a class="btn-link" href="https://demo.thanhbui.com/scorm/leadership-essentials" target="_blank">
+            SCORM package
+          </a>
+        </div>
+      </article>
+    </div>
   </section>
 
-  <!-- Product 5 (copy template, chỉ đổi title) -->
+  <!-- Product 5 -->
   <section class="product-grid">
-    <header>
-      <div class="product-category">eLearning</div>
-      <div class="product-name">Critical Thinking eLearning Module</div>
-    </header>
-    <article class="product-card">
-      <div class="label">Context & requirements</div>
-      <ul class="bullet-list">
-        <li>Self-paced course for individual contributors to strengthen problem solving.</li>
-        <li>Need short, modular content that fits into busy schedules.</li>
-        <li>Client requested data on completion and key behaviours.</li>
-      </ul>
+    <div class="product-header" onclick="toggleAccordion('product5')">
+      <div class="product-header-content">
+        <div class="product-category">eLearning</div>
+        <div class="product-name">Critical Thinking eLearning Module</div>
+      </div>
+      <div class="accordion-icon" id="icon5">▼</div>
+    </div>
+    <div class="product-content" id="product5">
+      <article class="product-card">
+        <div class="label">Context & requirements</div>
+        <ul class="bullet-list">
+          <li>Self-paced course for individual contributors to strengthen problem solving.</li>
+          <li>Need short, modular content that fits into busy schedules.</li>
+          <li>Client requested data on completion and key behaviours.</li>
+        </ul>
 
-      <div class="label">Learning approach</div>
-      <ul class="bullet-list">
-        <li>Micro-lessons built in Storyline and exported as SCORM for the LMS.</li>
-        <li>Interactive visualisations using simple HTML/CSS/JS embedded inside modules.</li>
-        <li>Power BI dashboard tracking progress and quiz results.</li>
-      </ul>
+        <div class="label">Learning approach</div>
+        <ul class="bullet-list">
+          <li>Micro-lessons built in Storyline and exported as SCORM for the LMS.</li>
+          <li>Interactive visualisations using simple HTML/CSS/JS embedded inside modules.</li>
+          <li>Power BI dashboard tracking progress and quiz results.</li>
+        </ul>
 
-      <div class="label">Result</div>
-      <ul class="bullet-list">
-        <li>85% completion rate within the first 3 months.</li>
-        <li>Managers reported clearer problem statements in project proposals.</li>
-        <li>Dashboard enabled monthly reporting to senior leadership.</li>
-      </ul>
+        <div class="label">Result</div>
+        <ul class="bullet-list">
+          <li>85% completion rate within the first 3 months.</li>
+          <li>Managers reported clearer problem statements in project proposals.</li>
+          <li>Dashboard enabled monthly reporting to senior leadership.</li>
+        </ul>
 
-      <!-- Carousel 5 -->
-      <div class="product-carousel">
-        <button class="carousel-btn prev" aria-label="Previous">‹</button>
-        <div class="carousel-track-wrapper">
-          <div class="carousel-track">
-            <figure class="carousel-item">
-              <img src="images/ct-1.jpg" alt="Critical thinking image 1">
-              <figcaption>Module overview</figcaption>
-            </figure>
-            <figure class="carousel-item">
-              <img src="images/ct-2.jpg" alt="Critical thinking image 2">
-              <figcaption>Case study</figcaption>
-            </figure>
-            <figure class="carousel-item">
-              <img src="images/ct-3.jpg" alt="Critical thinking image 3">
-              <figcaption>Interactive challenge</figcaption>
-            </figure>
-            <figure class="carousel-item">
-              <img src="images/ct-4.jpg" alt="Critical thinking image 4">
-              <figcaption>Reflection prompt</figcaption>
-            </figure>
-            <figure class="carousel-item">
-              <img src="images/ct-5.jpg" alt="Critical thinking image 5">
-              <figcaption>Progress dashboard</figcaption>
-            </figure>
+        <div class="carousel-container">
+          <div class="carousel-wrapper">
+            <button class="carousel-btn" onclick="moveCarousel('carousel5', -1)">‹</button>
+            <div class="carousel" id="carousel5">
+              <div class="carousel-track">
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/6366f1/fff?text=Micro+Lessons" alt="Micro Lessons">
+                  <div class="carousel-caption">Bite-sized learning modules</div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/8b5cf6/fff?text=Interactive+Visual" alt="Visualizations">
+                  <div class="carousel-caption">Interactive data visualizations</div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/ec4899/fff?text=Power+BI+Dashboard" alt="Dashboard">
+                  <div class="carousel-caption">Power BI tracking dashboard</div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/f59e0b/fff?text=Quiz+Results" alt="Quiz">
+                  <div class="carousel-caption">Quiz results and progress metrics</div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://placehold.co/400x300/10b981/fff?text=Completion+Rate" alt="Completion">
+                  <div class="carousel-caption">85% completion rate achieved</div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-btn" onclick="moveCarousel('carousel5', 1)">›</button>
           </div>
         </div>
-        <button class="carousel-btn next" aria-label="Next">›</button>
-      </div>
 
-      <div class="links-row">
-        <a class="btn-link primary" href="https://demo.thanhbui.com/storyline/critical-thinking" target="_blank">
-          View Storyline demo
-        </a>
-        <a class="btn-link" href="https://demo.thanhbui.com/scorm/critical-thinking" target="_blank">
-          SCORM sample
-        </a>
-        <a class="btn-link" href="https://app.powerbi.com/groups/critical-thinking-dashboard" target="_blank">
-          Power BI dashboard
-        </a>
-      </div>
-    </article>
+        <div class="links-row">
+          <a class="btn-link primary" href="https://demo.thanhbui.com/storyline/critical-thinking" target="_blank">
+            View Storyline demo
+          </a>
+          <a class="btn-link" href="https://demo.thanhbui.com/scorm/critical-thinking" target="_blank">
+            SCORM sample
+          </a>
+          <a class="btn-link" href="https://app.powerbi.com/groups/critical-thinking-dashboard" target="_blank">
+            Power BI dashboard
+          </a>
+        </div>
+      </article>
+    </div>
   </section>
 </main>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const carousels = document.querySelectorAll('.product-carousel');
+  const carousels = {};
 
-    carousels.forEach(carousel => {
-      const track = carousel.querySelector('.carousel-track');
-      const items = Array.from(track.children);
-      const prevBtn = carousel.querySelector('.prev');
-      const nextBtn = carousel.querySelector('.next');
+  function initCarousel(id) {
+    const carousel = document.getElementById(id);
+    if (!carousel) return;
+    const track = carousel.querySelector('.carousel-track');
+    const items = Array.from(track.children);
+    
+    carousels[id] = {
+      track: track,
+      items: items,
+      currentIndex: 0,
+      totalItems: items.length
+    };
+  }
 
-      // clone items for infinite loop
-      items.forEach(item => {
-        const clone = item.cloneNode(true);
-        track.appendChild(clone);
-      });
+  function moveCarousel(id, direction) {
+    const carousel = carousels[id];
+    if (!carousel) return;
+    
+    carousel.currentIndex += direction;
+    
+    // Infinite loop
+    if (carousel.currentIndex < 0) {
+      carousel.currentIndex = carousel.totalItems - 2;
+    } else if (carousel.currentIndex > carousel.totalItems - 2) {
+      carousel.currentIndex = 0;
+    }
+    
+    const offset = -carousel.currentIndex * 50;
+    carousel.track.style.transform = `translateX(${offset}%)`;
+  }
 
-      let index = 0;
-      let itemsPerView = window.innerWidth <= 600 ? 1 : 2;
-
-      const updateItemsPerView = () => {
-        itemsPerView = window.innerWidth <= 600 ? 1 : 2;
-        updatePosition();
-      };
-
-      const updatePosition = () => {
-        const itemWidth = track.querySelector('.carousel-item').getBoundingClientRect().width;
-        track.style.transform = `translateX(-${index * itemWidth}px)`;
-      };
-
-      const maxIndex = items.length * 2 - itemsPerView;
-
-      const moveNext = () => {
-        index++;
-        if (index > maxIndex) index = 0;
-        updatePosition();
-      };
-
-      const movePrev = () => {
-        index--;
-        if (index < 0) index = maxIndex;
-        updatePosition();
-      };
-
-      nextBtn.addEventListener('click', moveNext);
-      prevBtn.addEventListener('click', movePrev);
-      window.addEventListener('resize', updateItemsPerView);
-
-      updateItemsPerView();
-    });
-  });
+  function toggleAccordion(id) {
+    const content = document.getElementById(id);
+    const iconNum = id.replace('product', '');
+    const icon = document.getElementById('icon' + iconNum);
+    
+    content.classList.toggle('open');
+    icon.classList.toggle('open');
+    
+    // Initialize carousels when opening
+    if (content.classList.contains('open')) {
+      const carouselId = 'carousel' + iconNum;
+      if (!carousels[carouselId]) {
+        initCarousel(carouselId);
+      }
+    }
+  }
 </script>
 </body>
 </html>
