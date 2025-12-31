@@ -263,7 +263,6 @@ main {
 .cert-item a:hover {
   text-decoration: underline;
 }
-
 /* EXPERIENCE TIMELINE */
 
 .experience-timeline {
@@ -271,55 +270,58 @@ main {
   padding-left: 40px;
 }
 
-/* vertical line */
+/* Đường dọc xám đi xuyên qua tâm chấm tròn */
 .experience-timeline::before {
   content: '';
   position: absolute;
-  left: 0;
-  top: 8px;
-  bottom: 8px;
-  width: 1px;
-  background-color: rgba(200, 200, 200, 0.25);
+  left: 11px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: rgba(200, 200, 200, 0.6);
+  z-index: 0;
 }
 
 .exp-item {
   position: relative;
   margin-bottom: 32px;
+  padding-left: 0;
 }
 
-.exp-item:last-child {
-  margin-bottom: 0;
-}
-
-/* dots */
+/* Chấm tròn nằm trên đường dọc, không che logo */
 .exp-item::before {
   content: '';
   position: absolute;
-  left: -37px;
-  top: 8px;
+  left: 4px;
+  top: 6px;
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background-color: #e0e0e0;
-  border: 3px solid #fff;
-  z-index: 1;
+  background-color: #f9fafb;
+  border: 3px solid #d1d5db;
+  z-index: 2;
 }
 
-/* current item */
+/* chấm cho job hiện tại */
 .exp-current::before {
-  background-color: #0066cc;
+  background-color: #0f62fe;
+  border-color: #ffffff;
 }
 
 .exp-year {
   font-size: 13px;
   color: #666;
   margin-bottom: 8px;
+  position: relative;
+  z-index: 3;
 }
 
 .exp-content {
   display: flex;
   align-items: center;
   gap: 12px;
+  position: relative;
+  z-index: 3;
 }
 
 .exp-logo {
@@ -337,16 +339,19 @@ main {
   object-fit: contain;
 }
 
-.exp-role {
-  font-weight: 600;
-  font-size: 16px;
-  color: #1a1a1a;
-  margin-bottom: 2px;
-}
+/* MOBILE: đẩy timeline sang phải để không đè logo */
+@media (max-width: 600px) {
+  .experience-timeline {
+    padding-left: 52px;
+  }
 
-.exp-company {
-  font-size: 14px;
-  color: #666;
+  .experience-timeline::before {
+    left: 23px;
+  }
+
+  .exp-item::before {
+    left: 16px;
+  }
 }
 
 /* SHARED BUTTONS / CHIPS */
