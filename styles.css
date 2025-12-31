@@ -268,7 +268,7 @@ main {
   position: relative;
   padding-left: 40px;
 }
-/* Đường dọc xám đi xuyên qua tâm chấm tròn */
+/* Đường dọc xám */
 .experience-timeline::before {
   content: '';
   position: absolute;
@@ -283,24 +283,6 @@ main {
   position: relative;
   margin-bottom: 32px;
   padding-left: 0;
-}
-/* Chấm tròn nằm trên đường dọc, không che logo */
-.exp-item::before {
-  content: '';
-  position: absolute;
-  left: -26px;
-  top: 8px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: #f9fafb;
-  border: 3px solid #d1d5db;
-  z-index: 2;
-}
-/* chấm cho job hiện tại */
-.exp-current::before {
-  background-color: #0f62fe;
-  border-color: #ffffff;
 }
 .exp-year {
   font-size: 13px;
@@ -329,16 +311,13 @@ main {
   max-height: 100%;
   object-fit: contain;
 }
-/* MOBILE: đẩy timeline sang phải để không đè logo */
+/* MOBILE */
 @media (max-width: 600px) {
   .experience-timeline {
     padding-left: 52px;
   }
   .experience-timeline::before {
     left: 18px;
-  }
-  .exp-item::before {
-    left: -34px;
   }
 }
 /* SHARED BUTTONS / CHIPS */
