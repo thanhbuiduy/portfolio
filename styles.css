@@ -558,3 +558,70 @@ main {
   }
   .preview-media img { height: 80px; }
 }
+/* PRODUCT IMAGE CAROUSEL */
+
+.product-carousel {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.carousel-track-wrapper {
+  overflow: hidden;
+  flex: 1;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-item {
+  flex: 0 0 50%; /* 2 items at a time (desktop) */
+  box-sizing: border-box;
+  padding: 0 4px;
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid var(--border-soft);
+  background: #e5e7eb;
+}
+
+.carousel-item figcaption {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+.carousel-btn {
+  background: #ffffff;
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-soft);
+}
+
+.carousel-btn:hover {
+  border-color: var(--accent);
+  color: #1f2933;
+}
+
+/* Mobile: show 1 item */
+@media (max-width: 600px) {
+  .carousel-item {
+    flex: 0 0 100%;
+  }
+}
