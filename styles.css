@@ -15,7 +15,8 @@ body {
   background: var(--bg);
   color: var(--text-main);
   line-height: 1.6;
-  font-size: 17px; /* main body text */
+  font-size: 17px;
+  padding-top: 70px; /* chừa chỗ cho header fixed */
 }
 
 a { color: inherit; text-decoration: none; }
@@ -23,9 +24,11 @@ a { color: inherit; text-decoration: none; }
 /* HEADER & NAV */
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 10;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   backdrop-filter: blur(16px);
   background: rgba(245, 247, 251, 0.9);
   border-bottom: 1px solid var(--border-soft);
@@ -230,7 +233,7 @@ main {
 
 .cert-row {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 12px;
 }
 
@@ -268,11 +271,11 @@ main {
   padding-left: 40px;
 }
 
-/* Đường thẳng dọc mờ hơn và nhỏ hơn */
+/* vertical line */
 .experience-timeline::before {
   content: '';
   position: absolute;
-  left: 0; /* Đặt cùng vị trí với dấu chấm */
+  left: 0;
   top: 8px;
   bottom: 8px;
   width: 1px;
@@ -288,11 +291,11 @@ main {
   margin-bottom: 0;
 }
 
-/* Dấu chấm tròn */
+/* dots */
 .exp-item::before {
   content: '';
   position: absolute;
-  left: -37px; /* -40px + 3px để căn giữa */
+  left: -37px;
   top: 8px;
   width: 14px;
   height: 14px;
@@ -302,7 +305,7 @@ main {
   z-index: 1;
 }
 
-/* Dấu chấm cho item hiện tại */
+/* current item */
 .exp-current::before {
   background-color: #0066cc;
 }
@@ -345,6 +348,7 @@ main {
   font-size: 14px;
   color: #666;
 }
+
 /* SHARED BUTTONS / CHIPS */
 
 .links-inline {
@@ -373,12 +377,32 @@ main {
   font-size: 14px;
 }
 
+/* Accordion wrapper: mỗi product là 1 khối */
 .product-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 2.3fr);
-  gap: 18px;
-  margin-bottom: 22px;
-  align-items: start;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: block;
+}
+
+.product-header {
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-header:hover {
+  background: #f9f9f9;
+}
+
+.product-header-content {
+  flex: 1;
 }
 
 .product-category {
@@ -397,18 +421,26 @@ main {
   margin-bottom: 6px;
 }
 
+.product-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.product-content.open {
+  max-height: 3000px;
+}
+
+.product-card {
+  padding: 0 2rem 2rem 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
 .product-summary {
   font-size: 17px;
   color: var(--text-soft);
   max-width: 260px;
-}
-
-.product-card {
-  background: var(--card);
-  border-radius: 16px;
-  padding: 16px 16px 14px;
-  border: 1px solid rgba(148, 163, 184, 0.22);
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
 }
 
 .preview-media {
@@ -536,75 +568,9 @@ main {
   margin-top: 12px;
   max-width: 360px;
 }
-/* PRODUCTS PAGE - ACCORDION & CAROUSEL */
 
-body {
-  padding-top: 70px;
-}
+/* CAROUSEL – 16:9 & lớn hơn */
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-.product-grid {
-  background: white;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  overflow: hidden;
-  display: block; /* Override grid layout for accordion */
-}
-
-.product-header {
-  padding: 1.5rem 2rem;
-  cursor: pointer;
-  user-select: none;
-  transition: background 0.2s;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.product-header:hover {
-  background: #f9f9f9;
-}
-
-.product-header-content {
-  flex: 1;
-}
-
-.accordion-icon {
-  font-size: 1.5rem;
-  color: #ccc;
-  transition: transform 0.3s, color 0.2s;
-}
-
-.accordion-icon.open {
-  transform: rotate(180deg);
-  color: #999;
-}
-
-.product-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-
-.product-content.open {
-  max-height: 3000px;
-}
-
-.product-card {
-  padding: 0 2rem 2rem 2rem;
-  display: grid;
-  gap: 1.5rem;
-}
-
-/* Carousel Styles */
 .carousel-container {
   margin-top: 1.5rem;
 }
@@ -615,13 +581,26 @@ header {
   gap: 1rem;
 }
 
+/* khung 16:9, responsive */
 .carousel {
   flex: 1;
   overflow: hidden;
   position: relative;
+  border-radius: 12px;
+  background: #e5e7eb;
+}
+
+.carousel::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
 }
 
 .carousel-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   display: flex;
   transition: transform 0.3s ease;
 }
@@ -629,14 +608,19 @@ header {
 .carousel-item {
   min-width: 50%;
   padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
+/* ảnh fill khung 16:9 */
 .carousel-item img {
   width: 100%;
-  height: 200px;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border-soft);
   object-fit: cover;
-  border-radius: 6px;
-  background: #e0e0e0;
+  cursor: pointer; /* để user biết có thể click phóng to */
 }
 
 .carousel-caption {
@@ -669,8 +653,120 @@ header {
   transform: scale(0.95);
 }
 
-@media (max-width: 768px) {
+/* MODAL full-screen khi click ảnh */
+
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.image-modal.open {
+  display: flex;
+}
+
+.image-modal img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+}
+
+.image-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+/* tablet */
+@media (max-width: 900px) {
+  main {
+    padding: 24px 16px 40px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-panel {
+    margin-top: 16px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .product-header {
+    padding: 1.25rem 1.25rem;
+  }
+
+  .product-card {
+    padding: 0 1.25rem 1.25rem 1.25rem;
+  }
+
   .carousel-item {
-    min-width: 100%;
+    min-width: 100%; /* trên mobile/tablet: 1 ảnh mỗi slide */
+  }
+}
+
+/* mobile nhỏ */
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  .nav {
+    padding-inline: 12px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .section-title {
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 12px 12px 14px;
+  }
+
+  .pill-list {
+    font-size: 15px;
+  }
+
+  .experience-timeline {
+    padding-left: 20px;
+  }
+
+  .experience-timeline::before {
+    left: 4px;
+  }
+
+  .exp-item::before {
+    left: -10px;
+  }
+
+  .links-inline {
+    gap: 6px;
+  }
+
+  .link-chip {
+    font-size: 13px;
+    padding: 6px 10px;
   }
 }
