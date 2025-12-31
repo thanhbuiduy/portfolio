@@ -537,91 +537,141 @@ main {
   max-width: 360px;
 }
 
-/* RESPONSIVE */
+/* PRODUCTS PAGE - ACCORDION & CAROUSEL */
 
-@media (max-width: 800px) {
-  .hero {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  header { position: static; }
-  .hero-panel {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .product-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .layout {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .preview-media img { height: 80px; }
+body {
+  padding-top: 70px;
 }
-/* PRODUCT IMAGE CAROUSEL */
 
-.product-carousel {
-  margin-top: 12px;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.product-grid {
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: block; /* Override grid layout for accordion */
+}
+
+.product-header {
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-header:hover {
+  background: #f9f9f9;
+}
+
+.product-header-content {
+  flex: 1;
+}
+
+.accordion-icon {
+  font-size: 1.5rem;
+  color: #ccc;
+  transition: transform 0.3s, color 0.2s;
+}
+
+.accordion-icon.open {
+  transform: rotate(180deg);
+  color: #999;
+}
+
+.product-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.product-content.open {
+  max-height: 3000px;
+}
+
+.product-card {
+  padding: 0 2rem 2rem 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Carousel Styles */
+.carousel-container {
+  margin-top: 1.5rem;
+}
+
+.carousel-wrapper {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 1rem;
 }
 
-.carousel-track-wrapper {
-  overflow: hidden;
+.carousel {
   flex: 1;
+  overflow: hidden;
+  position: relative;
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.4s ease;
+  transition: transform 0.3s ease;
 }
 
 .carousel-item {
-  flex: 0 0 50%; /* 2 items at a time (desktop) */
-  box-sizing: border-box;
-  padding: 0 4px;
-  text-align: center;
+  min-width: 50%;
+  padding: 0 0.5rem;
 }
 
 .carousel-item img {
   width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
-  border: 1px solid var(--border-soft);
-  background: #e5e7eb;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #e0e0e0;
 }
 
-.carousel-item figcaption {
-  margin-top: 4px;
-  font-size: 13px;
-  color: var(--text-soft);
+.carousel-caption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #666;
+  text-align: center;
 }
 
 .carousel-btn {
-  background: #ffffff;
-  border: 1px solid var(--border-soft);
-  border-radius: 999px;
-  width: 24px;
-  height: 24px;
-  font-size: 16px;
-  line-height: 1;
-  display: inline-flex;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: var(--text-soft);
+  transition: all 0.2s;
+  flex-shrink: 0;
 }
 
 .carousel-btn:hover {
-  border-color: var(--accent);
-  color: #1f2933;
+  background: #f5f5f5;
+  border-color: #999;
 }
 
-/* Mobile: show 1 item */
-@media (max-width: 600px) {
+.carousel-btn:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
   .carousel-item {
-    flex: 0 0 100%;
+    min-width: 100%;
   }
 }
