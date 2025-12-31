@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
 </head>
+<div class="image-modal" id="imageModal">
+  <span class="image-modal-close" onclick="closeImageModal()">&times;</span>
+  <img id="imageModalImg" src="" alt="Preview">
+</div>
 <body>
 <header>
   <div class="nav">
@@ -408,7 +412,6 @@
     </div>
   </section>
 </main>
-
 <script>
   const carousels = {};
 
@@ -459,6 +462,29 @@
       }
     }
   }
+
+  function openImageModal(src, alt) {
+    const modal = document.getElementById('imageModal');
+    const img = document.getElementById('imageModalImg');
+    img.src = src;
+    img.alt = alt || '';
+    modal.classList.add('open');
+  }
+
+  function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    modal.classList.remove('open');
+  }
+
+  // Gắn sự kiện click cho ảnh trong carousel
+  document.addEventListener('click', function (e) {
+    if (e.target.matches('.carousel-item img')) {
+      openImageModal(e.target.src, e.target.alt);
+    }
+    if (e.target.id === 'imageModal') {
+      closeImageModal();
+    }
+  });
 </script>
 </body>
 </html>
