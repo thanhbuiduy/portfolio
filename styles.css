@@ -274,7 +274,7 @@ main {
 .experience-timeline::before {
   content: '';
   position: absolute;
-  left: 18px;
+  left: 6px;
   top: 0;
   bottom: 0;
   width: 2px;
@@ -292,7 +292,7 @@ main {
 .exp-item::before {
   content: '';
   position: absolute;
-  left: 14px;
+  left: -1px;
   top: 8px;
   width: 14px;
   height: 14px;
@@ -346,11 +346,11 @@ main {
   }
 
   .experience-timeline::before {
-    left: 23px;
+    left: 6px;
   }
 
   .exp-item::before {
-    left: 16px;
+    left: -1px;
   }
 }
 
