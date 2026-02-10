@@ -23,7 +23,7 @@ body {
   background: var(--bg);
   color: var(--text-main);
   line-height: 1.7;
-  font-size: 19px;
+  font-size: 25px;
   padding-top: 80px;
 }
 
@@ -54,15 +54,15 @@ header {
 }
 
 .brand {
-  font-size: 20px;
+  font-size: 32px;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.05em;
 }
 
 .nav-links {
   display: flex;
   gap: 32px;
-  font-size: 17px;
+  font-size: 32px;
 }
 
 .nav-links a {
@@ -113,7 +113,7 @@ main {
 
 .hero-sub {
   color: var(--text-soft);
-  font-size: 20px;
+  font-size: 32px;
   margin-bottom: 20px;
   line-height: 1.6;
 }
