@@ -1,54 +1,14 @@
-.hero-title {
-    font-size: 46px;
-}
-
-.brand {
-    font-size: 19px;
-}
-
-.nav-links {
-    font-size: 17px;
-}
-
-.exp-logo {
-    width: 72px;
-}
-
-.exp-content {
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.exp-role {
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.exp-company {
-    font-size: 14px;
-}
-
-.exp-highlights {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-.section-title {
-    font-size: 24px;
-    text-transform: none;
-    letter-spacing: normal;
-}
-
-ul {
-    font-size: 18px;
-}
-
-@media screen and (max-width: 600px) {
-    body {
-        font-size: 17px;
-    }
-}
+/* Styles for the website */
 
 body {
-    font-size: 19px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
+
+h1 {
+    color: #333;
+}
+
+/* Additional styles can be added here */
