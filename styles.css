@@ -23,8 +23,8 @@ body {
   background: var(--bg);
   color: var(--text-main);
   line-height: 1.7;
-  font-size: 25px;
-  padding-top: 80px;
+  font-size: 22px;
+  padding-top: 100px;
 }
 
 a { 
@@ -45,24 +45,24 @@ header {
 }
 
 .nav {
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 18px 40px;
+  padding: 24px 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .brand {
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 .nav-links {
   display: flex;
-  gap: 32px;
-  font-size: 32px;
+  gap: 40px;
+  font-size: 20px;
 }
 
 .nav-links a {
@@ -83,15 +83,15 @@ header {
 
 /* MAIN & SECTIONS */
 main {
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 48px 40px 64px;
+  padding: 60px 50px 80px;
 }
 
 .page-section {
   min-height: 60vh;
-  padding: 40px 0;
-  scroll-margin-top: 80px;
+  padding: 60px 0;
+  scroll-margin-top: 100px;
 }
 
 /* HERO / ABOUT */
@@ -104,32 +104,32 @@ main {
 }
 
 .hero-title {
-  font-size: 56px;
+  font-size: 72px;
   font-weight: 700;
   letter-spacing: -0.03em;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   line-height: 1.2;
 }
 
 .hero-sub {
   color: var(--text-soft);
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 28px;
   line-height: 1.6;
 }
 
 .hero-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 12px;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
 .tag {
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  padding: 7px 12px;
+  padding: 10px 16px;
   border-radius: 999px;
   background: #e5e7eb;
   color: #374151;
@@ -142,21 +142,21 @@ main {
 }
 
 .hero-panel {
-  border-radius: 20px;
+  border-radius: 24px;
   background: linear-gradient(135deg, #ffffff, #eef2ff);
-  padding: 24px;
+  padding: 32px;
   box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
-  gap: 20px;
+  gap: 24px;
   align-items: center;
 }
 
 .profile-pic {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-  border: 3px solid #e5e7eb;
+  border: 4px solid #e5e7eb;
   overflow: hidden;
   flex-shrink: 0;
   background: #e5e7eb;
@@ -170,87 +170,87 @@ main {
 }
 
 .hero-panel-title {
-  font-size: 13px;
+  font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-soft);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-weight: 600;
 }
 
 .hero-panel-body {
-  font-size: 18px;
+  font-size: 22px;
   color: #111827;
   line-height: 1.6;
 }
 
 /* SECTIONS, CARDS, LISTS */
 .section-title {
-  font-size: 17px;
+  font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 0.16em;
   color: var(--text-soft);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   font-weight: 600;
 }
 
 .section-title-main {
-  font-size: 48px;
+  font-size: 64px;
   font-weight: 700;
   letter-spacing: -0.02em;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   line-height: 1.2;
 }
 
 .section-note {
-  font-size: 19px;
+  font-size: 22px;
   color: var(--text-soft);
-  max-width: 700px;
-  margin-bottom: 24px;
+  max-width: 800px;
+  margin-bottom: 32px;
   line-height: 1.6;
 }
 
 .section-note-main {
-  font-size: 20px;
+  font-size: 24px;
   color: var(--text-soft);
-  margin-bottom: 24px;
-  max-width: 600px;
+  margin-bottom: 32px;
+  max-width: 700px;
   line-height: 1.6;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  margin-bottom: 48px;
+  gap: 32px;
+  margin-bottom: 60px;
 }
 
 .card {
   background: var(--card);
-  border-radius: 16px;
-  padding: 20px;
+  border-radius: 20px;
+  padding: 28px;
   border: 1px solid rgba(148, 163, 184, 0.15);
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
 }
 
 .card-title {
-  font-size: 15px;
+  font-size: 17px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-soft);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   font-weight: 600;
 }
 
 .pill-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  font-size: 19px;
+  gap: 10px;
+  font-size: 22px;
 }
 
 .pill {
-  padding: 8px 0;
+  padding: 10px 0;
   border-bottom: 1px dashed rgba(148, 163, 184, 0.4);
   line-height: 1.5;
 }
@@ -262,21 +262,21 @@ main {
 .cert-row {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 .cert-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 15px;
+  gap: 16px;
+  font-size: 18px;
   color: var(--text-soft);
 }
 
 .cert-item img {
-  width: 48px;
-  height: 48px;
-  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
   border: 1px solid var(--border-soft);
   object-fit: cover;
   background: #e5e7eb;
@@ -286,7 +286,7 @@ main {
 .cert-item a {
   color: #1d4ed8;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 17px;
 }
 
 .cert-item a:hover {
@@ -296,63 +296,63 @@ main {
 /* EXPERIENCE TIMELINE */
 .experience-timeline {
   position: relative;
-  padding-left: 48px;
-  margin-top: 24px;
+  padding-left: 60px;
+  margin-top: 32px;
 }
 
 .experience-timeline::before {
   content: '';
   position: absolute;
-  left: 20px;
+  left: 24px;
   top: 0;
   bottom: 0;
-  width: 2px;
+  width: 3px;
   background-color: rgba(200, 200, 200, 0.6);
   z-index: 0;
 }
 
 .exp-item {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   padding-left: 0;
 }
 
 .exp-item::before {
   content: '';
   position: absolute;
-  left: -34px;
-  top: 10px;
-  width: 16px;
-  height: 16px;
+  left: -42px;
+  top: 12px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: #f9fafb;
-  border: 3px solid #d1d5db;
+  border: 4px solid #d1d5db;
   z-index: 2;
 }
 
 .exp-current::before {
   background-color: #0f62fe;
   border-color: #ffffff;
-  box-shadow: 0 0 0 4px rgba(15, 98, 254, 0.2);
+  box-shadow: 0 0 0 5px rgba(15, 98, 254, 0.2);
 }
 
 .exp-year {
-  font-size: 14px;
+  font-size: 17px;
   color: #666;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-weight: 500;
 }
 
 .exp-content {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
 }
 
 .exp-logo {
   flex-shrink: 0;
-  width: 56px;
-  height: 56px;
+  width: 70px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -365,14 +365,14 @@ main {
 }
 
 .exp-role {
-  font-size: 19px;
+  font-size: 22px;
   font-weight: 600;
   color: var(--text-main);
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .exp-company {
-  font-size: 17px;
+  font-size: 20px;
   color: var(--text-soft);
 }
 
@@ -380,12 +380,12 @@ main {
 .links-inline {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  font-size: 15px;
+  gap: 16px;
+  font-size: 18px;
 }
 
 .link-chip {
-  padding: 10px 16px;
+  padding: 14px 20px;
   border-radius: 999px;
   border: 1px solid var(--border-soft);
   background: #ffffff;
@@ -401,14 +401,14 @@ main {
 /* PORTFOLIO (PROJECTS) */
 .product-grid {
   background: white;
-  border-radius: 12px;
-  margin-bottom: 20px;
+  border-radius: 16px;
+  margin-bottom: 28px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   overflow: hidden;
 }
 
 .product-header {
-  padding: 24px 28px;
+  padding: 32px 36px;
   cursor: pointer;
   user-select: none;
   transition: background 0.2s;
@@ -426,27 +426,27 @@ main {
 }
 
 .product-category {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--text-soft);
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   font-weight: 600;
 }
 
 .product-name {
-  font-size: 28px;
+  font-size: 34px;
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.3;
 }
 
 .accordion-icon {
-  font-size: 20px;
+  font-size: 24px;
   color: var(--text-soft);
   transition: transform 0.3s ease;
   flex-shrink: 0;
-  margin-left: 20px;
+  margin-left: 24px;
 }
 
 .accordion-icon.open {
@@ -460,47 +460,47 @@ main {
 }
 
 .product-content.open {
-  max-height: 4000px;
+  max-height: 5000px;
 }
 
 .product-card {
-  padding: 0 28px 28px 28px;
+  padding: 0 36px 36px 36px;
   display: grid;
-  gap: 20px;
+  gap: 28px;
 }
 
 .label {
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--text-soft);
-  margin-bottom: 6px;
-  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-top: 12px;
   font-weight: 600;
 }
 
 .bullet-list {
-  font-size: 19px;
+  font-size: 22px;
   color: #111827;
-  margin-bottom: 8px;
-  padding-left: 20px;
+  margin-bottom: 12px;
+  padding-left: 28px;
   line-height: 1.7;
 }
 
 .bullet-list li { 
-  margin-bottom: 6px; 
+  margin-bottom: 8px; 
 }
 
 .links-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 12px;
+  gap: 12px;
+  margin-top: 16px;
 }
 
 .btn-link {
-  font-size: 15px;
-  padding: 10px 16px;
+  font-size: 18px;
+  padding: 14px 22px;
   border-radius: 999px;
   border: 1px solid var(--border-soft);
   background: #ffffff;
@@ -530,53 +530,53 @@ main {
 .layout {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-  gap: 48px;
+  gap: 60px;
   align-items: start;
 }
 
 .contact-info {
-  font-size: 19px;
+  font-size: 22px;
   color: #111827;
-  margin-top: 24px;
+  margin-top: 32px;
 }
 
 .contact-info > div {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .contact-info strong {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
 }
 
 .contact-info span {
-  font-size: 18px;
+  font-size: 20px;
   color: var(--text-soft);
 }
 
 .hint {
-  font-size: 14px;
+  font-size: 17px;
   color: var(--text-soft);
-  margin-top: 16px;
+  margin-top: 20px;
   line-height: 1.6;
 }
 
 /* CAROUSEL */
 .carousel-container {
-  margin-top: 24px;
+  margin-top: 32px;
 }
 
 .carousel-wrapper {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
 }
 
 .carousel {
   flex: 1;
   overflow: hidden;
   position: relative;
-  border-radius: 14px;
+  border-radius: 16px;
   background: #e5e7eb;
 }
 
@@ -597,7 +597,7 @@ main {
 
 .carousel-item {
   min-width: 100%;
-  padding: 0 8px;
+  padding: 0 10px;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -606,15 +606,15 @@ main {
 .carousel-item img {
   width: 100%;
   height: 100%;
-  border-radius: 12px;
+  border-radius: 14px;
   border: 1px solid var(--border-soft);
   object-fit: cover;
   cursor: pointer;
 }
 
 .carousel-caption {
-  margin-top: 8px;
-  font-size: 15px;
+  margin-top: 10px;
+  font-size: 18px;
   color: #666;
   text-align: center;
   line-height: 1.4;
@@ -624,15 +624,15 @@ main {
   background: white;
   border: 1px solid #ddd;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.2s;
   flex-shrink: 0;
-  font-size: 20px;
+  font-size: 24px;
   color: #666;
 }
 
@@ -688,6 +688,66 @@ main {
 /* Tablet */
 @media (max-width: 1024px) {
   body {
+    font-size: 20px;
+  }
+
+  main {
+    padding: 48px 32px 64px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-title {
+    font-size: 56px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .product-header {
+    padding: 28px 32px;
+  }
+
+  .product-card {
+    padding: 0 32px 32px 32px;
+  }
+
+  .product-name {
+    font-size: 30px;
+  }
+
+  .section-title-main {
+    font-size: 52px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  body {
+    font-size: 18px;
+    padding-top: 85px;
+  }
+
+  .nav {
+    padding: 16px 20px;
+  }
+
+  .brand {
+    font-size: 22px;
+  }
+
+  .nav-links {
+    gap: 24px;
     font-size: 17px;
   }
 
@@ -695,27 +755,84 @@ main {
     padding: 40px 20px 56px;
   }
 
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 32px;
+  .page-section {
+    padding: 32px 0;
   }
 
   .hero-title {
-    font-size: 40px;
+    font-size: 42px;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
+  .hero-sub {
+    font-size: 20px;
+  }
+
+  .hero-panel {
+    padding: 24px;
     gap: 20px;
   }
 
-  .layout {
-    grid-template-columns: 1fr;
-    gap: 32px;
+  .profile-pic {
+    width: 130px;
+    height: 130px;
+  }
+
+  .hero-panel-body {
+    font-size: 19px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .section-title-main {
+    font-size: 38px;
+  }
+
+  .section-note,
+  .section-note-main {
+    font-size: 19px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .pill-list {
+    font-size: 19px;
+  }
+
+  .bullet-list {
+    font-size: 19px;
+  }
+
+  .experience-timeline {
+    padding-left: 52px;
+  }
+
+  .experience-timeline::before {
+    left: 20px;
+  }
+
+  .exp-item::before {
+    left: -38px;
+  }
+
+  .exp-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .exp-role {
+    font-size: 19px;
+  }
+
+  .exp-company {
+    font-size: 18px;
   }
 
   .product-header {
-    padding: 20px 24px;
+    padding: 24px 24px;
   }
 
   .product-card {
@@ -723,180 +840,63 @@ main {
   }
 
   .product-name {
-    font-size: 24px;
-  }
-
-  .section-title-main {
-    font-size: 36px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  body {
-    font-size: 16px;
-    padding-top: 70px;
-  }
-
-  .nav {
-    padding: 14px 16px;
-  }
-
-  .brand {
-    font-size: 18px;
-  }
-
-  .nav-links {
-    gap: 20px;
-    font-size: 15px;
-  }
-
-  main {
-    padding: 32px 16px 48px;
-  }
-
-  .page-section {
-    padding: 24px 0;
-  }
-
-  .hero-title {
-    font-size: 32px;
-  }
-
-  .hero-sub {
-    font-size: 17px;
-  }
-
-  .hero-panel {
-    padding: 20px;
-    gap: 16px;
-  }
-
-  .profile-pic {
-    width: 100px;
-    height: 100px;
-  }
-
-  .hero-panel-body {
-    font-size: 16px;
-  }
-
-  .section-title {
-    font-size: 15px;
-  }
-
-  .section-title-main {
-    font-size: 28px;
-  }
-
-  .section-note,
-  .section-note-main {
-    font-size: 16px;
-  }
-
-  .card {
-    padding: 16px;
-  }
-
-  .pill-list {
-    font-size: 16px;
-  }
-
-  .bullet-list {
-    font-size: 16px;
-  }
-
-  .experience-timeline {
-    padding-left: 40px;
-  }
-
-  .experience-timeline::before {
-    left: 16px;
-  }
-
-  .exp-item::before {
-    left: -30px;
-  }
-
-  .exp-logo {
-    width: 48px;
-    height: 48px;
-  }
-
-  .exp-role {
-    font-size: 16px;
-  }
-
-  .exp-company {
-    font-size: 15px;
-  }
-
-  .product-header {
-    padding: 18px 20px;
-  }
-
-  .product-card {
-    padding: 0 20px 20px 20px;
-  }
-
-  .product-name {
-    font-size: 20px;
+    font-size: 26px;
   }
 
   .carousel-wrapper {
-    gap: 12px;
+    gap: 16px;
   }
 
   .carousel-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 18px;
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
   }
 
   .carousel-caption {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .links-inline {
-    gap: 8px;
+    gap: 12px;
   }
 
   .link-chip {
-    font-size: 14px;
-    padding: 8px 12px;
+    font-size: 16px;
+    padding: 12px 16px;
   }
 
   .btn-link {
-    font-size: 14px;
-    padding: 8px 14px;
+    font-size: 16px;
+    padding: 12px 18px;
   }
 
   .contact-info {
-    font-size: 16px;
+    font-size: 19px;
   }
 
   .contact-info strong,
   .contact-info span {
-    font-size: 16px;
+    font-size: 19px;
   }
 }
 
 /* Extra small mobile */
 @media (max-width: 400px) {
   .hero-title {
-    font-size: 28px;
+    font-size: 36px;
   }
 
   .section-title-main {
-    font-size: 24px;
+    font-size: 32px;
   }
 
   .product-name {
-    font-size: 18px;
+    font-size: 24px;
   }
 
   .nav-links {
-    gap: 16px;
-    font-size: 14px;
+    gap: 20px;
+    font-size: 16px;
   }
 }
