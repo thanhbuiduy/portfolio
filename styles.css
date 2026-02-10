@@ -285,6 +285,24 @@ position: relative;
 margin-bottom: 32px;
 padding-left: 0;
 }
+/* Chấm tròn nằm trên đường dọc, không che logo */
+.exp-item::before {
+  content: '';
+  position: absolute;
+  left: -26px;
+  top: 8px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #f9fafb;
+  border: 3px solid #d1d5db;
+  z-index: 2;
+}
+/* chấm cho job hiện tại */
+.exp-current::before {
+  background-color: #0f62fe;
+  border-color: #ffffff;
+}
 .exp-year {
 font-size: 13px;
 color: #666;
