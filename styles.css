@@ -54,9 +54,10 @@ header {
 }
 
 .brand {
-  font-size: 52px;
+  font-size: 60px;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  color:#070570;
+  letter-spacing: 0.05em;
 }
 
 .nav-links {
