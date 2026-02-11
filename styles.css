@@ -390,3 +390,45 @@ a.contact-value:hover { color: var(--accent); }
   .tools-grid { grid-template-columns: 1fr 1fr; }
   .contact-heading { font-size: clamp(24px, 5vw, 32px); }
 }
+/* ── LANGUAGE TOGGLE ── */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 3px;
+  border-radius: 999px;
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+.lang-option {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+  color: var(--text-tertiary);
+  transition: all 0.2s;
+}
+.lang-option.active {
+  background: var(--text);
+  color: white;
+}
+
+/* ── LANGUAGE VISIBILITY ── */
+[data-lang-vi] { display: none; }
+[data-lang-en] { display: inline; }
+
+body[data-lang="vi"] [data-lang-en] { display: none; }
+body[data-lang="vi"] [data-lang-vi] { display: inline; }
+
+/* Block-level elements that need display:block instead of inline */
+p[data-lang-vi],
+ul[data-lang-vi] { display: none; }
+
+body[data-lang="vi"] p[data-lang-en],
+body[data-lang="vi"] ul[data-lang-en] { display: none; }
+
+body[data-lang="vi"] p[data-lang-vi] { display: block; }
+body[data-lang="vi"] ul[data-lang-vi] { display: block; }
