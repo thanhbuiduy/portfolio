@@ -51,9 +51,9 @@ button { font: inherit; border: none; background: none; cursor: pointer; }
   padding: 0 var(--gutter); height: 72px;
   display: flex; align-items: center; justify-content: space-between;
 }
-.brand { font-size: 30px; font-weight: 600; color: var(--text); }
+.brand { font-size: 28px; font-weight: 600; color: var(--text); }
 .nav-links { display: flex; gap: 44px; }
-.nav-link { font-size: 28px; color: var(--text-secondary); transition: color 0.2s; }
+.nav-link { font-size: 26px; color: var(--text-secondary); transition: color 0.2s; }
 .nav-link:hover, .nav-link.active { color: var(--text); }
 .nav-toggle { display: none; flex-direction: column; gap: 6px; padding: 8px; }
 .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 1px; transition: transform 0.25s; }
