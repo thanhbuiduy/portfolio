@@ -2,702 +2,531 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>thanh's portfolio</title>
+  <title>Thanh Bui — Learning & Development</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_3kWOr8aiGhzn4KnB9r8iw98kUwZp51o_HaPscW7Qr4Iw-1iAMBYPX7MwJFhDQpjfQ6ikUBziFIahu1AnDGV1PpnXHSrvVdzr2JYdi1QJlumiB_mjFsrUuQq7fYxusqWNtXgt2S1CFS1qBkGiaw-1Z4jZnrpzyGyeRoBJkT7LNixDNQ/s1600/profile.JPG">
+  <meta name="description" content="Thanh Bui builds and improves learning systems for organisations — leadership development, workshop facilitation, and learning design.">
+  <link rel="icon" type="image/png" href="images/profile.JPG">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
   <!-- HEADER -->
-  <header>
-    <div class="nav">
-      <div class="brand">thanh bui</div>
-      <nav class="nav-links">
-        <a href="#about" class="nav-link">About</a>
+  <header class="header">
+    <nav class="nav">
+      <a href="#" class="brand">thanh bui</a>
+      <div class="nav-links">
+        <a href="#about" class="nav-link active">About</a>
+        <a href="#how-i-work" class="nav-link">How I Work</a>
         <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
         <a href="#contact" class="nav-link">Contact</a>
-      </nav>
-    </div>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
   </header>
 
   <main>
-    <!-- ABOUT SECTION -->
-    <section id="about" class="page-section">
-      <!-- HERO -->
-      <div class="hero">
-        <div>
-          <h1 class="hero-title">Design Meaningful Learning Experience</h1>
-        </div>
 
-        <aside class="hero-panel">
-          <div class="profile-pic">
-            <img src="images/profile.JPG" alt="Thanh Bui profile photo">
+    <!-- ==============================
+         1. OPENING / HERO
+    ============================== -->
+    <section id="about" class="section hero-section">
+      <div class="hero-grid">
+        <div class="hero-text" >
+          <h1 class="hero-title">I build and improve<br>learning systems<br>for organisations.</h1>
+          <p class="hero-body">
+            At most places I've joined, leadership development was missing, learning data was limited, or training didn't connect to real business problems. I work with leaders to figure out what's needed, design the programmes, and deliver them — across manufacturing, multi-business groups, tech, and higher education.
+          </p>
+        </div>
+        <aside class="hero-card" >
+          <div class="hero-photo">
+            <img src="images/profile.JPG" alt="Thanh Bui" width="200" height="200">
           </div>
+          <div class="hero-card-body">
+            <p class="hero-card-name">Thanh Bui</p>
+            <p class="hero-card-role">L&D Specialist</p>
+            <div class="hero-tags">
+              <span class="tag">Learning Design</span>
+              <span class="tag">Facilitation</span>
+              <span class="tag">Leadership Development</span>
+              <span class="tag">Stakeholder Management</span>
+              <span class="tag">Learning Needs Analysis</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ==============================
+         2. HOW I WORK — 2x2 grid
+    ============================== -->
+    <section id="how-i-work" class="section">
+      <h2 class="section-label">How I Work</h2>
+      <div class="work-grid">
+        <div class="work-cell" >
+          <h3 class="work-cell-title">Start with what learners actually need</h3>
+          <p>Before designing anything, I try to understand the real situation — whether that's through conversations with managers, learning needs analysis with participants, or working with HRBPs. Sometimes the need is clear, sometimes people don't yet know what they need. Either way, I dig into it before building content. Even when hiring external vendors, I run learning needs analysis with learners first so the programme fits, not just fills a schedule.</p>
+        </div>
+        <div class="work-cell" >
+          <h3 class="work-cell-title">Build with what's available</h3>
+          <p>Not every organisation has a big L&D budget — especially after COVID. At Dai Viet Group, I negotiated trainer fees down by half, invited internal experts and external volunteers to teach, and worked with developers to build a gamification platform. The full leadership programme ran on a fraction of the original estimated cost.</p>
+        </div>
+        <div class="work-cell" >
+          <h3 class="work-cell-title">Do the work, not just the plan</h3>
+          <p>I design programmes and I also deliver them. I facilitate workshops, run training sessions, and stay close to how learners actually respond. At Samsung, that meant teaching across 3 shifts including night shifts to reach 10,000 factory workers. At RMIT, I facilitate sessions on AI, debate, and critical thinking — not just coordinate them.</p>
+        </div>
+        <div class="work-cell" >
+          <h3 class="work-cell-title">Make learning part of how the organisation works</h3>
+          <p>I focus on building systems that last beyond a single training event. At RMIT, learning hours grew from 7,000 to 11,000 per year — not because of one programme, but because of a series of initiatives: the first lunch & learn series, the first leadership programme for academic managers, the first AI productivity workshops, and 170+ staff participating in cross-department sharing for the first time.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         3. SELECTED PROJECTS
+    ============================== -->
+    <section id="projects" class="section">
+      <h2 class="section-label">Selected Projects</h2>
+
+      <!-- Project 1: Leading for Impact -->
+      <div class="project" >
+        <button class="project-header" aria-expanded="false" data-target="proj1">
           <div>
-            <div class="hero-panel-title">Short introduction</div>
-            <div class="hero-panel-body">
-              Thanh designs and delivers learning journeys that connect business goals with human experience, from multi‑month leadership programmes to hands‑on workshops and eLearning modules.
+            <span class="project-category">Leadership Development</span>
+            <h3 class="project-name">Leading for Impact — RMIT Vietnam (2025)</h3>
           </div>
-        </aside>
-      </div>
-
-      <!-- EXPERIENCE TIMELINE -->
-      <div style="margin-bottom: 32px;">
-        <h2 class="section-title">Experience</h2>
-        <p class="section-note">
-          A quick timeline of key in‑house learning & development roles across different industries.
-        </p>
-
-        <div class="experience-timeline">
-          <div class="exp-item exp-current">
-            <div class="exp-year">2023 – present</div>
-            <div class="exp-content">
-              <div class="exp-logo">
-                <img src="images/rmit.png" alt="RMIT Vietnam logo">
-              </div>
-              <div>
-                <div class="exp-role">L&D Specialist</div>
-                <div class="exp-company">RMIT Vietnam</div>
-              </div>
+          <svg class="project-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="project-body" id="proj1">
+          <div class="project-content">
+            <div class="project-section">
+              <h4 class="project-section-label">Problem</h4>
+              <p>RMIT Vietnam had no leadership development programme for academic programme managers. These managers handled both academic and people responsibilities but had no structured support for the leadership side.</p>
             </div>
-          </div>
-
-          <div class="exp-item">
-            <div class="exp-year">2022 – 2023</div>
-            <div class="exp-content">
-              <div class="exp-logo">
-                <img src="images/shopee.png" alt="Shopee logo">
-              </div>
-              <div>
-                <div class="exp-role">L&D Partner</div>
-                <div class="exp-company">Shopee</div>
-              </div>
+            <div class="project-section">
+              <h4 class="project-section-label">What I did</h4>
+              <p>Worked with senior leaders to identify the key gaps. Designed a hybrid programme combining in-person workshops with digital follow-up. Built reflection journals in Padlet for peer learning. Focused on practical tools — coaching conversations, feedback frameworks — not just theory.</p>
             </div>
-          </div>
-
-          <div class="exp-item">
-            <div class="exp-year">2019 – 2022</div>
-            <div class="exp-content">
-              <div class="exp-logo">
-                <img src="images/dvg.png" alt="Dai Viet Group logo">
-              </div>
-              <div>
-                <div class="exp-role">L&D Specialist</div>
-                <div class="exp-company">Dai Viet Group</div>
-              </div>
+            <div class="project-section">
+              <h4 class="project-section-label">Result</h4>
+              <p>80 managers participated in the first rollout. Most common feedback: "safe practice space" and "realistic scenarios."</p>
             </div>
-          </div>
-
-          <div class="exp-item">
-            <div class="exp-year">2016 – 2019</div>
-            <div class="exp-content">
-              <div class="exp-logo">
-                <img src="images/sdv.png" alt="Samsung Display Vietnam logo">
-              </div>
-              <div>
-                <div class="exp-role">Senior Training Professional</div>
-                <div class="exp-company">Samsung Display Vietnam</div>
-              </div>
+            <div class="project-gallery">
+              <figure class="gallery-item">
+                <img src="images/rmit-ldp.JPG" alt="Workshop participants engaging in group activity" loading="lazy">
+                <figcaption>Workshop participants in action</figcaption>
+              </figure>
+              <figure class="gallery-item">
+                <img src="images/rmit-ldp-2.JPG" alt="Padlet reflection wall" loading="lazy">
+                <figcaption>Padlet reflection wall for peer learning</figcaption>
+              </figure>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- CARDS GRID -->
-      <div class="grid">
-        <!-- CERTIFICATIONS -->
-        <article class="card">
-          <h3 class="card-title">Certifications</h3>
-          <div class="cert-row">
-            <div class="cert-item">
-              <img src="images/shrm.png" alt="SHRM certificate badge">
-              <div>
-                <div>SHRM Certified Professional</div>
-                <a href="https://www.credly.com/badges/d1f2b6aa-8134-49fc-95c4-e5b8ea5ee66c" target="_blank">View certificate</a>
-              </div>
+      <!-- Project 2: Change Management Workshop -->
+      <div class="project" >
+        <button class="project-header" aria-expanded="false" data-target="proj2">
+          <div>
+            <span class="project-category">Leadership Workshop</span>
+            <h3 class="project-name">Change Management Workshop — Leading E-commerce Company (2022)</h3>
+          </div>
+          <svg class="project-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="project-body" id="proj2">
+          <div class="project-content">
+            <div class="project-section">
+              <h4 class="project-section-label">Problem</h4>
+              <p>A leading e-commerce logistics operation was building one of its largest sorting centres while facing high rider turnover and increasing competition. Hub managers needed to lead their teams through constant operational changes but had no framework or tools to do it.</p>
             </div>
-            <div class="cert-item">
-              <img src="images/klfa.jpg" alt="KFLA practitioner badge">
-              <div>
-                <div>Korn Ferry Leadership Architect™ Certified Practitioner</div>
-                <a href="#" target="_blank">View certificate</a>
-              </div>
+            <div class="project-section">
+              <h4 class="project-section-label">What I did</h4>
+              <p>Worked with the Regional Operations Manager and HRBP to understand the specific challenges on the ground. Designed a half-day workshop combining a simulation game I created (later reused across multiple business entities), real case studies built with the Ops Manager, and a practical change management framework teams could use immediately.</p>
             </div>
-            <div class="cert-item">
-              <img src="images/tsp.png" alt="tsp">
-              <div>
-                <div>Certified Practitioner Team Psychological Safety by Leaders Create Leaders</div>
-                <a href="#" target="_blank">View certificate</a>
-              </div>
+            <div class="project-section">
+              <h4 class="project-section-label">Result</h4>
+              <p>4.8/5 on "can apply back to work." Most common feedback: wanted more sessions. The simulation game was adopted for workshops across food delivery and business development teams.</p>
             </div>
+            <p class="project-context">Designed and facilitated leadership workshops across 4 entities — logistics, business development, food delivery — each customised to the team's specific challenges.</p>
+            <blockquote class="project-quote">"Real-life examples, engaging facilitation, clear delivery"<span>— Participant feedback</span></blockquote>
           </div>
-        </article>
-
-        <!-- SKILLS -->
-        <article class="card">
-          <h3 class="card-title">Skills</h3>
-          <div class="hero-tags">
-            <span class="tag">Learning Design</span>
-            <span class="tag">Facilitation</span>
-            <span class="tag">Leadership Development</span>
-            <span class="tag">eLearning</span>
-          </div>
-          </div>
-             
-        </article>
-
-        <!-- TOOLS -->
-        <article class="card">
-          <h3 class="card-title">Tools</h3>
-          <div class="pill-list">
-            <div class="pill">LMS: Workday Learning</div>
-            <div class="pill">Design: PowerPoint, Google Slides, Canva</div>
-            <div class="pill">eLearning: Articulate Storyline</div>
-            <div class="pill">Analytics: Excel, Power BI</div>
-            <div class="pill">Collaboration: Miro, Padlet</div>
-          </div>
-        </article>
+        </div>
       </div>
 
-      <!-- WHERE TO EXPLORE MORE -->
-      <div>
-        <h2 class="section-title">Where to explore more</h2>
-        <p class="section-note">
-          You can find more writing, prototypes and workshop boards on these platforms.
-        </p>
-        <div class="links-inline">
-          <span class="link-chip"><strong>LinkedIn</strong> – ideas on learning & leadership</span>
-          <span class="link-chip"><strong>Padlet</strong> – learning walls & resources</span>
-          <span class="link-chip"><strong>Miro</strong> – structures, flows & workshop boards</span>
+      <!-- Project 3: Leadership Development Programme — DVG -->
+      <div class="project" >
+        <button class="project-header" aria-expanded="false" data-target="proj3">
+          <div>
+            <span class="project-category">Leadership Development</span>
+            <h3 class="project-name">Leadership Development Programme — Dai Viet Group (2021)</h3>
+          </div>
+          <svg class="project-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="project-body" id="proj3">
+          <div class="project-content">
+            <div class="project-section">
+              <h4 class="project-section-label">Problem</h4>
+              <p>Dai Viet Group (~800 employees, multiple business lines) had no structured leadership development. Leaders worked in silos and rarely understood each other's work. Budget was severely limited post-COVID.</p>
+            </div>
+            <div class="project-section">
+              <h4 class="project-section-label">What I did</h4>
+              <p>Worked directly with CEO, CFO, and CHRO to design the programme. Kept costs low by negotiating trainer fees, inviting an ex-McKinsey strategist and other experts to teach pro bono, and leveraging internal managers as mentors. Built case studies with the CEO and designed a capstone project. Worked with developers to create a gamification website tracking participation across workshops, book reviews, and article summaries. In parallel, ran 52 knowledge-sharing sessions with internal SMEs from IT, marketing, finance, and other teams.</p>
+            </div>
+            <div class="project-section">
+              <h4 class="project-section-label">Result</h4>
+              <p>45 senior managers completed the 6-month programme. Leaders reported better cross-department understanding. The gamification system and SME sharing series created ongoing learning habits beyond the formal programme.</p>
+            </div>
+            <div class="project-gallery">
+              <figure class="gallery-item gallery-video">
+                <div class="video-embed">
+                  <iframe src="https://www.youtube.com/embed/K9CEfFe8uvY" title="Dai Viet Group Leadership Programme" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <figcaption>Programme overview video</figcaption>
+              </figure>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
-    <section id="projects" class="page-section">
-      <h1 class="section-title">Selected projects</h1>
-      <p class="section-note">
-        Each product combines learning design, facilitation, and technology. Links below are prototypes so you can see how Storyline, SCORM and collaboration tools appear.
-      </p>
-
-      <!-- Product 1 -->
-      <div class="product-grid">
-        <div class="product-header" onclick="toggleAccordion('product1')">
-          <div class="product-header-content">
-            <div class="product-category">Leadership Development</div>
-            <div class="product-name">Leading for Impact – RMIT (2025)</div>
-          </div>
-          <div class="accordion-icon" id="icon1">▼</div>
-        </div>
-        <div class="product-content" id="product1">
-          <article class="product-card">
-            <div class="label">Context & requirements</div>
-            <ul class="bullet-list">
-              <li>Programme for mid-level leaders to strengthen coaching and feedback skills.</li>
-              <li>Hybrid delivery: in-person workshops plus digital follow-up.</li>
-              <li>Need practical tools, not just theory.</li>
-            </ul>
-
-            <div class="label">Learning approach</div>
-            <ul class="bullet-list">
-              <li>Interactive cases and branching conversations in Storyline.</li>
-              <li>Reflection journals hosted in Padlet for peer learning.</li>
-              <li>Session flows and frameworks captured in Miro.</li>
-            </ul>
-
-            <div class="label">Result</div>
-            <ul class="bullet-list">
-              <li>80 managers participated in the first rollout.</li>
-              <li>90% indicated they used at least one tool within 4 weeks.</li>
-              <li>Qualitative feedback highlighted "safe practice space" and "realistic scenarios".</li>
-            </ul>
-
-            <div class="carousel-container">
-              <div class="carousel-wrapper">
-                <button class="carousel-btn" onclick="moveCarousel('carousel1', -1)">‹</button>
-                <div class="carousel" id="carousel1">
-                  <div class="carousel-track">
-                    <div class="carousel-item">
-                      <img src="images/rmit-ldp.JPG" alt="room setting">
-                      <div class="carousel-caption">LDP Room Setting</div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="images/rmit-ldp-2.JPG" alt="Reflection Journal">
-                      <div class="carousel-caption">Peer reflection journals in Padlet</div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/ec4899/fff?text=Framework+Map" alt="Framework">
-                      <div class="carousel-caption">Leadership frameworks mapped in Miro</div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/f59e0b/fff?text=Practice+Space" alt="Practice">
-                      <div class="carousel-caption">Safe practice environment for coaching</div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/10b981/fff?text=Feedback+Tools" alt="Tools">
-                      <div class="carousel-caption">Practical feedback tools and templates</div>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-btn" onclick="moveCarousel('carousel1', 1)">›</button>
-              </div>
-            </div>
-
-            <div class="links-row">
-              <a class="btn-link primary" href="#" target="_blank">View Storyline demo</a>
-              <a class="btn-link" href="#" target="_blank">Padlet reflection wall</a>
-              <a class="btn-link" href="#" target="_blank">Miro programme map</a>
-            </div>
-          </article>
-        </div>
+    <!-- ==============================
+         5. TESTIMONIALS
+    ============================== -->
+    <section class="section section-muted">
+      <h2 class="section-label">What People Say</h2>
+      <div class="testimonial-grid">
+        <blockquote class="testimonial" >
+          <p>"When I hired Thanh, I couldn't have imagined what he was capable of. Any organization would be lucky to have him until we can clone him."</p>
+          <footer>
+            <strong>Haico Kuut</strong>
+            <span>Former manager at RMIT Vietnam</span>
+          </footer>
+        </blockquote>
+        <blockquote class="testimonial" >
+          <p>"Thanh is a good doer, who always find the way to get thing done, and also a good team player."</p>
+          <footer>
+            <strong>Khoa Nguyen</strong>
+            <span>CPA, PMP, SHRM-SCP — Former OD Manager at Dai Viet Group</span>
+          </footer>
+        </blockquote>
+        <blockquote class="testimonial" >
+          <p>"He never gives up even when the budget is 0, he always thinks and finds out solutions for any issue."</p>
+          <footer>
+            <strong>Hang Tran</strong>
+            <span>SHRM-SCP — Former colleague at Dai Viet Group</span>
+          </footer>
+        </blockquote>
       </div>
+    </section>
 
-      <!-- Product 2 -->
-      <div class="product-grid">
-        <div class="product-header" onclick="toggleAccordion('product2')">
-          <div class="product-header-content">
-            <div class="product-category">Leadership Development</div>
-            <div class="product-name">Leadership Development Programme – Dai Viet Group (2021)</div>
-          </div>
-          <div class="accordion-icon" id="icon2">▼</div>
-        </div>
-        <div class="product-content" id="product2">
-          <article class="product-card">
-            <div class="label">Context & requirements</div>
-            <ul class="bullet-list">
-              <li>Comprehensive leadership programme for senior managers at Dai Viet Group.</li>
-              <li>Focus on strategic thinking, team management, and organizational transformation.</li>
-              <li>Blended learning approach with in-person sessions and online modules.</li>
-            </ul>
+    <!-- ==============================
+         EXPERIENCE TIMELINE
+    ============================== -->
+    <section id="experience" class="section">
+      <h2 class="section-label">Experience</h2>
+      <div class="timeline">
 
-            <div class="label">Learning approach</div>
-            <ul class="bullet-list">
-              <li>Custom leadership assessment and 360-degree feedback tools.</li>
-              <li>Interactive workshops with real business case studies.</li>
-              <li>Action learning projects aligned with company goals.</li>
-            </ul>
-
-            <div class="label">Result</div>
-            <ul class="bullet-list">
-              <li>45 senior managers completed the 6-month programme.</li>
-              <li>Improved leadership capability scores by an average of 28%.</li>
-              <li>3 action learning projects implemented organization-wide.</li>
-            </ul>
-
-            <div class="carousel-container">
-              <div class="carousel-wrapper">
-                <button class="carousel-btn" onclick="moveCarousel('carousel2', -1)">‹</button>
-                <div class="carousel" id="carousel2">
-                  <div class="carousel-track">
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/6366f1/fff?text=Assessment+Tool" alt="Assessment Tool">
-                      <div class="carousel-caption">Leadership assessment dashboard</div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/8b5cf6/fff?text=Workshop+Session" alt="Workshop">
-                      <div class="carousel-caption">Interactive workshop facilitation</div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/ec4899/fff?text=Case+Studies" alt="Case Studies">
-                      <div class="carousel-caption">Business case analysis sessions</div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/f59e0b/fff?text=Action+Learning" alt="Action Learning">
-                      <div class="carousel-caption">Action learning project teams</div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/10b981/fff?text=Results+Report" alt="Results">
-                      <div class="carousel-caption">Programme impact and outcomes</div>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-btn" onclick="moveCarousel('carousel2', 1)">›</button>
+        <div class="timeline-item current" >
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2023 – present</span>
+            <div class="timeline-row">
+              <img src="images/rmit.png" alt="RMIT Vietnam" class="timeline-logo">
+              <div>
+                <p class="timeline-role">L&D Specialist</p>
+                <p class="timeline-company">RMIT Vietnam</p>
+                <p class="timeline-highlight">Grew learning hours from 7K to 11K/year. Built first leadership programme for academic managers, first AI productivity workshops, first cross-department lunch & learn series.</p>
               </div>
             </div>
-
-            <div class="links-row">
-              <a class="btn-link primary" href="#" target="_blank">View programme overview</a>
-              <a class="btn-link" href="#" target="_blank">Assessment tool</a>
-            </div>
-          </article>
+          </div>
         </div>
+
+        <div class="timeline-item" >
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2022 – 2023</span>
+            <div class="timeline-row">
+              <img src="images/shopee.png" alt="Shopee" class="timeline-logo">
+              <div>
+                <p class="timeline-role">L&D Partner</p>
+                <p class="timeline-company">Shopee</p>
+                <p class="timeline-highlight">Partnered with business across 4 entities (1,600+ staff in BD alone). Designed and facilitated customised leadership workshops; created simulation game adopted company-wide.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" >
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2019 – 2022</span>
+            <div class="timeline-row">
+              <img src="images/dvg.png" alt="Dai Viet Group" class="timeline-logo">
+              <div>
+                <p class="timeline-role">L&D Specialist</p>
+                <p class="timeline-company">Dai Viet Group</p>
+                <p class="timeline-highlight">Built the company's first structured leadership programme from scratch, working directly with CEO, CFO, and CHRO. Ran 52 internal knowledge-sharing sessions in one year.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" >
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2016 – 2019</span>
+            <div class="timeline-row">
+              <img src="images/sdv.png" alt="Samsung Display Vietnam" class="timeline-logo">
+              <div>
+                <p class="timeline-role">Senior Training Professional</p>
+                <p class="timeline-company">Samsung Display Vietnam</p>
+                <p class="timeline-highlight">Managed training operations for 10,000+ employees. Led 60-person change manager network.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
+    </section>
 
-      <!-- Product 3 -->
-      <div class="product-grid">
-        <div class="product-header" onclick="toggleAccordion('product3')">
-          <div class="product-header-content">
-            <div class="product-category">Leadership Workshops</div>
-            <div class="product-name">Leadership Workshops – Shopee (2022)</div>
+    <!-- ==============================
+         6. CERTIFICATIONS
+    ============================== -->
+    <section class="section">
+      <h2 class="section-label">Certifications</h2>
+      <div class="cert-grid">
+        <a href="https://www.credly.com/badges/d1f2b6aa-8134-49fc-95c4-e5b8ea5ee66c" target="_blank" rel="noopener" class="cert-card" >
+          <img src="images/shrm.png" alt="SHRM-CP badge" class="cert-badge">
+          <div>
+            <p class="cert-name">SHRM Certified Professional</p>
+            <span class="cert-link">View on Credly ↗</span>
           </div>
-          <div class="accordion-icon" id="icon3">▼</div>
-        </div>
-        <div class="product-content" id="product3">
-          <article class="product-card">
-            <div class="label">Context & requirements</div>
-            <ul class="bullet-list">
-              <li>Fast-paced workshop series for team leaders in tech and operations.</li>
-              <li>Focus on agile leadership, remote team management, and quick decision-making.</li>
-              <li>High engagement required due to busy schedules.</li>
-            </ul>
-
-            <div class="label">Learning approach</div>
-            <ul class="bullet-list">
-              <li>90-minute intensive workshops with practical exercises.</li>
-              <li>Real-time simulations and role-playing activities.</li>
-              <li>Digital toolkit with templates and quick-reference guides.</li>
-            </ul>
-
-            <div class="label">Result</div>
-            <ul class="bullet-list">
-              <li>150+ team leaders participated across 8 workshop sessions.</li>
-              <li>4.7 / 5 average satisfaction rating.</li>
-              <li>92% reported applying at least two new techniques within one week.</li>
-            </ul>
-
-            <div class="carousel-container">
-              <div class="carousel-wrapper">
-                <button class="carousel-btn" onclick="moveCarousel('carousel3', -1)">‹</button>
-                <div class="carousel" id="carousel3">
-                  <div class="carousel-track">
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/3b82f6/fff?text=Workshop+Room" alt="Workshop">
-                      <div class="carousel-caption">Interactive workshop environment</div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/8b5cf6/fff?text=Simulation" alt="Simulation">
-                      <div class="carousel-caption">Leadership simulation exercises</div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/ec4899/fff?text=Digital+Toolkit" alt="Toolkit">
-                      <div class="carousel-caption">Digital toolkit and resources</div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/f59e0b/fff?text=Team+Activity" alt="Team Activity">
-                      <div class="carousel-caption">Collaborative team activities</div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/10b981/fff?text=Feedback+Session" alt="Feedback">
-                      <div class="carousel-caption">Participant feedback and insights</div>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-btn" onclick="moveCarousel('carousel3', 1)">›</button>
-              </div>
-            </div>
-
-            <div class="links-row">
-              <a class="btn-link primary" href="#" target="_blank">View workshop materials</a>
-              <a class="btn-link" href="#" target="_blank">Digital toolkit</a>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <!-- Product 4 -->
-      <div class="product-grid">
-        <div class="product-header" onclick="toggleAccordion('product4')">
-          <div class="product-header-content">
-            <div class="product-category">eLearning</div>
-            <div class="product-name">Leadership Essentials – RMIT Vietnam (2025)</div>
+        </a>
+        <div class="cert-card" >
+          <img src="images/klfa.jpg" alt="KFLA badge" class="cert-badge">
+          <div>
+            <p class="cert-name">Korn Ferry Leadership Architect™ Certified Practitioner</p>
           </div>
-          <div class="accordion-icon" id="icon4">▼</div>
         </div>
-        <div class="product-content" id="product4">
-          <article class="product-card">
-            <div class="label">Context & requirements</div>
-            <ul class="bullet-list">
-              <li>Self-paced eLearning for emerging leaders and students.</li>
-              <li>Cover foundational leadership concepts and essential skills.</li>
-              <li>Need engaging, mobile-friendly content with gamification.</li>
-            </ul>
-
-            <div class="label">Learning approach</div>
-            <ul class="bullet-list">
-              <li>Modular course built in Storyline with SCORM compliance.</li>
-              <li>Interactive scenarios with branching pathways.</li>
-              <li>Gamified elements including badges, points, and leaderboards.</li>
-            </ul>
-
-            <div class="label">Result</div>
-            <ul class="bullet-list">
-              <li>200+ students enrolled in the first semester.</li>
-              <li>88% completion rate within 6 weeks.</li>
-              <li>Students reported increased confidence in leadership situations.</li>
-            </ul>
-
-            <div class="carousel-container">
-              <div class="carousel-wrapper">
-                <button class="carousel-btn" onclick="moveCarousel('carousel4', -1)">‹</button>
-                <div class="carousel" id="carousel4">
-                  <div class="carousel-track">
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/6366f1/fff?text=Course+Interface" alt="Course Interface">
-                      <div class="carousel-caption">Modern eLearning interface</div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/8b5cf6/fff?text=Scenario+Module" alt="Scenario">
-                      <div class="carousel-caption">Interactive leadership scenarios</div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/ec4899/fff?text=Gamification" alt="Gamification">
-                      <div class="carousel-caption">Badges and achievement system</div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/f59e0b/fff?text=Mobile+View" alt="Mobile">
-                      <div class="carousel-caption">Mobile-responsive learning</div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/10b981/fff?text=Analytics" alt="Analytics">
-                      <div class="carousel-caption">Learning analytics dashboard</div>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-btn" onclick="moveCarousel('carousel4', 1)">›</button>
-              </div>
-            </div>
-
-            <div class="links-row">
-              <a class="btn-link primary" href="#" target="_blank">View Storyline demo</a>
-              <a class="btn-link" href="#" target="_blank">SCORM package</a>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <!-- Product 5 -->
-      <div class="product-grid">
-        <div class="product-header" onclick="toggleAccordion('product5')">
-          <div class="product-header-content">
-            <div class="product-category">eLearning</div>
-            <div class="product-name">Critical Thinking eLearning Module</div>
+        <div class="cert-card" >
+          <img src="images/tsp.png" alt="Team Psychological Safety badge" class="cert-badge">
+          <div>
+            <p class="cert-name">Certified Practitioner — Team Psychological Safety</p>
+            <span class="cert-issuer">Leaders Create Leaders</span>
           </div>
-          <div class="accordion-icon" id="icon5">▼</div>
-        </div>
-        <div class="product-content" id="product5">
-          <article class="product-card">
-            <div class="label">Context & requirements</div>
-            <ul class="bullet-list">
-              <li>Self-paced course for individual contributors to strengthen problem solving.</li>
-              <li>Need short, modular content that fits into busy schedules.</li>
-              <li>Client requested data on completion and key behaviours.</li>
-            </ul>
-
-            <div class="label">Learning approach</div>
-            <ul class="bullet-list">
-              <li>Micro-lessons built in Storyline and exported as SCORM for the LMS.</li>
-              <li>Interactive visualisations using simple HTML/CSS/JS embedded inside modules.</li>
-              <li>Power BI dashboard tracking progress and quiz results.</li>
-            </ul>
-
-            <div class="label">Result</div>
-            <ul class="bullet-list">
-              <li>85% completion rate within the first 3 months.</li>
-              <li>Managers reported clearer problem statements in project proposals.</li>
-              <li>Dashboard enabled monthly reporting to senior leadership.</li>
-            </ul>
-
-            <div class="carousel-container">
-              <div class="carousel-wrapper">
-                <button class="carousel-btn" onclick="moveCarousel('carousel5', -1)">‹</button>
-                <div class="carousel" id="carousel5">
-                  <div class="carousel-track">
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/6366f1/fff?text=Micro+Lessons" alt="Micro Lessons">
-                      <div class="carousel-caption">Bite-sized learning modules</div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/8b5cf6/fff?text=Interactive+Visual" alt="Visualizations">
-                      <div class="carousel-caption">Interactive data visualizations</div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/ec4899/fff?text=Power+BI+Dashboard" alt="Dashboard">
-                      <div class="carousel-caption">Power BI tracking dashboard</div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/f59e0b/fff?text=Quiz+Results" alt="Quiz">
-                      <div class="carousel-caption">Quiz results and progress metrics</div>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="https://placehold.co/800x450/10b981/fff?text=Completion+Rate" alt="Completion">
-                      <div class="carousel-caption">85% completion rate achieved</div>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-btn" onclick="moveCarousel('carousel5', 1)">›</button>
-              </div>
-            </div>
-
-            <div class="links-row">
-              <a class="btn-link primary" href="#" target="_blank">View Storyline demo</a>
-              <a class="btn-link" href="#" target="_blank">SCORM sample</a>
-              <a class="btn-link" href="#" target="_blank">Power BI dashboard</a>
-            </div>
-          </article>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="page-section">
-      <div class="layout">
+    <!-- ==============================
+         7. SKILLS & TOOLS
+    ============================== -->
+    <section class="section section-muted">
+      <div class="skills-tools-grid">
         <div>
-          <h1 class="section-title-main">I help organisation and individual by:</h1>
-          <p class="section-note-main">
-            Whether you are desining a new leadership programme, re-thinking onboarding, or prototyping digital learning products, feel free to reach out.
-          </p>
-          <div class="contact-info">
-            <div style="margin-bottom: 20px;">
-              <strong>Email</strong><br>
-              <span>hello@thanhbui.example</span>
+          <h2 class="section-label">Skills</h2>
+          <div class="chip-group">
+            <span class="chip">Learning Design</span>
+            <span class="chip">Facilitation</span>
+            <span class="chip">Leadership Development</span>
+            <span class="chip">Stakeholder Management</span>
+            <span class="chip">Learning Needs Analysis</span>
+          </div>
+        </div>
+        <div>
+          <h2 class="section-label">Tools</h2>
+          <div class="tools-grid">
+            <div class="tool-card">
+              <img src="https://cdn.simpleicons.org/articulatestoryline/E86C00" alt="Articulate Storyline" class="tool-logo">
+              <div class="tool-info">
+                <span class="tool-name">Articulate Storyline</span>
+                <span class="tool-desc">eLearning & SCORM</span>
+              </div>
             </div>
-            <div>
-              <strong>LinkedIn</strong><br>
-              <span>linkedin.com/in/thanhbui-example</span>
+            <div class="tool-card">
+              <img src="https://cdn.simpleicons.org/anthropic/181818" alt="Claude AI" class="tool-logo">
+              <div class="tool-info">
+                <span class="tool-name">Claude AI</span>
+                <span class="tool-desc">AI-assisted design</span>
+              </div>
+            </div>
+            <div class="tool-card">
+              <img src="https://cdn.simpleicons.org/google/4285F4" alt="NotebookLM" class="tool-logo">
+              <div class="tool-info">
+                <span class="tool-name">NotebookLM</span>
+                <span class="tool-desc">Knowledge management</span>
+              </div>
+            </div>
+            <div class="tool-card">
+              <img src="https://cdn.simpleicons.org/powerbi/F2C811" alt="Power BI" class="tool-logo">
+              <div class="tool-info">
+                <span class="tool-name">Power BI</span>
+                <span class="tool-desc">Learning data & analytics</span>
+              </div>
+            </div>
+            <div class="tool-card">
+              <img src="https://cdn.simpleicons.org/padlet/E03E98" alt="Padlet" class="tool-logo">
+              <div class="tool-info">
+                <span class="tool-name">Padlet</span>
+                <span class="tool-desc">Collaboration & reflection</span>
+              </div>
+            </div>
+            <div class="tool-card">
+              <img src="https://cdn.simpleicons.org/miro/FFD02F" alt="Miro" class="tool-logo">
+              <div class="tool-info">
+                <span class="tool-name">Miro</span>
+                <span class="tool-desc">Workshop boards & flows</span>
+              </div>
+            </div>
+            <div class="tool-card">
+              <img src="https://cdn.simpleicons.org/workday/0875E1" alt="Workday" class="tool-logo">
+              <div class="tool-info">
+                <span class="tool-name">Workday Learning</span>
+                <span class="tool-desc">LMS administration</span>
+              </div>
+            </div>
+            <div class="tool-card">
+              <img src="https://cdn.simpleicons.org/canva/00C4CC" alt="Canva" class="tool-logo">
+              <div class="tool-info">
+                <span class="tool-name">Canva</span>
+                <span class="tool-desc">Visual design</span>
+              </div>
             </div>
           </div>
         </div>
-        <aside class="card">
-          <div class="label">Services I can offer:</div>
-          <div class="pill-list">
-            <span class="pill">Leadership & soft skills programmes Design</span>
-            <span class="pill">Workshop design & facilitation</span>
-            <span class="pill">Coaching & Mentoring</span>
-            <span class="pill">Design Learning Strategy & Learning System for you Organisation</span>
-            <span class="pill">Learning tech & analytics</span>
-            <span class="pill">eLearning & SCORM modules</span>
-          </div>
-          <p class="hint">
-            Feel free to drop me a message or let's have a coffee catch up.
-          </p>
-        </aside>
       </div>
     </section>
+
+    <!-- ==============================
+         8. CONTACT
+    ============================== -->
+    <section id="contact" class="section">
+      <div class="contact-grid">
+        <div>
+          <h2 class="contact-heading">Let's create meaningful<br>learning experiences.</h2>
+          <p class="contact-sub">I can help with designing leadership programmes, facilitating workshops, building learning strategies and systems, or setting up learning analytics. If any of that sounds useful, I'd love to have a conversation.</p>
+        </div>
+        <div class="contact-details">
+          <div class="contact-row">
+            <span class="contact-label">Email</span>
+            <a href="mailto:hello@thanhbui.example" class="contact-value">hello@thanhbui.example</a>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">LinkedIn</span>
+            <a href="https://linkedin.com/in/thanhbui-example" target="_blank" rel="noopener" class="contact-value">linkedin.com/in/thanhbui-example</a>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">Blog</span>
+            <a href="#" class="contact-value">thanhbui.blog</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- Image Modal -->
-  <div class="image-modal" id="imageModal">
-    <span class="image-modal-close" onclick="closeImageModal()">&times;</span>
-    <img id="imageModalImg" src="" alt="Preview">
+  <footer class="site-footer">
+    <p>© 2025 Thanh Bui</p>
+  </footer>
+
+  <!-- IMAGE LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="">
   </div>
 
   <script>
-    // Smooth scroll for navigation
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', function(e) {
+    // ── Nav: smooth scroll + active state ──
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.section, [id]');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
         e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        // close mobile nav
+        document.body.classList.remove('nav-open');
+        document.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Active nav on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          if (id) {
+            navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
+          }
+        }
+      });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+
+    document.querySelectorAll('section[id]').forEach(s => observer.observe(s));
+
+    // ── Mobile nav toggle ──
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      document.body.classList.toggle('nav-open');
+    });
+
+    // ── Project accordion ──
+    document.querySelectorAll('.project-header').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById(btn.dataset.target);
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
         
-        if (targetSection) {
-          const headerOffset = 80;
-          const elementPosition = targetSection.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        }
-
-        // Update active state
-        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
+        btn.setAttribute('aria-expanded', !isOpen);
+        target.classList.toggle('open');
       });
     });
 
-    // Update active nav on scroll
-    window.addEventListener('scroll', () => {
-      const sections = document.querySelectorAll('.page-section');
-      const navLinks = document.querySelectorAll('.nav-link');
-      
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.pageYOffset >= sectionTop - 100) {
-          current = section.getAttribute('id');
-        }
-      });
+    // ── Lightbox ──
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
 
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
-        }
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
       });
     });
 
-    // Carousel functionality
-    const carousels = {};
-
-    function initCarousel(id) {
-      const carousel = document.getElementById(id);
-      if (!carousel) return;
-      const track = carousel.querySelector('.carousel-track');
-      const items = Array.from(track.children);
-      
-      carousels[id] = {
-        track: track,
-        items: items,
-        currentIndex: 0,
-        totalItems: items.length
-      };
-    }
-
-    function moveCarousel(id, direction) {
-      const carousel = carousels[id];
-      if (!carousel) return;
-      
-      carousel.currentIndex += direction;
-      
-      if (carousel.currentIndex < 0) {
-        carousel.currentIndex = carousel.totalItems - 1;
-      } else if (carousel.currentIndex > carousel.totalItems - 1) {
-        carousel.currentIndex = 0;
-      }
-      
-      const offset = -carousel.currentIndex * 100;
-      carousel.track.style.transform = `translateX(${offset}%)`;
-    }
-
-    function toggleAccordion(id) {
-      const content = document.getElementById(id);
-      const iconNum = id.replace('product', '');
-      const icon = document.getElementById('icon' + iconNum);
-      
-      content.classList.toggle('open');
-      icon.classList.toggle('open');
-      
-      if (content.classList.contains('open')) {
-        const carouselId = 'carousel' + iconNum;
-        if (!carousels[carouselId]) {
-          initCarousel(carouselId);
-        }
-      }
-    }
-
-    function openImageModal(src, alt) {
-      const modal = document.getElementById('imageModal');
-      const img = document.getElementById('imageModalImg');
-      img.src = src;
-      img.alt = alt || '';
-      modal.classList.add('open');
-    }
-
-    function closeImageModal() {
-      const modal = document.getElementById('imageModal');
-      modal.classList.remove('open');
-    }
-
-    document.addEventListener('click', function (e) {
-      if (e.target.matches('.carousel-item img')) {
-        openImageModal(e.target.src, e.target.alt);
-      }
-      if (e.target.id === 'imageModal') {
-        closeImageModal();
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
       }
     });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+      }
+    });
+
+    // ── Scroll reveal animation ──
+    const reveal = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          reveal.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('[data-reveal]').forEach(el => reveal.observe(el));
   </script>
 </body>
 </html>
