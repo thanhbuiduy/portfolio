@@ -19,7 +19,7 @@
   --shadow-sm: 0 2px 6px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.06);
   --shadow-md: 0 6px 20px rgba(0,0,0,0.06), 0 2px 6px rgba(0,0,0,0.04);
   --max-w: 1320px;
-  --gutter: 48px;
+  --gutter: 40px;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -27,8 +27,8 @@ html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
 
 body {
   font-family: var(--font);
-  font-size: 22px;
-  line-height: 1.7;
+  font-size: 20px;
+  line-height: 1.6;
   color: var(--text);
   background: var(--bg);
   padding-top: 72px;
@@ -48,12 +48,12 @@ button { font: inherit; border: none; background: none; cursor: pointer; }
 }
 .nav {
   max-width: var(--max-w); margin: 0 auto;
-  padding: 0 var(--gutter); height: 72px;
+  padding: 0 var(--gutter); height: 64px;
   display: flex; align-items: center; justify-content: space-between;
 }
-.brand { font-size: 28px; font-weight: 600; color: var(--text); }
+.brand { font-size: 26px; font-weight: 600; color: var(--text); }
 .nav-links { display: flex; gap: 44px; }
-.nav-link { font-size: 26px; color: var(--text-secondary); transition: color 0.2s; }
+.nav-link { font-size: 24px; color: var(--text-secondary); transition: color 0.2s; }
 .nav-link:hover, .nav-link.active { color: var(--text); }
 .nav-toggle { display: none; flex-direction: column; gap: 6px; padding: 8px; }
 .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 1px; transition: transform 0.25s; }
@@ -61,7 +61,7 @@ button { font: inherit; border: none; background: none; cursor: pointer; }
 /* ── SECTIONS ── */
 .section {
   max-width: var(--max-w); margin: 0 auto;
-  padding: 100px var(--gutter); scroll-margin-top: 72px;
+  padding: 90px var(--gutter); scroll-margin-top: 72px;
 }
 .section-muted { max-width: none; background: var(--bg-muted); }
 .section-muted > * { max-width: var(--max-w); margin-left: auto; margin-right: auto; }
@@ -77,11 +77,11 @@ button { font: inherit; border: none; background: none; cursor: pointer; }
   gap: 72px; align-items: center;
 }
 .hero-title {
-  font-size: clamp(48px, 5.5vw, 72px);
+  font-size: clamp(36px, 5.5vw, 72px);
   font-weight: 700; line-height: 1.1;
   letter-spacing: -0.03em; margin-bottom: 32px;
 }
-.hero-body { font-size: 24px; color: var(--text-secondary); max-width: 720px; line-height: 1.7; }
+.hero-body { font-size: 22px; color: var(--text-secondary); max-width: 720px; line-height: 1.7; }
 .hero-photo {
   width: 260px; height: 260px; border-radius: 50%;
   overflow: hidden; flex-shrink: 0;
@@ -126,13 +126,13 @@ button { font: inherit; border: none; background: none; cursor: pointer; }
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 36px 40px;
+  padding: 28px 32px;
   flex: 1;
   transition: box-shadow 0.3s;
 }
 .step-content:hover { box-shadow: var(--shadow-md); }
 .step-title { font-size: 26px; font-weight: 600; margin-bottom: 12px; line-height: 1.25; }
-.step-content p { font-size: 21px; color: var(--text-secondary); line-height: 1.7; }
+.step-content p { font-size: 19px; color: var(--text-secondary); line-height: 1.7; }
 
 /* ── PROJECTS ── */
 .project {
@@ -178,7 +178,7 @@ button { font: inherit; border: none; background: none; cursor: pointer; }
   font-size: 15px; font-weight: 600; text-transform: uppercase;
   letter-spacing: 0.08em; color: var(--text-tertiary); margin-bottom: 10px;
 }
-.project-section p { font-size: 21px; color: var(--text-secondary); line-height: 1.7; }
+.project-section p { font-size: 19px; color: var(--text-secondary); line-height: 1.7; }
 
 .project-quote {
   margin-top: 24px; padding: 28px 32px; background: var(--bg-muted);
@@ -234,7 +234,7 @@ button { font: inherit; border: none; background: none; cursor: pointer; }
   padding: 40px; background: var(--surface);
   border-radius: var(--radius-lg); border: 1px solid var(--border);
 }
-.testimonial p { font-size: 21px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 28px; font-style: italic; }
+.testimonial p { font-size: 19px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 28px; font-style: italic; }
 .testimonial footer { display: flex; flex-direction: column; gap: 4px; }
 .testimonial footer strong { font-size: 20px; font-weight: 600; }
 .testimonial footer span { font-size: 17px; color: var(--text-tertiary); }
