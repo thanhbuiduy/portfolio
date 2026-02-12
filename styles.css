@@ -1,51 +1,10 @@
 /*THANH BUI PORTFOLIO*/
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
-:root {
-  /* Bổ sung hai biến font, giữ DM Sans cho EN, Be Vietnam Pro cho VI */
-  --font-en: 'DM Sans', ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  --font-vi: 'Be Vietnam Pro', ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-
-  /* (Tùy chọn) line-height hơi khác cho EN/VI để dấu tiếng Việt thoáng hơn */
-  --lh-en: 1.6;
-  --lh-vi: 1.65;
-}
-
-/* Mặc định EN */
-body {
-  font-family: var(--font-en);
-  line-height: var(--lh-en);
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Khi chuyển sang tiếng Việt */
-body[data-lang="vi"] {
-  font-family: var(--font-vi);
-  line-height: var(--lh-vi);
-}
-
-/* (Khuyến nghị) tinh chỉnh tracking rất nhẹ cho text nhỏ khi là VI */
-body[data-lang="vi"] .hero-body,
-body[data-lang="vi"] .project-section p,
-body[data-lang="vi"] .testimonial p,
-body[data-lang="vi"] .tool-desc {
-  letter-spacing: 0.0025em;
-}
-
-/* Tiêu đề tiếng Việt – giữ tracking chặt nhẹ để vẫn “sắc” */
-body[data-lang="vi"] .hero-title,
-body[data-lang="vi"] .project-name,
-body[data-lang="vi"] .contact-heading {
-  letter-spacing: -0.008em;
-}
-
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
 :root {
   --font: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-vi: 'Be Vietnam Pro', ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   --bg: #fbfbfd;
   --bg-muted: #f5f5f7;
   --surface: #ffffff;
