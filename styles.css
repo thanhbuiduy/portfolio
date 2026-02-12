@@ -1,6 +1,4 @@
-/* ============================================
-   THANH BUI PORTFOLIO
-   ============================================ */
+/*THANH BUI PORTFOLIO*/
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
 
@@ -34,7 +32,6 @@ body {
   background: var(--bg);
   padding-top: 56px;
 }
-
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; border: none; background: none; cursor: pointer; }
@@ -314,7 +311,29 @@ a.contact-value:hover { color: var(--accent); }
   font-size: 13px; color: var(--text-tertiary);
   border-top: 1px solid var(--border);
 }
-
+/* Thêm mới — Contact services list */
+.contact-services {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 28px;
+}
+.contact-services li {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 4px;
+}
+.contact-services li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  font-size: 20px;
+  line-height: 1.4;
+}
 /* ── LIGHTBOX ── */
 .lightbox {
   position: fixed; inset: 0; z-index: 200;
