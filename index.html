@@ -300,6 +300,76 @@
           </div>
         </div>
       </div>
+      <!-- Project 4: AI Skills for Teachers -->
+      <div class="project">
+        <button class="project-header" aria-expanded="false" data-target="proj4">
+          <div class="project-header-text">
+            <span class="project-category">Workshop Design & Facilitation</span>
+            <h3 class="project-name">
+              <span data-lang-en>AI Skills for Teaching — 200+ High School Teachers (2024)</span>
+              <span data-lang-vi>Kỹ năng AI cho Giảng dạy — 200+ Giáo viên THPT (2024)</span>
+            </h3>
+          </div>
+          <img src="images/ai-teachers-thumb.png" alt="" class="project-thumb">
+          <svg class="project-chevron" width="28" height="28" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="project-body" id="proj4">
+          <div class="project-content">
+            <div class="project-section">
+              <h4 class="project-section-label"><span data-lang-en>Problem</span><span data-lang-vi>Vấn đề</span></h4>
+              <ul class="exp-bullets" data-lang-en>
+                <li>High school teachers in Hanoi and Ho Chi Minh City were hearing a lot about AI but had no structured way to understand or apply it in the classroom</li>
+                <li>Most available AI training was either too technical or too generic — not grounded in actual teaching practice</li>
+                <li>Schools needed something practical they could act on immediately, not a theoretical overview</li>
+              </ul>
+              <ul class="exp-bullets" data-lang-vi>
+                <li>Giáo viên THPT ở Hà Nội và TP.HCM nghe nhiều về AI nhưng chưa có con đường rõ ràng để hiểu và ứng dụng vào lớp học</li>
+                <li>Hầu hết các khoá đào tạo AI hiện có quá kỹ thuật hoặc quá chung chung — không gắn với thực tiễn giảng dạy</li>
+                <li>Các trường cần một chương trình thực tế có thể áp dụng ngay, không chỉ là lý thuyết tổng quan</li>
+              </ul>
+            </div>
+            <div class="project-section">
+              <h4 class="project-section-label"><span data-lang-en>What I did</span><span data-lang-vi>Tôi đã làm gì</span></h4>
+              <ul class="exp-bullets" data-lang-en>
+                <li>Designed and delivered a full-day AI for Teaching workshop tailored to secondary school educators across 3 schools</li>
+                <li>Built all content from scratch — no vendor materials — grounded in real classroom scenarios teachers could relate to</li>
+                <li>Covered prompt writing, AI-assisted lesson planning, assessment design, and ethical use with students</li>
+                <li>Used hands-on practice throughout: teachers left with AI-generated materials they actually made during the session</li>
+              </ul>
+              <ul class="exp-bullets" data-lang-vi>
+                <li>Thiết kế và triển khai workshop AI cho Giảng dạy một ngày, tuỳ chỉnh cho giáo viên THPT tại 3 trường</li>
+                <li>Xây dựng toàn bộ nội dung từ đầu — không dùng tài liệu vendor — bám sát tình huống thực tế trong lớp học</li>
+                <li>Bao gồm viết prompt, lập kế hoạch bài học với AI, thiết kế kiểm tra, và sử dụng AI có trách nhiệm với học sinh</li>
+                <li>Thực hành xuyên suốt: giáo viên rời buổi học với tài liệu do AI hỗ trợ mà chính họ tạo ra trong buổi học</li>
+              </ul>
+            </div>
+            <div class="project-section">
+              <h4 class="project-section-label"><span data-lang-en>Result</span><span data-lang-vi>Kết quả</span></h4>
+              <ul class="exp-bullets" data-lang-en>
+                <li>200+ teachers trained across 3 schools in Hanoi and Ho Chi Minh City</li>
+                <li>9.3/10 post-training feedback score; 90%+ rated "extremely satisfied"</li>
+                <li>Most common feedback: relevant to real work, easy to apply right away</li>
+                <li>Multiple schools requested follow-up sessions after the initial workshop</li>
+              </ul>
+              <ul class="exp-bullets" data-lang-vi>
+                <li>200+ giáo viên được đào tạo tại 3 trường ở Hà Nội và TP.HCM</li>
+                <li>Điểm phản hồi sau đào tạo 9.3/10; 90%+ đánh giá "rất hài lòng"</li>
+                <li>Phản hồi phổ biến nhất: sát thực tế, dễ áp dụng ngay</li>
+                <li>Nhiều trường yêu cầu thêm buổi sau chương trình đầu tiên</li>
+              </ul>
+            </div>
+            <div class="project-gallery-stack">
+              <img src="images/ai-teachers-1.jpg" alt="" loading="lazy">
+              <img src="images/ai-teachers-2.jpg" alt="" loading="lazy">
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link-btn"><span data-lang-en>Read more on my blog →</span><span data-lang-vi>Đọc thêm trên blog →</span></a>
+              <a href="#" class="project-link-btn"><span data-lang-en>See the workshop outline →</span><span data-lang-vi>Xem chương trình workshop →</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <!-- 4. TESTIMONIALS -->
@@ -606,7 +676,10 @@
   <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox" role="dialog" aria-hidden="true">
     <button class="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous image">&#8592;</button>
     <img id="lightbox-img" src="" alt="">
+    <button class="lightbox-next" id="lightbox-next" aria-label="Next image">&#8594;</button>
+    <span class="lightbox-counter" id="lightbox-counter"></span>
   </div>
 
   <script>
@@ -657,26 +730,65 @@
       document.body.classList.toggle('nav-open');
     });
 
-    // ── Project accordion ──
-    document.querySelectorAll('.project-header').forEach(btn => {
+    // ── Project accordion (close others + auto-scroll) ──
+    const allHeaders = document.querySelectorAll('.project-header');
+    allHeaders.forEach(btn => {
       btn.addEventListener('click', () => {
         const target = document.getElementById(btn.dataset.target);
         const isOpen = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', !isOpen);
-        target.classList.toggle('open');
+
+        // Close all other panels
+        allHeaders.forEach(otherBtn => {
+          if (otherBtn !== btn) {
+            otherBtn.setAttribute('aria-expanded', 'false');
+            document.getElementById(otherBtn.dataset.target).classList.remove('open');
+          }
+        });
+
+        // Toggle current
+        btn.setAttribute('aria-expanded', String(!isOpen));
+        target.classList.toggle('open', !isOpen);
+
+        // Auto-scroll into view when opening
+        if (!isOpen) {
+          setTimeout(() => {
+            btn.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 60);
+        }
       });
     });
 
-    // ── Lightbox ──
+    // ── Lightbox with prev/next ──
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    document.querySelectorAll('.project-gallery-stack img').forEach(img => {
-      img.addEventListener('click', () => {
-        lightboxImg.src = img.src;
-        lightbox.classList.add('open');
-        lightbox.setAttribute('aria-hidden', 'false');
-      });
+    const lightboxCounter = document.getElementById('lightbox-counter');
+    let galleryImages = [];
+    let currentLightboxIndex = 0;
+
+    function openLightbox(index) {
+      currentLightboxIndex = index;
+      lightboxImg.src = galleryImages[index].src;
+      lightboxCounter.textContent = (index + 1) + ' / ' + galleryImages.length;
+      document.getElementById('lightbox-prev').style.opacity = index > 0 ? '1' : '0.25';
+      document.getElementById('lightbox-next').style.opacity = index < galleryImages.length - 1 ? '1' : '0.25';
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+    }
+
+    document.querySelectorAll('.project-gallery-stack img').forEach((img, i) => {
+      galleryImages.push(img);
+      img.addEventListener('click', () => openLightbox(i));
     });
+
+    document.getElementById('lightbox-prev').addEventListener('click', e => {
+      e.stopPropagation();
+      if (currentLightboxIndex > 0) openLightbox(currentLightboxIndex - 1);
+    });
+    document.getElementById('lightbox-next').addEventListener('click', e => {
+      e.stopPropagation();
+      if (currentLightboxIndex < galleryImages.length - 1) openLightbox(currentLightboxIndex + 1);
+    });
+
     lightbox.addEventListener('click', e => {
       if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
         lightbox.classList.remove('open');
@@ -685,6 +797,8 @@
     });
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') { lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden', 'true'); }
+      if (e.key === 'ArrowLeft' && lightbox.classList.contains('open')) { if (currentLightboxIndex > 0) openLightbox(currentLightboxIndex - 1); }
+      if (e.key === 'ArrowRight' && lightbox.classList.contains('open')) { if (currentLightboxIndex < galleryImages.length - 1) openLightbox(currentLightboxIndex + 1); }
     });
   </script>
 </body>
