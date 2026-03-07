@@ -731,11 +731,40 @@
     });
 
     // ── Project accordion (close others + auto-scroll) ──
-    const allHeaders = document.querySelectorAll('.project-header');
-    allHeaders.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const target = document.getElementById(btn.dataset.target);
-        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    // ── Project accordion (close others + safe scroll) ──
+const NAV_HEIGHT = 64;
+const allHeaders = document.querySelectorAll('.project-header');
+
+allHeaders.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = document.getElementById(btn.dataset.target);
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+    // Close all other panels
+    allHeaders.forEach(otherBtn => {
+      if (otherBtn !== btn) {
+        otherBtn.setAttribute('aria-expanded', 'false');
+        document.getElementById(otherBtn.dataset.target).classList.remove('open');
+      }
+    });
+
+    // Toggle current
+    btn.setAttribute('aria-expanded', String(!isOpen));
+    target.classList.toggle('open', !isOpen);
+
+    // Scroll chỉ khi đang mở VÀ button bị header che
+    if (!isOpen) {
+      const onTransitionEnd = () => {
+        target.removeEventListener('transitionend', onTransitionEnd);
+        const rect = btn.getBoundingClientRect();
+        if (rect.top < NAV_HEIGHT) {
+          window.scrollTo({ top: window.scrollY + rect.top - NAV_HEIGHT, behavior: 'smooth' });
+        }
+      };
+      target.addEventListener('transitionend', onTransitionEnd);
+    }
+  });
+});
 
         // Close all other panels
         allHeaders.forEach(otherBtn => {
