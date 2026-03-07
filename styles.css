@@ -436,7 +436,7 @@ a.contact-value:hover { color: var(--accent); }
 
 .lightbox-prev, .lightbox-next {
   position: absolute; top: 50%; transform: translateY(-50%);
-  font-size: 22px; color: rgba(255,255,255,0.85);
+  font-size: 20px; color: rgba(255,255,255,0.85);
   background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
   border-radius: 50%; width: 44px; height: 44px;
   display: flex; align-items: center; justify-content: center;
@@ -448,15 +448,18 @@ a.contact-value:hover { color: var(--accent); }
 
 .lightbox-counter {
   position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
-  font-size: 13px; color: rgba(255,255,255,0.6);
-  font-family: inherit;
+  font-size: 13px; color: rgba(255,255,255,0.55); font-family: inherit;
 }
 
-/* Project section visual separator */
+/* Visual separator between project sub-sections */
 .project-section + .project-section {
   border-top: 1px solid var(--border);
   padding-top: 16px;
 }
+
+/* How I Work — tighter line spacing */
+.flow-card p { font-size: 15px; color: var(--text-secondary); line-height: 1.8; }
+.flow-card br + br { display: none; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
