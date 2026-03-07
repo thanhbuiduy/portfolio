@@ -653,7 +653,7 @@
         <div class="contact-details">
           <div class="contact-row">
             <span class="contact-label">Email</span>
-            <a href="mailto:buiduthanh8493@gmail.com" class="contact-value">thanh's email</a>
+            <a href="/cdn-cgi/l/email-protection#2c4e5945485958444d42441418151f6c4b414d4540024f4341" class="contact-value">thanh's email</a>
           </div>
           <div class="contact-row">
             <span class="contact-label">LinkedIn</span>
@@ -682,7 +682,7 @@
     <span class="lightbox-counter" id="lightbox-counter"></span>
   </div>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // ── Language toggle ──
     const langToggle = document.getElementById('langToggle');
     const langOptions = langToggle.querySelectorAll('.lang-option');
@@ -730,41 +730,14 @@
       document.body.classList.toggle('nav-open');
     });
 
-    // ── Project accordion (close others + auto-scroll) ──
     // ── Project accordion (close others + safe scroll) ──
-const NAV_HEIGHT = 64;
-const allHeaders = document.querySelectorAll('.project-header');
+    const NAV_HEIGHT = 64; // fixed header height + buffer
+    const allHeaders = document.querySelectorAll('.project-header');
 
-allHeaders.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const target = document.getElementById(btn.dataset.target);
-    const isOpen = btn.getAttribute('aria-expanded') === 'true';
-
-    // Close all other panels
-    allHeaders.forEach(otherBtn => {
-      if (otherBtn !== btn) {
-        otherBtn.setAttribute('aria-expanded', 'false');
-        document.getElementById(otherBtn.dataset.target).classList.remove('open');
-      }
-    });
-
-    // Toggle current
-    btn.setAttribute('aria-expanded', String(!isOpen));
-    target.classList.toggle('open', !isOpen);
-
-    // Scroll chỉ khi đang mở VÀ button bị header che
-    if (!isOpen) {
-      const onTransitionEnd = () => {
-        target.removeEventListener('transitionend', onTransitionEnd);
-        const rect = btn.getBoundingClientRect();
-        if (rect.top < NAV_HEIGHT) {
-          window.scrollTo({ top: window.scrollY + rect.top - NAV_HEIGHT, behavior: 'smooth' });
-        }
-      };
-      target.addEventListener('transitionend', onTransitionEnd);
-    }
-  });
-});
+    allHeaders.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById(btn.dataset.target);
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
 
         // Close all other panels
         allHeaders.forEach(otherBtn => {
@@ -778,11 +751,18 @@ allHeaders.forEach(btn => {
         btn.setAttribute('aria-expanded', String(!isOpen));
         target.classList.toggle('open', !isOpen);
 
-        // Auto-scroll into view when opening
+        // Only scroll if opening AND button is hidden behind the fixed header
         if (!isOpen) {
-          setTimeout(() => {
-            btn.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }, 60);
+          // Wait for the 0.5s CSS transition to fully complete before checking position
+          const onTransitionEnd = () => {
+            target.removeEventListener('transitionend', onTransitionEnd);
+            const rect = btn.getBoundingClientRect();
+            if (rect.top < NAV_HEIGHT) {
+              const scrollTarget = window.scrollY + rect.top - NAV_HEIGHT;
+              window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
+            }
+          };
+          target.addEventListener('transitionend', onTransitionEnd);
         }
       });
     });
@@ -827,8 +807,4 @@ allHeaders.forEach(btn => {
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') { lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden', 'true'); }
       if (e.key === 'ArrowLeft' && lightbox.classList.contains('open')) { if (currentLightboxIndex > 0) openLightbox(currentLightboxIndex - 1); }
-      if (e.key === 'ArrowRight' && lightbox.classList.contains('open')) { if (currentLightboxIndex < galleryImages.length - 1) openLightbox(currentLightboxIndex + 1); }
-    });
-  </script>
-</body>
-</html>
+      if (e.key === 'ArrowRight' && lightbox.classL
