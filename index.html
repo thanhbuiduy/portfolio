@@ -430,147 +430,134 @@
     <button class="lightbox-next" id="lightbox-next" aria-label="Next image">&#8594;</button>
     <span class="lightbox-counter" id="lightbox-counter"></span>
   </div>
-<script>
- // ── Language toggle ──
-const langToggle = document.getElementById('langToggle');
-const langOptions = langToggle.querySelectorAll('.lang-option');
+ <script>
+    // ── Language toggle ──
+    const langToggle = document.getElementById('langToggle');
+    const langOptions = langToggle.querySelectorAll('.lang-option');
 
-function setLang(lang) {
-  document.documentElement.lang = lang;
-  document.body.setAttribute('data-lang', lang);
-  langOptions.forEach(opt => opt.classList.toggle('active', opt.dataset.lang === lang));
-  localStorage.setItem('lang', lang);
-}
-
-setLang(localStorage.getItem('lang') || 'en');
-
-langToggle.addEventListener('click', () => {
-  const current = document.body.getAttribute('data-lang') || 'en';
-  setLang(current === 'en' ? 'vi' : 'en');
-});
-
-// ── Nav smooth scroll ──
-const navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    document.body.classList.remove('nav-open');
-    document.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false');
-  });
-});
-
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const id = entry.target.getAttribute('id');
-      if (id) navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.body.setAttribute('data-lang', lang);
+      langOptions.forEach(opt => opt.classList.toggle('active', opt.dataset.lang === lang));
+      localStorage.setItem('lang', lang);
     }
-  });
-}, { rootMargin: '-20% 0px -60% 0px' });
-document.querySelectorAll('section[id]').forEach(s => obs.observe(s));
 
-// ── Mobile nav ──
-document.querySelector('.nav-toggle').addEventListener('click', function() {
-  const expanded = this.getAttribute('aria-expanded') === 'true';
-  this.setAttribute('aria-expanded', !expanded);
-  document.body.classList.toggle('nav-open');
-});
+    setLang(localStorage.getItem('lang') || 'en');
 
-// ── Project accordion (fix: bù trừ scroll khi đóng panel cũ) ──
-const allHeaders = document.querySelectorAll('.project-header');
-const NAV_H = 64;
+    langToggle.addEventListener('click', () => {
+      const current = document.body.getAttribute('data-lang') || 'en';
+      setLang(current === 'en' ? 'vi' : 'en');
+    });
 
-allHeaders.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const panel = document.getElementById(btn.dataset.target);
-    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    // ── Nav smooth scroll ──
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.body.classList.remove('nav-open');
+        document.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false');
+      });
+    });
 
-    // Ghi nhớ vị trí nút trên màn hình TRƯỚC khi thay đổi gì
-    const btnTopBefore = btn.getBoundingClientRect().top;
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          if (id) navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
+        }
+      });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+    document.querySelectorAll('section[id]').forEach(s => obs.observe(s));
 
-    // Đóng tất cả panel khác
-    allHeaders.forEach(other => {
-      if (other !== btn) {
-        other.setAttribute('aria-expanded', 'false');
-        document.getElementById(other.dataset.target).classList.remove('open');
+    // ── Mobile nav ──
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      document.body.classList.toggle('nav-open');
+    });
+
+    // ── Project accordion (close others + safe scroll) ──
+ 
+    const allHeaders = document.querySelectorAll('.project-header');
+    const NAV_H = 64;
+    allHeaders.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const panel = document.getElementById(btn.dataset.target);
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+        // Close all other panels
+        allHeaders.forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            document.getElementById(other.dataset.target).classList.remove('open');
+          }
+        });
+
+        // Toggle this panel
+        if (isOpen) {
+          btn.setAttribute('aria-expanded', 'false');
+          panel.classList.remove('open');
+        } else {
+          btn.setAttribute('aria-expanded', 'true');
+          panel.classList.add('open');
+          // After CSS transition (500ms), scroll only if button is hidden behind nav
+          setTimeout(() => {
+            const rect = btn.getBoundingClientRect();
+            if (rect.top < NAV_H) {
+              window.scrollTo({ top: window.scrollY + rect.top - NAV_H, behavior: 'smooth' });
+            }
+          }, 520);
+        }
+      });
+    });
+
+    // ── Lightbox with prev/next ──
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCounter = document.getElementById('lightbox-counter');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
+    const galleryImages = Array.from(document.querySelectorAll('.project-gallery-stack img'));
+    let currentIdx = 0;
+
+    function openLightbox(index) {
+      currentIdx = index;
+      lightboxImg.src = galleryImages[index].src;
+      lightboxCounter.textContent = (index + 1) + ' / ' + galleryImages.length;
+      lightboxPrev.style.opacity = index > 0 ? '1' : '0.3';
+      lightboxNext.style.opacity = index < galleryImages.length - 1 ? '1' : '0.3';
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+    }
+
+    galleryImages.forEach((img, i) => img.addEventListener('click', () => openLightbox(i)));
+
+    lightboxPrev.addEventListener('click', e => {
+      e.stopPropagation();
+      if (currentIdx > 0) openLightbox(currentIdx - 1);
+    });
+
+    lightboxNext.addEventListener('click', e => {
+      e.stopPropagation();
+      if (currentIdx < galleryImages.length - 1) openLightbox(currentIdx + 1);
+    });
+
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
       }
     });
 
-    // Bù trừ scroll ngay lập tức — nút không được phép nhảy chỗ
-    const btnTopAfter = btn.getBoundingClientRect().top;
-    if (btnTopAfter !== btnTopBefore) {
-      window.scrollBy(0, btnTopAfter - btnTopBefore);
-    }
+    document.addEventListener('keydown', e => {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape') { lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden', 'true'); }
+      if (e.key === 'ArrowLeft' && currentIdx > 0) openLightbox(currentIdx - 1);
+      if (e.key === 'ArrowRight' && currentIdx < galleryImages.length - 1) openLightbox(currentIdx + 1);
+    });
+  </script>
+</body>
+</html>
 
-    // Toggle panel này
-    if (isOpen) {
-      btn.setAttribute('aria-expanded', 'false');
-      panel.classList.remove('open');
-    } else {
-      btn.setAttribute('aria-expanded', 'true');
-      panel.classList.add('open');
-      setTimeout(() => {
-        const rect = btn.getBoundingClientRect();
-        if (rect.top < NAV_H) {
-          window.scrollTo({ top: window.scrollY + rect.top - NAV_H, behavior: 'smooth' });
-        }
-      }, 520);
-    }
-  });
-});
-
-// ── Lightbox (fix: chỉ điều hướng trong cùng project) ──
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const lightboxCounter = document.getElementById('lightbox-counter');
-const lightboxPrev = document.getElementById('lightbox-prev');
-const lightboxNext = document.getElementById('lightbox-next');
-
-let currentImages = [];
-let currentIdx = 0;
-
-function openLightbox(images, index) {
-  currentImages = images;
-  currentIdx = index;
-  lightboxImg.src = currentImages[currentIdx].src;
-  lightboxCounter.textContent = (currentIdx + 1) + ' / ' + currentImages.length;
-  lightboxPrev.style.opacity = currentIdx > 0 ? '1' : '0.3';
-  lightboxNext.style.opacity = currentIdx < currentImages.length - 1 ? '1' : '0.3';
-  lightbox.classList.add('open');
-  lightbox.setAttribute('aria-hidden', 'false');
-}
-
-// Gắn event cho từng ảnh — chỉ lấy ảnh trong cùng gallery stack
-document.querySelectorAll('.project-gallery-stack').forEach(gallery => {
-  const images = Array.from(gallery.querySelectorAll('img'));
-  images.forEach((img, i) => {
-    img.addEventListener('click', () => openLightbox(images, i));
-  });
-});
-
-lightboxPrev.addEventListener('click', e => {
-  e.stopPropagation();
-  if (currentIdx > 0) openLightbox(currentImages, currentIdx - 1);
-});
-
-lightboxNext.addEventListener('click', e => {
-  e.stopPropagation();
-  if (currentIdx < currentImages.length - 1) openLightbox(currentImages, currentIdx + 1);
-});
-
-lightbox.addEventListener('click', e => {
-  if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
-    lightbox.classList.remove('open');
-    lightbox.setAttribute('aria-hidden', 'true');
-  }
-});
-
-document.addEventListener('keydown', e => {
-  if (!lightbox.classList.contains('open')) return;
-  if (e.key === 'Escape') { lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden', 'true'); }
-  if (e.key === 'ArrowLeft' && currentIdx > 0) openLightbox(currentImages, currentIdx - 1);
-  if (e.key === 'ArrowRight' && currentIdx < currentImages.length - 1) openLightbox(currentImages, currentIdx + 1);
-});
-</script>
