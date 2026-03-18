@@ -482,7 +482,7 @@
     // ── Project accordion (close others + safe scroll) ──
  
     const allHeaders = document.querySelectorAll('.project-header');
-
+    const NAV_H = 64;
     allHeaders.forEach(btn => {
       btn.addEventListener('click', () => {
         const panel = document.getElementById(btn.dataset.target);
@@ -503,7 +503,13 @@
         } else {
           btn.setAttribute('aria-expanded', 'true');
           panel.classList.add('open');
-          
+          // After CSS transition (500ms), scroll only if button is hidden behind nav
+          setTimeout(() => {
+            const rect = btn.getBoundingClientRect();
+            if (rect.top < NAV_H) {
+              window.scrollTo({ top: window.scrollY + rect.top - NAV_H, behavior: 'smooth' });
+            }
+          }, 520);
         }
       });
     });
