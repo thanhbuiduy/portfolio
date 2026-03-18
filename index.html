@@ -480,7 +480,7 @@
     });
 
     // ── Project accordion (close others + safe scroll) ──
-    const NAV_H = 64;
+ 
     const allHeaders = document.querySelectorAll('.project-header');
 
     allHeaders.forEach(btn => {
@@ -503,13 +503,7 @@
         } else {
           btn.setAttribute('aria-expanded', 'true');
           panel.classList.add('open');
-          // After CSS transition (500ms), scroll only if button is hidden behind nav
-          setTimeout(() => {
-            const rect = btn.getBoundingClientRect();
-            if (rect.top < NAV_H) {
-              window.scrollTo({ top: window.scrollY + rect.top - NAV_H, behavior: 'smooth' });
-            }
-          }, 520);
+          
         }
       });
     });
