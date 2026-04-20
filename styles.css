@@ -186,9 +186,18 @@ body[data-lang="vi"] ul[data-lang-vi] { display: block; }
 .proj-meta { display: flex; align-items: center; gap: 10px; }
 .proj-tag { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-tertiary); }
 .proj-year { font-size: 13px; color: var(--text-tertiary); }
-.proj-arrow { font-size: 20px; color: var(--text-tertiary); flex-shrink: 0; transition: transform 0.25s ease, color 0.2s; line-height: 1; }
-.proj-item:hover .proj-arrow { color: var(--text); }
-.proj-item.is-open .proj-arrow { transform: rotate(45deg); color: var(--text); }
+.proj-arrow {
+  font-size: 16px;
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, color 0.2s;
+  line-height: 1;
+}
+
+.proj-item.is-open .proj-arrow {
+  transform: rotate(180deg);
+  color: var(--text);
+}
 
 .proj-detail { grid-column: 2; overflow: hidden; max-height: 0; transition: max-height 0.5s ease; }
 .proj-detail.open { max-height: 2400px; }
