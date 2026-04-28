@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <title>LDP 2021 - Đại Việt Group · Thanh Bui</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
   <style>
-    /* ── PROJECT DETAIL PAGE ── */
     .proj-page {
       max-width: 720px;
       margin: 0 auto;
@@ -23,10 +22,7 @@
       transition: color 0.2s;
       cursor: pointer;
     }
-
-    .proj-page-back:hover {
-      color: var(--text);
-    }
+    .proj-page-back:hover { color: var(--text); }
 
     .proj-page-tag {
       font-size: 12px;
@@ -62,10 +58,6 @@
       margin-bottom: 24px;
     }
 
-    .proj-page-body p:last-child {
-      margin-bottom: 0;
-    }
-
     .proj-page-pull {
       font-size: 19px;
       font-weight: 500;
@@ -83,14 +75,12 @@
       overflow: hidden;
       background: var(--bg-muted);
     }
-
     .proj-page-img img {
       width: 100%;
       height: auto;
       display: block;
       object-fit: cover;
     }
-
     .proj-page-img figcaption {
       font-size: 13px;
       color: var(--text-tertiary);
@@ -110,7 +100,6 @@
       gap: 12px;
       margin: 32px 0;
     }
-
     .proj-page-result {
       background: var(--bg-muted);
       border-radius: 12px;
@@ -128,7 +117,6 @@
       flex-direction: column;
       gap: 12px;
     }
-
     .proj-page-list li {
       font-size: 16px;
       line-height: 1.7;
@@ -136,7 +124,6 @@
       padding-left: 18px;
       position: relative;
     }
-
     .proj-page-list li::before {
       content: '·';
       position: absolute;
@@ -146,9 +133,8 @@
       color: var(--text-tertiary);
       font-weight: 700;
     }
-
     .proj-page-list li strong {
-      font-weight: 600;
+      font-weight: 500;
       color: var(--text);
     }
 
@@ -159,14 +145,12 @@
       overflow: hidden;
       background: var(--bg-muted);
     }
-
     .proj-page-video iframe {
       width: 100%;
       height: 480px;
       border: none;
       display: block;
     }
-
     .proj-page-video figcaption {
       font-size: 13px;
       color: var(--text-tertiary);
@@ -174,35 +158,33 @@
       line-height: 1.5;
     }
 
+    @media (max-width: 900px) {
+      .proj-page { padding: 56px 28px 80px; }
+    }
+
     @media (max-width: 640px) {
-      .proj-page {
-        padding: 48px 20px 72px;
-      }
-
-      .proj-page-results {
-        grid-template-columns: 1fr;
-      }
-
-      .proj-page-pull {
-        font-size: 17px;
-      }
-
-      .proj-page-video iframe {
-        height: 300px;
-      }
+      .proj-page { padding: 48px 20px 72px; }
+      .proj-page-results { grid-template-columns: 1fr; }
+      .proj-page-pull { font-size: 17px; }
+      .proj-page-video iframe { height: 220px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="header">
     <nav class="nav">
       <a href="index.html" class="brand">thanh bui</a>
       <div class="nav-links">
-        <a href="index.html#about" class="nav-link">About</a>
-        <a href="index.html#projects" class="nav-link">Projects</a>
-        <a href="index.html#contact" class="nav-link">Contact</a>
+        <a href="index.html#about" class="nav-link">
+          <span data-lang-en>About</span><span data-lang-vi>Giới thiệu</span>
+        </a>
+        <a href="index.html#projects" class="nav-link">
+          <span data-lang-en>Projects</span><span data-lang-vi>Dự án</span>
+        </a>
+        <a href="index.html#contact" class="nav-link">
+          <span data-lang-en>Contact</span><span data-lang-vi>Liên hệ</span>
+        </a>
       </div>
       <button class="lang-toggle" id="langToggle" aria-label="Switch language">
         <span class="lang-option active" data-lang="en">EN</span>
@@ -233,7 +215,7 @@
         <div class="proj-page-pull">Thay vì dừng lại, chúng tôi tự xây chương trình nội bộ với chi phí chỉ bằng 10% so với báo giá từ các đơn vị bên ngoài.</div>
 
         <figure class="proj-page-img">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4Z-Qz8FeYdpX90j6fLL8wXOEM_iv17LSe_4MddePHRjvFBxr38fD4VZ4ap4J2MJt9c3C1j-q2U41jOf1_UZWY9Jc1qK2QfX9Bs-Ed1bCzcCOyedsFeLQQB2gpPrC28S67mpKiKEULjEXM0_MGimKmcCe6sj4CAjnM0wKAWfDdWj0u4TQ3SlWrKj8OEFo/s16000/ldp-program-structure.png" alt="LDP 2021 Program Structure">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4Z-Qz8FeYdpX90j6fLL8wXOEM_iv17LSe_4MddePHRjvFBxr38fD4VZ4ap4J2MJt9c3C1j-q2U41jOf1_UZWY9Jc1qK2QfX9Bs-Ed1bCzcCOyedsFeLQQB2gpPrC28S67mpKiKEULjEXM0_MGimKmcCe6sj4CAjnM0wKAWfDdWj0u4TQ3SlWrKj8OEFo/s16000/ldp-program-structure.png" alt="Cấu trúc chương trình LDP 2021" loading="lazy">
           <figcaption>Nội dung chương trình trong vòng 6 tháng</figcaption>
         </figure>
 
@@ -247,13 +229,13 @@
         </ul>
 
         <figure class="proj-page-img">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6k5y7h9Ly1sK7MaqPN-ybrK7oJhrH1aeQIxCOtY97KG4_CVOugW_7RmcPXr24g2oOw48Hb1Gs99rO5cdZnqXlUQN9e4nDzVWLc96f1kZhZ1HjC9_n_RfLOsgLtkH-oAOfUIKR8kPos5X47x1-5i9JSe9QfF__RaGA1hyQfUKgC0Y6Fao4J5zZzmzSKUI/s16000/360-feedback-sample.png" alt="360 Feedback Sample">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6k5y7h9Ly1sK7MaqPN-ybrK7oJhrH1aeQIxCOtY97KG4_CVOugW_7RmcPXr24g2oOw48Hb1Gs99rO5cdZnqXlUQN9e4nDzVWLc96f1kZhZ1HjC9_n_RfLOsgLtkH-oAOfUIKR8kPos5X47x1-5i9JSe9QfF__RaGA1hyQfUKgC0Y6Fao4J5zZzmzSKUI/s16000/360-feedback-sample.png" alt="Mẫu đánh giá 360 độ" loading="lazy">
           <figcaption>Hệ thống phản hồi 360 độ tự thiết kế — ưu tiên tính hữu dụng hơn phần mềm cồng kềnh.</figcaption>
         </figure>
 
         <figure class="proj-page-img">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjc5CYnXhnZhnMcw1sJapvNq7jnVOYidh2xS38FMjpZpvzz1DKKdaYwmjt0u0_F5s8X1_fgXG36h4kVoRXiNh2ps5WsMmx8VGTn882VNZ_IyL0hHrI3URBuvbDyq6TlkSO4sMzL45HeSrPB8G9NT0NIeEZDvclOgGP38UIUE9aafGSwiJldxF46gVi_tS4/s16000/ldp-site.png" alt="LDP Learning Website">
-          <figcaption>Tất cả nội dung học được cập nhật trên Google Site, người học truy cập để tìm tài liệu, làm bài tập và chuẩn bị cho các buổi tiếp theo.</figcaption>
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjc5CYnXhnZhnMcw1sJapvNq7jnVOYidh2xS38FMjpZpvzz1DKKdaYwmjt0u0_F5s8X1_fgXG36h4kVoRXiNh2ps5WsMmx8VGTn882VNZ_IyL0hHrI3URBuvbDyq6TlkSO4sMzL45HeSrPB8G9NT0NIeEZDvclOgGP38UIUE9aafGSwiJldxF46gVi_tS4/s16000/ldp-site.png" alt="Website học tập LDP" loading="lazy">
+          <figcaption>Tất cả nội dung học được cập nhật trên Google Site — người học truy cập để tìm tài liệu, làm bài tập và chuẩn bị cho các buổi tiếp theo.</figcaption>
         </figure>
 
         <hr class="proj-page-divider">
@@ -261,18 +243,16 @@
         <p>Phần tôi tâm đắc nhất là capstone project. Chúng tôi chia các managers thành nhóm, giao budget thật do CEO cấp, và để họ làm việc cùng nhau lên ý tưởng giúp các website của tập đoàn thu về nhiều lead nhất có thể — trên một dự án thực tế. Đây không phải bài tập mô phỏng. Đây là công việc thật.</p>
 
         <figure class="proj-page-img">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjy2cowRwPAUoKY9wwsDkp7nc3YVYj5LPK4qHax1AtdGktQz2jOKnt8RAdbDbifQBty-5XHb-ztrzAvI2SwuvdutsAMb5LM7-JV5j20Zm1sBb08Zj3rLFcKhYfeRHjQIu6cc3a6VA0Nzd05AXn0N38IF9iTO8Z7f_XyJCVZCnBKtgjnzXIDtNse-K6OXUs/s16000/ldp-game.png" alt="Business Acumen Simulation">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjy2cowRwPAUoKY9wwsDkp7nc3YVYj5LPK4qHax1AtdGktQz2jOKnt8RAdbDbifQBty-5XHb-ztrzAvI2SwuvdutsAMb5LM7-JV5j20Zm1sBb08Zj3rLFcKhYfeRHjQIu6cc3a6VA0Nzd05AXn0N38IF9iTO8Z7f_XyJCVZCnBKtgjnzXIDtNse-K6OXUs/s16000/ldp-game.png" alt="Trò chơi mô phỏng Business Acumen" loading="lazy">
           <figcaption>Buổi học business acumen qua trò chơi mô phỏng — thiết kế để chạm được đến sự tò mò và niềm vui của người học.</figcaption>
         </figure>
 
         <figure class="proj-page-video">
-          <iframe 
-            width="100%" 
-            height="480" 
-            src="https://www.youtube.com/embed/0qRMfAD65eQ" 
-            title="LDP 2021 Leaderboard" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen="">
+          <iframe
+            src="https://www.youtube.com/embed/0qRMfAD65eQ"
+            title="LDP 2021 Leaderboard"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
           </iframe>
           <figcaption>Bảng xếp hạng leaderboard cập nhật liên tục — một hình thức gamification giúp người học duy trì động lực xuyên suốt chương trình.</figcaption>
         </figure>
@@ -282,25 +262,21 @@
         <hr class="proj-page-divider">
 
         <div class="proj-page-results">
-          <div class="proj-page-result">25 managers hoàn thành chương trình, chi phí bằng 10% báo giá ban đầu.</div>
+          <div class="proj-page-result">25 managers hoàn thành chương trình với chi phí bằng 10% báo giá ban đầu.</div>
           <div class="proj-page-result">Các managers kết nối với nhau nhiều hơn, tự tin hơn sau chương trình.</div>
           <div class="proj-page-result">Capstone project chạy trên dự án thực tế — các team hiểu rõ hơn về marketing online.</div>
-          <div class="proj-page-result">Managers chủ động đề xuất nhân rộng chương trình cho cấp dưới. Tôi sau đó xây thêm LDP+ cho team leaders và supervisors.</div>
+          <div class="proj-page-result">Managers chủ động đề xuất nhân rộng chương trình. Tôi sau đó xây thêm LDP+ cho team leaders và supervisors.</div>
         </div>
 
       </div>
-
     </article>
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     <p>© 2026 thanh bui</p>
   </footer>
 
-  <!-- SCRIPTS -->
   <script>
-    // ── Language toggle ──
     const langToggle = document.getElementById('langToggle');
     const langOptions = langToggle.querySelectorAll('.lang-option');
 
@@ -318,17 +294,19 @@
       setLang(current === 'en' ? 'vi' : 'en');
     });
 
-    // ── Mobile nav ──
     document.querySelector('.nav-toggle').addEventListener('click', function() {
       const expanded = this.getAttribute('aria-expanded') === 'true';
       this.setAttribute('aria-expanded', !expanded);
       document.body.classList.toggle('nav-open');
     });
 
-    // ── Back button ──
     document.querySelector('.proj-page-back').addEventListener('click', (e) => {
       e.preventDefault();
-      window.history.back();
+      if (document.referrer) {
+        window.history.back();
+      } else {
+        window.location.href = 'index.html#projects';
+      }
     });
   </script>
 
