@@ -6,68 +6,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style-mar.css">
   <style>
-    .proj-page { max-width: 720px; margin: 0 auto; padding: 72px 36px 96px; }
+    /* ── PROJECT DETAIL PAGE ── */
+    .proj-page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 72px 36px 96px;
+    }
 
     .proj-page-back {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-size: 14px; color: #86868b;
-      margin-bottom: 52px; transition: color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: var(--text-tertiary);
+      margin-bottom: 52px;
+      transition: color 0.2s;
+      cursor: pointer;
     }
-    .proj-page-back:hover { color: #1d1d1f; }
+
+    .proj-page-back:hover {
+      color: var(--text);
+    }
 
     .proj-page-tag {
-      font-size: 12px; font-weight: 600; text-transform: uppercase;
-      letter-spacing: 0.1em; color: #86868b; margin-bottom: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-tertiary);
+      margin-bottom: 12px;
     }
 
     .proj-page-title {
       font-size: clamp(26px, 4vw, 36px);
-      font-weight: 700; line-height: 1.15;
+      font-weight: 700;
+      line-height: 1.15;
       letter-spacing: -0.025em;
-      color: #1d1d1f; margin-bottom: 10px;
+      color: var(--text);
+      margin-bottom: 10px;
     }
 
     .proj-page-meta {
-      font-size: 14px; color: #86868b; margin-bottom: 52px;
+      font-size: 14px;
+      color: var(--text-tertiary);
+      margin-bottom: 52px;
     }
 
     .proj-page-body {
-      font-size: 17px; line-height: 1.8;
-      color: #1d1d1f;
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text);
     }
 
     .proj-page-body p {
       margin-bottom: 24px;
     }
 
-    .proj-page-body p:last-child { margin-bottom: 0; }
+    .proj-page-body p:last-child {
+      margin-bottom: 0;
+    }
 
     .proj-page-pull {
-      font-size: 19px; font-weight: 500;
-      line-height: 1.6; color: #1d1d1f;
-      border-left: 2px solid rgba(0,0,0,0.12);
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 1.6;
+      color: var(--text);
+      border-left: 2px solid var(--border-strong);
       padding-left: 20px;
       margin: 40px 0;
     }
 
     .proj-page-img {
-      width: 100%; margin: 40px 0;
-      border-radius: 14px; overflow: hidden;
-      background: #f5f5f7;
+      width: 100%;
+      margin: 40px 0;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--bg-muted);
     }
+
     .proj-page-img img {
-      width: 100%; height: auto;
-      display: block; object-fit: cover;
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
     }
+
     .proj-page-img figcaption {
-      font-size: 13px; color: #86868b;
+      font-size: 13px;
+      color: var(--text-tertiary);
       padding: 10px 16px 14px;
       line-height: 1.5;
     }
 
     .proj-page-divider {
       border: none;
-      border-top: 0.5px solid rgba(0,0,0,0.08);
+      border-top: 0.5px solid var(--border);
       margin: 48px 0;
     }
 
@@ -77,54 +110,92 @@
       gap: 12px;
       margin: 32px 0;
     }
+
     .proj-page-result {
-      background: #f5f5f7;
+      background: var(--bg-muted);
       border-radius: 12px;
       padding: 20px;
       font-size: 15px;
       line-height: 1.65;
-      color: #1d1d1f;
+      color: var(--text);
     }
 
     .proj-page-list {
-      list-style: none; padding: 0;
+      list-style: none;
+      padding: 0;
       margin: 0 0 28px;
-      display: flex; flex-direction: column; gap: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
+
     .proj-page-list li {
-      font-size: 16px; line-height: 1.7; color: #1d1d1f;
-      padding-left: 18px; position: relative;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      padding-left: 18px;
+      position: relative;
     }
+
     .proj-page-list li::before {
-      content: '·'; position: absolute; left: 0;
-      font-size: 22px; line-height: 1.35; color: #86868b; font-weight: 700;
+      content: '·';
+      position: absolute;
+      left: 0;
+      font-size: 22px;
+      line-height: 1.35;
+      color: var(--text-tertiary);
+      font-weight: 700;
     }
+
     .proj-page-list li strong {
-      font-weight: 600; color: #1d1d1f;
+      font-weight: 600;
+      color: var(--text);
     }
 
     .proj-page-video {
-      width: 100%; margin: 40px 0;
-      border-radius: 14px; overflow: hidden;
-      background: #f5f5f7;
+      width: 100%;
+      margin: 40px 0;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--bg-muted);
     }
-    .proj-page-video video {
-      width: 100%; display: block;
+
+    .proj-page-video iframe {
+      width: 100%;
+      height: 480px;
+      border: none;
+      display: block;
     }
+
     .proj-page-video figcaption {
-      font-size: 13px; color: #86868b;
-      padding: 10px 16px 14px; line-height: 1.5;
+      font-size: 13px;
+      color: var(--text-tertiary);
+      padding: 10px 16px 14px;
+      line-height: 1.5;
     }
 
     @media (max-width: 640px) {
-      .proj-page { padding: 48px 20px 72px; }
-      .proj-page-results { grid-template-columns: 1fr; }
-      .proj-page-pull { font-size: 17px; }
+      .proj-page {
+        padding: 48px 20px 72px;
+      }
+
+      .proj-page-results {
+        grid-template-columns: 1fr;
+      }
+
+      .proj-page-pull {
+        font-size: 17px;
+      }
+
+      .proj-page-video iframe {
+        height: 300px;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- HEADER -->
   <header class="header">
     <nav class="nav">
       <a href="index-mar.html" class="brand">thanh bui</a>
@@ -133,6 +204,14 @@
         <a href="index-mar.html#projects" class="nav-link">Projects</a>
         <a href="index-mar.html#contact" class="nav-link">Contact</a>
       </div>
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span class="lang-option active" data-lang="en">EN</span>
+        <span class="lang-option" data-lang="vi">VI</span>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
     </nav>
   </header>
 
@@ -154,8 +233,8 @@
         <div class="proj-page-pull">Thay vì dừng lại, chúng tôi tự xây chương trình nội bộ với chi phí chỉ bằng 10% so với báo giá từ các đơn vị bên ngoài.</div>
 
         <figure class="proj-page-img">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4Z-Qz8FeYdpX90j6fLL8wXOEM_iv17LSe_4MddePHRjvFBxr38fD4VZ4ap4J2MJt9c3C1j-q2U41jOf1_UZWY9Jc1qK2QfX9Bs-Ed1bCzcCOyedsFeLQQB2gpPrC28S67mpKiKEULjEXM0_MGimKmcCe6sj4CAjnM0wKAWfDdWj0u4TQ3SlWrKj8OEFo/s16000/ldp-program-structure.png" alt="LDP 2021 Kick-off" loading="lazy">
-          <figcaption>Nội dung chương trình trong vòng 6 tháng</figcaption>
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4Z-Qz8FeYdpX90j6fLL8wXOEM_iv17LSe_4MddePHRjvFBxr38fD4VZ4ap4J2MJt9c3C1j-q2U41jOf1_UZWY9Jc1qK2QfX9Bs-Ed1bCzcCOyedsFeLQQB2gpPrC28S67mpKiKEULjEXM0_MGimKmcCe6sj4CAjnM0wKAWfDdWj0u4TQ3SlWrKj8OEFo/s16000/ldp-program-structure.png" alt="LDP 2021 Program Structure">
+          <figcaption>Nội dung chương trình trong vòng 6 tháng</figcaption>
         </figure>
 
         <p>Để đạt kết quả tốt nhất với ngân sách thấp nhất, chúng tôi tập trung vào những gì thực sự quan trọng:</p>
@@ -168,13 +247,13 @@
         </ul>
 
         <figure class="proj-page-img">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6k5y7h9Ly1sK7MaqPN-ybrK7oJhrH1aeQIxCOtY97KG4_CVOugW_7RmcPXr24g2oOw48Hb1Gs99rO5cdZnqXlUQN9e4nDzVWLc96f1kZhZ1HjC9_n_RfLOsgLtkH-oAOfUIKR8kPos5X47x1-5i9JSe9QfF__RaGA1hyQfUKgC0Y6Fao4J5zZzmzSKUI/s16000/360-feedback-sample.png" alt="Mẫu đánh giá 360 độ trên Google Form" loading="lazy">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6k5y7h9Ly1sK7MaqPN-ybrK7oJhrH1aeQIxCOtY97KG4_CVOugW_7RmcPXr24g2oOw48Hb1Gs99rO5cdZnqXlUQN9e4nDzVWLc96f1kZhZ1HjC9_n_RfLOsgLtkH-oAOfUIKR8kPos5X47x1-5i9JSe9QfF__RaGA1hyQfUKgC0Y6Fao4J5zZzmzSKUI/s16000/360-feedback-sample.png" alt="360 Feedback Sample">
           <figcaption>Hệ thống phản hồi 360 độ tự thiết kế — ưu tiên tính hữu dụng hơn phần mềm cồng kềnh.</figcaption>
         </figure>
 
         <figure class="proj-page-img">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjc5CYnXhnZhnMcw1sJapvNq7jnVOYidh2xS38FMjpZpvzz1DKKdaYwmjt0u0_F5s8X1_fgXG36h4kVoRXiNh2ps5WsMmx8VGTn882VNZ_IyL0hHrI3URBuvbDyq6TlkSO4sMzL45HeSrPB8G9NT0NIeEZDvclOgGP38UIUE9aafGSwiJldxF46gVi_tS4/s16000/ldp-site.png" alt="Website học tập nội bộ" loading="lazy">
-          <figcaption>Tất cả nội dung học được cập nhật trên Google Site, người học truy cập để tìm tài liệu, làm bài tập và chuẩn bị cho các buổi tiếp theo.</figcaption>
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjc5CYnXhnZhnMcw1sJapvNq7jnVOYidh2xS38FMjpZpvzz1DKKdaYwmjt0u0_F5s8X1_fgXG36h4kVoRXiNh2ps5WsMmx8VGTn882VNZ_IyL0hHrI3URBuvbDyq6TlkSO4sMzL45HeSrPB8G9NT0NIeEZDvclOgGP38UIUE9aafGSwiJldxF46gVi_tS4/s16000/ldp-site.png" alt="LDP Learning Website">
+          <figcaption>Tất cả nội dung học được cập nhật trên Google Site, người học truy cập để tìm tài liệu, làm bài tập và chuẩn bị cho các buổi tiếp theo.</figcaption>
         </figure>
 
         <hr class="proj-page-divider">
@@ -182,14 +261,19 @@
         <p>Phần tôi tâm đắc nhất là capstone project. Chúng tôi chia các managers thành nhóm, giao budget thật do CEO cấp, và để họ làm việc cùng nhau lên ý tưởng giúp các website của tập đoàn thu về nhiều lead nhất có thể — trên một dự án thực tế. Đây không phải bài tập mô phỏng. Đây là công việc thật.</p>
 
         <figure class="proj-page-img">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjy2cowRwPAUoKY9wwsDkp7nc3YVYj5LPK4qHax1AtdGktQz2jOKnt8RAdbDbifQBty-5XHb-ztrzAvI2SwuvdutsAMb5LM7-JV5j20Zm1sBb08Zj3rLFcKhYfeRHjQIu6cc3a6VA0Nzd05AXn0N38IF9iTO8Z7f_XyJCVZCnBKtgjnzXIDtNse-K6OXUs/s16000/ldp-game.png" alt="Buổi học Business Acumen qua trò chơi mô phỏng" loading="lazy">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjy2cowRwPAUoKY9wwsDkp7nc3YVYj5LPK4qHax1AtdGktQz2jOKnt8RAdbDbifQBty-5XHb-ztrzAvI2SwuvdutsAMb5LM7-JV5j20Zm1sBb08Zj3rLFcKhYfeRHjQIu6cc3a6VA0Nzd05AXn0N38IF9iTO8Z7f_XyJCVZCnBKtgjnzXIDtNse-K6OXUs/s16000/ldp-game.png" alt="Business Acumen Simulation">
           <figcaption>Buổi học business acumen qua trò chơi mô phỏng — thiết kế để chạm được đến sự tò mò và niềm vui của người học.</figcaption>
         </figure>
 
         <figure class="proj-page-video">
-          <video src="https://www.youtube.com/watch?v=0qRMfAD65eQ">
-            Trình duyệt của bạn không hỗ trợ video.
-          </video>
+          <iframe 
+            width="100%" 
+            height="480" 
+            src="https://www.youtube.com/embed/0qRMfAD65eQ" 
+            title="LDP 2021 Leaderboard" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen="">
+          </iframe>
           <figcaption>Bảng xếp hạng leaderboard cập nhật liên tục — một hình thức gamification giúp người học duy trì động lực xuyên suốt chương trình.</figcaption>
         </figure>
 
@@ -209,9 +293,44 @@
     </article>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <p>© 2026 thanh bui</p>
   </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // ── Language toggle ──
+    const langToggle = document.getElementById('langToggle');
+    const langOptions = langToggle.querySelectorAll('.lang-option');
+
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.body.setAttribute('data-lang', lang);
+      langOptions.forEach(opt => opt.classList.toggle('active', opt.dataset.lang === lang));
+      localStorage.setItem('lang', lang);
+    }
+
+    setLang(localStorage.getItem('lang') || 'en');
+
+    langToggle.addEventListener('click', () => {
+      const current = document.body.getAttribute('data-lang') || 'en';
+      setLang(current === 'en' ? 'vi' : 'en');
+    });
+
+    // ── Mobile nav ──
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      document.body.classList.toggle('nav-open');
+    });
+
+    // ── Back button ──
+    document.querySelector('.proj-page-back').addEventListener('click', (e) => {
+      e.preventDefault();
+      window.history.back();
+    });
+  </script>
 
 </body>
 </html>
