@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Leading for Impact - RMIT - 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .proj-page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 72px 36px 96px;
+    }
+
+    .proj-page-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: var(--text-tertiary);
+      margin-bottom: 52px;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+    .proj-page-back:hover { color: var(--text); }
+
+    .proj-page-tag {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-tertiary);
+      margin-bottom: 12px;
+    }
+
+    .proj-page-title {
+      font-size: clamp(26px, 4vw, 36px);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .proj-page-meta {
+      font-size: 14px;
+      color: var(--text-tertiary);
+      margin-bottom: 52px;
+    }
+
+    .proj-page-body {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    .proj-page-body p {
+      margin-bottom: 24px;
+    }
+
+    .proj-page-pull {
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 1.6;
+      color: var(--text);
+      border-left: 2px solid var(--border-strong);
+      padding-left: 20px;
+      margin: 40px 0;
+    }
+
+    .proj-page-img {
+      width: 100%;
+      margin: 40px 0;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--bg-muted);
+    }
+    .proj-page-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    .proj-page-img figcaption {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      padding: 10px 16px 14px;
+      line-height: 1.5;
+    }
+
+    .proj-page-divider {
+      border: none;
+      border-top: 0.5px solid var(--border);
+      margin: 48px 0;
+    }
+
+    .proj-page-results {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 32px 0;
+    }
+    .proj-page-result {
+      background: var(--bg-muted);
+      border-radius: 12px;
+      padding: 20px;
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--text);
+    }
+
+    .proj-page-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .proj-page-list li {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      padding-left: 18px;
+      position: relative;
+    }
+    .proj-page-list li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      font-size: 22px;
+      line-height: 1.35;
+      color: var(--text-tertiary);
+      font-weight: 700;
+    }
+    .proj-page-list li strong {
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .proj-page-video {
+      width: 100%;
+      margin: 40px 0;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--bg-muted);
+    }
+    .proj-page-video iframe {
+      width: 100%;
+      height: 480px;
+      border: none;
+      display: block;
+    }
+    .proj-page-video figcaption {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      padding: 10px 16px 14px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .proj-page { padding: 56px 28px 80px; }
+    }
+
+    @media (max-width: 640px) {
+      .proj-page { padding: 48px 20px 72px; }
+      .proj-page-results { grid-template-columns: 1fr; }
+      .proj-page-pull { font-size: 17px; }
+      .proj-page-video iframe { height: 220px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="brand">thanh bui</a>
+      <div class="nav-links">
+        <a href="index.html#about" class="nav-link">
+          <span data-lang-en>About</span><span data-lang-vi>Giới thiệu</span>
+        </a>
+        <a href="index.html#projects" class="nav-link">
+          <span data-lang-en>Projects</span><span data-lang-vi>Dự án</span>
+        </a>
+        <a href="index.html#contact" class="nav-link">
+          <span data-lang-en>Contact</span><span data-lang-vi>Liên hệ</span>
+        </a>
+      </div>
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span class="lang-option active" data-lang="en">EN</span>
+        <span class="lang-option" data-lang="vi">VI</span>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="proj-page">
+
+      <a href="index.html#projects" class="proj-page-back">← Projects</a>
+
+      <p class="proj-page-tag">Leadership Development · 2025</p>
+      <h1 class="proj-page-title">Chương trình Phát triển Lãnh đạo — RMIT Vietnam</h1>
+      <p class="proj-page-meta">Leading fro Impact</p>
+
+      <div class="proj-page-body">
+
+        <p>Giai đoạn 2019 - 2021, Đại Việt Group đang mở rộng sang nhiều lĩnh vực — từ các websites thương mại điện tử trong mảng ô tô ở 6 quốc gia, cho tới marketing agency, F&B tại Hồ Chí Minh và Đà Lạt. Công ty có gần 1.000 nhân sự, các managers trẻ rất giỏi về chuyên môn, tuy nhiên họ tập trung nhiều vào vận hành hàng ngày, không nhìn thấy bức tranh toàn cảnh. Nhiều người thiếu kỹ năng quản lý, đào tạo đội ngũ, và phối hợp với các phòng ban khác.</p>
+
+        <p>Chúng tôi trao đổi cùng các Deans, Senior Program Managers để xây dựng chương trình leadership. Điểm khó khăn nhất là chưa từng có một chương trình đào tạo nào tương tự trên thị trường dành cho các Program Managers.</p>
+
+        <div class="proj-page-pull">Không dừng lại, chúng tôi tự xây chương trình nội bộ với chi phí chỉ bằng 10% so với báo giá từ các đơn vị bên ngoài.</div>
+
+        <figure class="proj-page-img">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4Z-Qz8FeYdpX90j6fLL8wXOEM_iv17LSe_4MddePHRjvFBxr38fD4VZ4ap4J2MJt9c3C1j-q2U41jOf1_UZWY9Jc1qK2QfX9Bs-Ed1bCzcCOyedsFeLQQB2gpPrC28S67mpKiKEULjEXM0_MGimKmcCe6sj4CAjnM0wKAWfDdWj0u4TQ3SlWrKj8OEFo/s16000/ldp-program-structure.png" alt="Cấu trúc chương trình LDP 2021" loading="lazy">
+          <figcaption>Nội dung chương trình trong vòng 6 tháng</figcaption>
+        </figure>
+        <figure class="proj-page-img">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhpXS-xf18HBWr6sEzKlsU0qH0_cHzDELth4RDSbUqOUfTqlMYoINOvLFEI_0jkWIgoPxc8oz-2VO9r9S77BBfL1jRYvAHHBsW_skTflARkt7xX0u1ho0Rb6uhogvmZQDlkV-huQPyjNSMbsKHplfu66iiElSfH2PBcL6zeJTJH3bFSqy6N9VYfUb55mIk/s16000/Screenshot%202026-04-28%20160530.png" alt="Cấu trúc chương trình LDP 2021" loading="lazy">
+          <figcaption>Trong vòng 6 tháng, các quản lý sẽ được tham gia các workshops, cung cấp tài liệu tự học trước và sau khóa học, đồng thời tham gia một dự án thực tế.</figcaption>
+        </figure>
+        <p>Để đạt kết quả tốt nhất với ngân sách thấp nhất, chúng tôi tập trung vào một số thứ thực sự quan trọng:</p>
+
+        <ul class="proj-page-list">
+          <li><strong>Tự xây dựng hệ thống đánh giá 360:</strong> Tôi và một bạn trong nhóm thiết kế phản hồi 360 độ trên Google Form và Excel, tập trung vào những kỹ năng thực tế nhất mà managers DVG cần.</li>
+          <li><strong>Tận dụng nguồn lực sẵn có:</strong> CEO dạy về business acumen, CFO dạy về financial acumen — bằng case study thật của công ty. Cựu nhân viên DVG từng làm tại McKinsey dạy về problem solving. Ngoài ra, tôi mời được chuyên gia EQ và DISC đến từ cộng đồng hỗ trợ doanh nghiệp thời Covid.</li>
+          <li><strong>Leaderboard:</strong> Phối hợp cùng đội IT xây website riêng cho các hoạt động học tập và gamification.</li>
+          <li><strong>Trực tiếp đứng lớp:</strong> Tôi không chỉ thiết kế và tổ chức, điều phối chương trình mà còn trực tiếp đứng lớp các nội dung về communication và kỹ năng đào tạo nhân viên.</li>
+        </ul>
+
+        <figure class="proj-page-img">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6k5y7h9Ly1sK7MaqPN-ybrK7oJhrH1aeQIxCOtY97KG4_CVOugW_7RmcPXr24g2oOw48Hb1Gs99rO5cdZnqXlUQN9e4nDzVWLc96f1kZhZ1HjC9_n_RfLOsgLtkH-oAOfUIKR8kPos5X47x1-5i9JSe9QfF__RaGA1hyQfUKgC0Y6Fao4J5zZzmzSKUI/s16000/360-feedback-sample.png" alt="Mẫu đánh giá 360 độ" loading="lazy">
+          <figcaption>Hệ thống phản hồi 360 độ tự thiết kế — ưu tiên tính hữu dụng hơn phần mềm cồng kềnh.</figcaption>
+        </figure>
+        <figure class="proj-page-img">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiTxsOLqpxKbnSYiBF-WBAh2D04y0K6s5auNNsf9WpDmQ_hfFqe4j-h6hi9e0TG4stuglJFXgBi-b6ehX5dYtOW1rmthqwjF2jlSn85odUWtXpmKBegEUDLbPeYKHQ1lnGQNCMhjAjQB36CLZbuc0jkiS_NSYWPizmTeJbqLPADLMClAUMoPpO8sXl-mOA/s16000/ldp-thanh-facilitator.png" alt="Trực tiếp đứng lớp" loading="lazy">
+          <figcaption>Tôi trực tiếp facilitate workshop về kỹ năng giao tiếp.</figcaption>
+        </figure>
+        <figure class="proj-page-img">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjc5CYnXhnZhnMcw1sJapvNq7jnVOYidh2xS38FMjpZpvzz1DKKdaYwmjt0u0_F5s8X1_fgXG36h4kVoRXiNh2ps5WsMmx8VGTn882VNZ_IyL0hHrI3URBuvbDyq6TlkSO4sMzL45HeSrPB8G9NT0NIeEZDvclOgGP38UIUE9aafGSwiJldxF46gVi_tS4/s16000/ldp-site.png" alt="Website học tập LDP" loading="lazy">
+          <figcaption>Tất cả nội dung học được cập nhật trên Google Site — người học truy cập để tìm tài liệu, làm bài tập và chuẩn bị cho các buổi tiếp theo.</figcaption>
+        </figure>
+
+            <figure class="proj-page-img">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjy2cowRwPAUoKY9wwsDkp7nc3YVYj5LPK4qHax1AtdGktQz2jOKnt8RAdbDbifQBty-5XHb-ztrzAvI2SwuvdutsAMb5LM7-JV5j20Zm1sBb08Zj3rLFcKhYfeRHjQIu6cc3a6VA0Nzd05AXn0N38IF9iTO8Z7f_XyJCVZCnBKtgjnzXIDtNse-K6OXUs/s16000/ldp-game.png" alt="Trò chơi mô phỏng Business Acumen" loading="lazy">
+          <figcaption>Buổi học business acumen qua trò chơi mô phỏng — đây là trò chơi tôi tự thiết kế, sau này còn được ứng dụng trong các chương trình đào tạo về Change Management, Grow Mindset.</figcaption>
+        </figure>
+        <figure class="proj-page-img">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzv32HkrradX1Uq_ZfP6IqyY57KfQgRCnb00xli3KSgQ73DhRHKlIuNqt8Z4CczJzKvmkaQZJEoMiqywaILS1TeM0MfD8-Z8IvWFkcb7X1iw0Sh9_7tIPIDG9gbdeYtBKA7EaV0aqyXw0kksG6DNJ6jllwCqfPNCr2mKLygJUKwkUAnmEoMI7IVkFX4YU/s16000/ldp-leader-board.png" alt="Leaderboard" loading="lazy">
+          <figcaption>Mảng kinh doanh lớn nhất xoay quanh ô tô, nên tôi nghĩ ra ý tưởng về leaderboard như lái một chiếc xe đi qua hành trình là khóa học laeadership này. Mỗi khi tham gia một hoạt động học tập, học viên sẽ nhận được số kilomet tương ứng. Phân hạng vô lăng dựa trên số kilomet tích lũy. Những chiếc vô lăng này tạo động lực và gắn kết người học rất tốt.</figcaption>
+        </figure>
+        <figure class="proj-page-video">
+          <iframe
+            src="https://www.youtube.com/embed/0qRMfAD65eQ"
+            title="LDP 2021 Leaderboard"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+          <figcaption>Bảng xếp hạng leaderboard cập nhật hàng ngày — một dạng gamification giúp người học duy trì động lực xuyên suốt chương trình.</figcaption>
+        </figure>
+        <hr class="proj-page-divider">
+
+        <p>Tôi tin rằng việc học hiệu quả nhất là thông qua thực hành. Vì vậy chúng tôi thiết kết capstone project bằng cách chia các managers thành nhóm nhỏ liên phòng ban, giao budget thật do CEO cấp, và để họ làm việc cùng nhau lên ý tưởng giúp các websites của tập đoàn thu về nhiều lead (khách hàng tiềm năng) nhất có thể — trên một dự án thực tế.</p>
+
+        <p>Kết quả là các managers hiểu rõ hơn về marketing online — một mảng ảnh hưởng tới hầu hết các team nhưng không phải ai cũng hiểu cách team Marketing vận hành. Họ cũng bắt đầu làm việc với nhau theo hướng hợp tác hơn.</p>
+
+        <hr class="proj-page-divider">
+
+        <div class="proj-page-results">
+          <div class="proj-page-result">30 managers hoàn thành chương trình với chi phí bằng 10% báo giá ban đầu.</div>
+          <div class="proj-page-result">Các managers kết nối với nhau nhiều hơn, tự tin hơn sau chương trình.</div>
+          <div class="proj-page-result">Capstone project chạy trên dự án thực tế — các team hiểu rõ hơn về marketing online.</div>
+          <div class="proj-page-result">Managers chủ động đề xuất nhân rộng chương trình. Tôi sau đó xây thêm LDP+ cho team leaders và supervisors.</div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 thanh bui</p>
+  </footer>
+
+  <script>
+    const langToggle = document.getElementById('langToggle');
+    const langOptions = langToggle.querySelectorAll('.lang-option');
+
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.body.setAttribute('data-lang', lang);
+      langOptions.forEach(opt => opt.classList.toggle('active', opt.dataset.lang === lang));
+      localStorage.setItem('lang', lang);
+    }
+
+    setLang(localStorage.getItem('lang') || 'en');
+
+    langToggle.addEventListener('click', () => {
+      const current = document.body.getAttribute('data-lang') || 'en';
+      setLang(current === 'en' ? 'vi' : 'en');
+    });
+
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      document.body.classList.toggle('nav-open');
+    });
+
+    document.querySelector('.proj-page-back').addEventListener('click', (e) => {
+      e.preventDefault();
+      if (document.referrer) {
+        window.history.back();
+      } else {
+        window.location.href = 'index.html#projects';
+      }
+    });
+  </script>
+
+</body>
+</html>
