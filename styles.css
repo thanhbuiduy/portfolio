@@ -201,7 +201,7 @@ body[data-lang="vi"] ul[data-lang-vi] { display: block; }
 
 .proj-expand { padding: 8px 0 24px; display: flex; flex-direction: column; }
 
-.proj-desc { font-size: 17px; line-height: 1.75; color: var(--text-tertiary); margin-bottom: 28px; }
+.proj-desc { font-size: 17px; line-height: 1.75; color: var(--text); margin-bottom: 28px; }
 .proj-img-wrap { width: 100%; margin-bottom: 24px; }
 .proj-img-wrap img { width: 100%; max-height: 560px; object-fit: cover; border-radius: var(--radius-md); cursor: zoom-in; transition: opacity 0.2s; }
 .proj-img-wrap img:hover { opacity: 0.92; }
