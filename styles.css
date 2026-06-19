@@ -283,7 +283,7 @@ a.contact-value:hover { color: var(--accent); }
 @media (max-width: 900px) {
   :root { --gutter: 28px; }
 
-  .hero-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+  .hero-grid { grid-template-columns: 1fr; gap: 32px;}
   .hero-photo { width: 160px; height: 320px; margin: 0 auto; order: -1; }
   .hero-body { margin: 0 auto; }
 
