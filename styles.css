@@ -312,8 +312,8 @@ a.contact-value:hover { color: var(--accent); }
   .nav-link { font-size: 16px; }
   .nav-open .nav-links { transform: translateY(0); opacity: 1; pointer-events: auto; }
   .nav-toggle { display: flex; }
-  .nav-open .nav-toggle span:first-child { transform: rotate(45deg) translate(3px, 3px); }
-  .nav-open .nav-toggle span:last-child { transform: rotate(-45deg) translate(3px, -3px); }
+  .nav-open .nav-toggle span:first-child { transform: rotate(45deg) translate(0, 3.5px); }
+  .nav-open .nav-toggle span:last-child { transform: rotate(-45deg) translate(0, -3.5px); }
 
   .section { padding: 48px var(--gutter); }
   .hero-section { padding-top: 64px; }
