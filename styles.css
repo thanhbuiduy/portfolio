@@ -152,7 +152,7 @@ body[data-lang="vi"] ul[data-lang-vi] { display: block; }
   font-weight: 700; line-height: 1.15;
   letter-spacing: -0.03em; margin-bottom: 20px;
 }
-.hero-body { font-size: 18px; color: var(--text-secondary); max-width: 580px; line-height: 1.7; }
+.hero-body { font-size: 17px; color: var(--text-secondary); max-width: 580px; line-height: 1.7; }
 .hero-photo {
   width: 380px; height: 480px;
   flex-shrink: 0;
