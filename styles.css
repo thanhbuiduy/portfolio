@@ -383,3 +383,16 @@ a.contact-value:hover { color: var(--accent); }
   .proj-row { grid-template-columns: 1fr; gap: 16px; padding: 28px 0; }
   .proj-row-img { height: 200px; }
 }
+.bento-grid { display: none; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 28px; }
+body[data-lang="en"] .bento-grid[data-lang-en],
+body[data-lang="vi"] .bento-grid[data-lang-vi] { display: grid; }
+.bento-card { background: var(--bg-muted); border-radius: 12px; padding: 18px; }
+.bento-card i { font-size: 22px; color: var(--text-accent); }
+.bento-h { font-size: 15px; font-weight: 500; color: var(--text); margin: 10px 0 4px; }
+.bento-d { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+.bento-wide { grid-column: span 2; }
+
+@media (max-width: 640px) {
+  .bento-grid { grid-template-columns: 1fr; }
+  .bento-wide { grid-column: span 1; }
+}
