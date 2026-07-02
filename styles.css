@@ -389,9 +389,9 @@ a.contact-value:hover { color: var(--accent); }
 body[data-lang="en"] .bento-grid[data-lang-en],
 body[data-lang="vi"] .bento-grid[data-lang-vi] { display: grid; }
 .bento-card { background: var(--bg-muted); border-radius: 12px; padding: 18px; }
-.bento-card i { font-size: 22px; color: var(--text-accent); }
-.bento-h { font-size: 15px; font-weight: 500; color: var(--text); margin: 10px 0 4px; }
-.bento-d { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+.bento-card i { font-size: 22px; color: var(--accent); }
+.bento-h { font-size: 17px; font-weight: 500; color: var(--text); margin: 10px 0 4px; }
+.bento-d { font-size: 15px; color: var(--text-secondary); line-height: 1.5; }
 .bento-wide { grid-column: span 2; }
 
 @media (max-width: 640px) {
