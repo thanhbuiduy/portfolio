@@ -383,9 +383,8 @@ a.contact-value:hover { color: var(--accent); }
   .proj-row { grid-template-columns: 1fr; gap: 16px; padding: 28px 0; }
   .proj-row-img { height: 200px; }
 }
-.contact-info-column { margin-top: 56px; }
-.bento-h { font-size: 17px; }
-.bento-d { font-size: 14px; }
+.contact-details { margin-top: 56px; }
+.contact-grid { align-items: flex-start; }
 .bento-grid { display: none; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 28px; }
 body[data-lang="en"] .bento-grid[data-lang-en],
 body[data-lang="vi"] .bento-grid[data-lang-vi] { display: grid; }
